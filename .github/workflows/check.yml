@@ -28,3 +28,5 @@ jobs:
           persist-credentials: false
       - run: node scripts/bootstrap-public-data.mjs
       - run: npm test
+      - name: Render daily digest without sending
+        run: node scripts/send-digest.mjs --dry
