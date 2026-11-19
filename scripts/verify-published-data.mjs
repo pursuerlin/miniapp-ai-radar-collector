@@ -7,7 +7,7 @@ import {PUBLIC_CORE_FILES,readPublicPayloads,validatePublicPayloads} from './val
 
 export async function verifyPublishedData({expected,baseUrl='https://pursuerlin.github.io/miniapp-ai-radar-data/radar/',fetcher=fetch,maxAttempts=36,delayMs=5000,maxDurationMs=180000,wait=ms=>new Promise(r=>setTimeout(r,ms)),now=()=>Date.now()}={}){
  validatePublicPayloads(expected)
- const files=[...PUBLIC_CORE_FILES,...(expected['practice-resources.json']?['practice-resources.json']:[]),...(expected['manifest.json'].datasets.media?['media-leaderboards.json']:[]),...(expected['manifest.json'].datasets.research?['model-evidence.json']:[])]
+ const files=[...PUBLIC_CORE_FILES,...['changes.json','catalog-baseline.json'].filter(name=>expected[name]),...(expected['practice-resources.json']?['practice-resources.json']:[]),...(expected['manifest.json'].datasets.media?['media-leaderboards.json']:[]),...(expected['manifest.json'].datasets.research?['model-evidence.json']:[])]
  const endpoint=new URL(baseUrl);if(endpoint.protocol!=='https:'||endpoint.username||endpoint.password)throw Error('PUBLIC_VERIFY_URL_INVALID')
  let lastCode='PUBLIC_VERIFY_PENDING',attempts=0
  const deadline=now()+maxDurationMs

@@ -1,3 +1,4 @@
+import {buildChangesFiles} from './build-changes.mjs'
 import {writeFile,readFile,appendFile} from 'node:fs/promises'
 import {hasMatchingAaArchive} from './aa-source-proof.mjs'
 import {chooseScope} from './choose-collection-scope.mjs'
@@ -30,6 +31,7 @@ if(requested==='skills'||['all','news','catalog'].includes(decision.profile)){
  const due=requested==='skills'||Date.now()-Date.parse(previous.checkedAt)>6*3600000||previous.skills.length<JSON.parse(await readFile('scripts/config/practice-resources.json','utf8')).skills.length
  if(due)await writePracticeResources('.',await collectPracticeResources({client:createResourceClient(),previous}))
 }
+await buildChangesFiles()
 const report=await validateCandidate();await writeFile('.candidate-verification.json',JSON.stringify(report,null,2)+'\n')
 const health=JSON.parse(await readFile('public/radar/health.json','utf8')),failed=failedCollectedSources(health)
 await writeFile('.collection-result.json',JSON.stringify({requested,skipped:decision.skip,checkedAt:new Date().toISOString(),failedSources:failed,generatedAt:report.generatedAt},null,2)+'\n')

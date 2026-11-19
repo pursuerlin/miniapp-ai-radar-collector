@@ -7,7 +7,7 @@ import {compactRadarLaunch} from '../src/domain/radar-content.mjs'
 export async function bootstrapPublicData({site='state/data-site',root=process.cwd()}={}){
  const from=resolve(root,site,'public/radar'),payloads=await readPublicPayloads(from);validatePublicPayloads(payloads)
  await mkdir(resolve(root,'src/data'),{recursive:true});await mkdir(resolve(root,'src/practice-resources'),{recursive:true});await mkdir(resolve(root,'public/radar'),{recursive:true})
- for(const name of ['snapshot.json','intelligence.json','briefings.json','latest-benchmark.json','evaluation-leaderboards.json','manifest.json','media-leaderboards.json','model-evidence.json'])if(payloads[name])await writeFile(resolve(root,'src/data',name),JSON.stringify(payloads[name])+'\n')
+ for(const name of ['snapshot.json','intelligence.json','briefings.json','latest-benchmark.json','evaluation-leaderboards.json','manifest.json','media-leaderboards.json','model-evidence.json','changes.json','catalog-baseline.json'])if(payloads[name])await writeFile(resolve(root,'src/data',name),JSON.stringify(payloads[name])+'\n')
  // The published compact model payload keeps news in a separate validated file.
  const snapshot={...payloads['snapshot.json'],intelligence:payloads['intelligence.json']};await writeFile(resolve(root,'src/data/snapshot.json'),JSON.stringify(snapshot)+'\n')
  if(payloads['practice-resources.json'])await writeFile(resolve(root,'src/practice-resources/resources.json'),JSON.stringify(payloads['practice-resources.json'])+'\n')
