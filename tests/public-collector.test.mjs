@@ -30,3 +30,11 @@ test('public collection uses standard hosted runners, no private checkout, no cl
  const publisher=job.steps.find(s=>s.name==='Checkout currently published state');assert.equal(publisher.with.repository,'pursuerlin/miniapp-ai-radar-data');assert.match(publisher.with['ssh-key'],/DATA_REPO_DEPLOY_KEY/)
  assert.ok(job.steps.find(s=>s.name==='Verify deployed public contents'));assert.ok(job.steps.find(s=>s.name==='Require healthy selected sources'))
 })
+
+test('public data sync preserves the independently published v6 comparison policy',async()=>{
+ const {mkdtemp,mkdir,writeFile,readFile,rm}=await import('node:fs/promises')
+ const {tmpdir}=await import('node:os'),{resolve}=await import('node:path')
+ const {syncPublicRadar}=await import('../scripts/sync-public-radar.mjs')
+ const root=await mkdtemp(resolve(tmpdir(),'collector-v6-'))
+ try{const from=resolve(root,'from'),to=resolve(root,'to');await mkdir(from);await mkdir(to);await writeFile(resolve(from,'snapshot.json'),'new');await writeFile(resolve(to,'operations-config-v6.json'),'published-policy');await syncPublicRadar(from,to);assert.equal(await readFile(resolve(to,'operations-config-v6.json'),'utf8'),'published-policy')}finally{await rm(root,{recursive:true,force:true})}
+})

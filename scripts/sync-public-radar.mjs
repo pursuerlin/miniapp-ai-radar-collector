@@ -5,7 +5,7 @@ import {pathToFileURL} from 'node:url'
 // neither remove its live file nor replace it with a local development copy.
 export async function syncPublicRadar(source,destination){
  await mkdir(destination,{recursive:true})
- const managed=name=>name.endsWith('.json')&&!/^operations-config(?:-v[345])?\.json$/.test(name)
+ const managed=name=>name.endsWith('.json')&&!/^operations-config(?:-v[3456])?\.json$/.test(name)
  const names=(await readdir(source)).filter(managed)
  for(const file of (await readdir(destination)).filter(managed))if(!names.includes(file))await unlink(resolve(destination,file))
  for(const file of names)await copyFile(resolve(source,file),resolve(destination,file))
