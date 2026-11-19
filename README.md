@@ -12,8 +12,14 @@ Data is published to https://pursuerlin.github.io/miniapp-ai-radar-data/radar/ a
 - Tests run on code changes, separately from scheduled collection. Data updates do not build the mini-program.
 - Missing AA credentials stop requested media collection explicitly; they are never treated as a successful update.
 - A source outage can leave a run red after the validated retained snapshot has been published; publication and source health are separate checks.
+- The existing daily Feishu digest runs at 01:10 UTC; the public-feed freshness check runs at 01:23 UTC and alerts only when news is more than three hours old.
+- An external Cloudflare heartbeat dispatches this repository every two hours. It skips fresh news unless a different source needs recovery. Authenticated Feishu approval actions remain in the private application repository.
 
-Repository Secrets: `AA_API_KEY` for the AA media data API; `DATA_REPO_DEPLOY_KEY`, a write deploy key scoped to the public data repository. No private application checkout or application repository token is needed by this workflow. Runtime secrets must not be placed in config files, snapshots, logs or fixtures.
+Repository Secrets: `AA_API_KEY` for the AA media data API; `DATA_REPO_DEPLOY_KEY`, a write deploy key scoped to the public data repository; and `FEISHU_WEBHOOK_URL` for the migrated digest and freshness alerts. No private application checkout or application repository token is needed by these workflows. Runtime secrets must not be placed in config files, snapshots, logs or fixtures.
+
+Standard GitHub-hosted computation for this public repository is free; upstream API terms and artifact-storage limits still apply. Diagnostics expire after three days. GitHub can disable scheduled workflows after 60 days without repository activity; check workflow enablement when investigating a long gap. The external heartbeat provides a separate trigger, rather than a promise of exact execution times.
+
+Maintain collection code in this repository. The private application retains client UI, internal review and operational publishing; internal manual workflows still follow that repository's billing limits. Updating collected JSON does not publish operational drafts or change the mini-program package.
 
 ## Local checks
 
