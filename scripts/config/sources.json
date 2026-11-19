@@ -1,0 +1,329 @@
+[
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "family": "openai",
+    "kind": "official",
+    "url": "https://openai.com/news/rss.xml",
+    "adapter": "rss",
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://openai.com/news/rss.xml",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary"
+  },
+  {
+    "id": "deepmind",
+    "name": "Google DeepMind",
+    "family": "google",
+    "kind": "official",
+    "url": "https://deepmind.google/blog/rss.xml",
+    "adapter": "rss",
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://deepmind.google/blog/rss.xml",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary"
+  },
+  {
+    "id": "github",
+    "name": "GitHub AI & ML",
+    "family": "github",
+    "kind": "official",
+    "url": "https://github.blog/ai-and-ml/feed/",
+    "adapter": "rss",
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://github.blog/ai-and-ml/feed/",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary"
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face 社区",
+    "family": "huggingface",
+    "kind": "community",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "adapter": "rss",
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://huggingface.co/blog/feed.xml",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary"
+  },
+  {
+    "id": "decoder",
+    "name": "The Decoder",
+    "family": "decoder",
+    "kind": "media",
+    "url": "https://the-decoder.com/feed/",
+    "adapter": "rss",
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://the-decoder.com/feed/",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "discovery"
+  },
+  {
+    "id": "ifanr",
+    "name": "爱范儿",
+    "family": "ifanr",
+    "kind": "media",
+    "url": "https://www.ifanr.com/feed",
+    "adapter": "rss",
+    "aiOnly": true,
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://www.ifanr.com/feed",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary"
+  },
+  {
+    "id": "ithome",
+    "name": "IT之家",
+    "family": "ithome",
+    "kind": "media",
+    "url": "https://www.ithome.com/rss/",
+    "adapter": "rss",
+    "aiOnly": true,
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://www.ithome.com/rss/",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary"
+  },
+  {
+    "id": "infoq",
+    "name": "InfoQ 中文",
+    "family": "infoq",
+    "kind": "media",
+    "url": "https://www.infoq.cn/feed",
+    "adapter": "rss",
+    "aiOnly": true,
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://www.infoq.cn/feed",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini 官方更新",
+    "family": "google",
+    "kind": "official",
+    "url": "https://aistudio.google.com/docs/changelog?hl=en",
+    "adapter": "gemini",
+    "aiOnly": false,
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://aistudio.google.com/docs/changelog?hl=en",
+      "checkedAt": "2026-11-03T00:00:00+08:00"
+    },
+    "evidenceRole": "primary",
+    "contentType": "changelog"
+  },
+  {
+    "id": "arxiv",
+    "name": "arXiv AI 论文",
+    "family": "arxiv",
+    "kind": "community",
+    "url": "https://export.arxiv.org/api/query?search_query=cat:cs.AI%20OR%20cat:cs.CL&sortBy=submittedDate&sortOrder=descending&max_results=15",
+    "adapter": "arxiv",
+    "aiOnly": false,
+    "limit": 8,
+    "rights": {
+      "licenseId": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "scope": "text-summary",
+      "evidenceUrl": "https://info.arxiv.org/help/api/tou.html",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary",
+    "contentType": "preprint"
+  },
+  {
+    "id": "owid",
+    "name": "OWID AI 观察",
+    "family": "owid",
+    "kind": "media",
+    "url": "https://ourworldindata.org/atom.xml",
+    "adapter": "rss",
+    "aiOnly": true,
+    "limit": 12,
+    "rights": {
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "scope": "text-summary",
+      "evidenceUrl": "https://ourworldindata.org/artificial-intelligence",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary"
+  },
+  {
+    "id": "algorithmwatch",
+    "name": "AlgorithmWatch",
+    "family": "algorithmwatch",
+    "kind": "media",
+    "url": "https://algorithmwatch.org/en/rss",
+    "adapter": "rss",
+    "aiOnly": false,
+    "limit": 12,
+    "rights": {
+      "licenseId": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "scope": "text-summary",
+      "evidenceUrl": "https://algorithmwatch.org/en/",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "primary"
+  },
+  {
+    "id": "hackernews",
+    "name": "Hacker News AI",
+    "family": "hackernews",
+    "kind": "community",
+    "url": "https://hn.algolia.com/api/v1/search_by_date?query=AI&tags=story&hitsPerPage=40",
+    "adapter": "hn",
+    "aiOnly": true,
+    "limit": 12,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://github.com/HackerNews/API",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    },
+    "evidenceRole": "discovery"
+  },
+  {
+    "id": "bensbites",
+    "name": "Ben’s Bites",
+    "family": "bensbites",
+    "kind": "media",
+    "url": "https://www.bensbites.com/feed",
+    "adapter": "rss",
+    "limit": 4,
+    "evidenceRole": "discovery",
+    "contentType": "digest",
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://www.bensbites.com/feed",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    }
+  },
+  {
+    "id": "latentspace",
+    "name": "Latent Space / AINews",
+    "family": "latentspace",
+    "kind": "media",
+    "url": "https://www.latent.space/feed",
+    "adapter": "rss",
+    "limit": 4,
+    "timeoutMs": 45000,
+    "evidenceRole": "discovery",
+    "contentType": "digest",
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://www.latent.space/feed",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    }
+  },
+  {
+    "id": "lastweekinai",
+    "name": "Last Week in AI",
+    "family": "lastweekinai",
+    "kind": "media",
+    "url": "https://lastweekin.ai/feed",
+    "adapter": "rss",
+    "limit": 4,
+    "evidenceRole": "discovery",
+    "contentType": "digest",
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://lastweekin.ai/feed",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    }
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek 官方更新",
+    "family": "deepseek",
+    "kind": "official",
+    "url": "https://api-docs.deepseek.com/updates",
+    "fallbackUrls": [
+      "https://api-docs.deepseek.com/updates?output=1",
+      "https://api-docs.deepseek.com/zh-cn/updates"
+    ],
+    "adapter": "deepseek",
+    "limit": 6,
+    "evidenceRole": "primary",
+    "contentType": "changelog",
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://api-docs.deepseek.com/updates",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    }
+  },
+  {
+    "id": "anthropic-sdk",
+    "name": "Anthropic Python SDK",
+    "family": "anthropic",
+    "kind": "official",
+    "url": "https://github.com/anthropics/anthropic-sdk-python/releases.atom",
+    "adapter": "rss",
+    "limit": 3,
+    "evidenceRole": "primary",
+    "contentType": "changelog",
+    "titlePrefix": "Anthropic Python SDK · ",
+    "stableReleasesOnly": true,
+    "rights": {
+      "licenseId": "UNVERIFIED",
+      "licenseUrl": "",
+      "scope": "title-link-only",
+      "evidenceUrl": "https://github.com/anthropics/anthropic-sdk-python/releases.atom",
+      "checkedAt": "2026-10-18T00:00:00Z"
+    }
+  }
+]

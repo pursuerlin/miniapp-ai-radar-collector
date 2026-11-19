@@ -1,0 +1,97 @@
+name: Collect and publish radar data
+run-name: ${{ inputs.heartbeat && '心跳采集' || (github.event_name == 'schedule' && '定时采集' || '手动采集') }}
+on:
+  schedule:
+    - cron: '11,41 * * * *'
+    - cron: '7 0,4,8,12,16,20 * * *'
+    - cron: '37 0,12 * * *'
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: Collection scope
+        type: choice
+        options: [all, catalog, news, aa, livebench, media, research, evaluation, skills]
+        default: news
+      heartbeat:
+        description: Skip news if recently refreshed
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: radar-public-publisher
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .cache/aihot
+            docs/accuracy-audit/raw
+          key: public-sources-v1-${{ github.run_id }}
+          restore-keys: public-sources-v1-
+      - run: npm ci --ignore-scripts
+      - name: Checkout currently published state
+        uses: actions/checkout@v4
+        with:
+          repository: pursuerlin/miniapp-ai-radar-data
+          ref: master
+          path: state/data-site
+          ssh-key: ${{ secrets.DATA_REPO_DEPLOY_KEY }}
+      - name: Restore validated public state
+        run: node scripts/bootstrap-public-data.mjs
+      - name: Collect and validate isolated candidate
+        id: collect
+        env:
+          INPUT_PROFILE: ${{ inputs.profile || 'news' }}
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          HEARTBEAT: ${{ inputs.heartbeat }}
+          AA_API_KEY: ${{ secrets.AA_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+          FEISHU_SYNC: 'false'
+        run: node scripts/run-public-collection.mjs
+      - name: Publish only validated public JSON
+        if: steps.collect.outputs.publish == 'true'
+        run: |
+          node scripts/sync-public-radar.mjs public/radar state/data-site/public/radar
+          cd state/data-site
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/radar
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: publish validated radar snapshots'
+            git pull --rebase origin master
+            git push origin HEAD:master
+          fi
+      - name: Verify deployed public contents
+        if: steps.collect.outputs.publish == 'true'
+        run: node scripts/verify-published-data.mjs
+      - name: Require healthy selected sources
+        if: steps.collect.outputs.publish == 'true'
+        run: node scripts/check-collection-health.mjs
+      - name: Save bounded validation diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: collection-diagnostics
+          include-hidden-files: true
+          path: |
+            .candidate-verification.json
+            .publication-verification.json
+            .collection-result.json
+            public/radar/health.json
+          if-no-files-found: ignore
+          retention-days: 3

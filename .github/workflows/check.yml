@@ -1,0 +1,30 @@
+name: Collector quality
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: node scripts/assert-public-boundary.mjs
+      - uses: actions/checkout@v4
+        with:
+          repository: pursuerlin/miniapp-ai-radar-data
+          ref: master
+          path: state/data-site
+          persist-credentials: false
+      - run: node scripts/bootstrap-public-data.mjs
+      - run: npm test

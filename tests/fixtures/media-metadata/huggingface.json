@@ -1,0 +1,121 @@
+{
+  "id": "Qwen/Qwen-Image",
+  "private": false,
+  "sha": "75e0b4be04f60ec59a75f475837eced720f823b6",
+  "createdAt": "2025-08-02T04:58:07.000Z",
+  "lastModified": "2025-08-18T02:42:19.000Z",
+  "gated": false,
+  "safetensors": {
+    "parameters": {
+      "BF16": 20430401088
+    },
+    "total": 20430401088
+  },
+  "cardData": {
+    "license": "apache-2.0",
+    "language": [
+      "en",
+      "zh"
+    ],
+    "library_name": "diffusers",
+    "pipeline_tag": "text-to-image"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "LICENSE"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "model_index.json"
+    },
+    {
+      "rfilename": "scheduler/scheduler_config.json"
+    },
+    {
+      "rfilename": "text_encoder/config.json"
+    },
+    {
+      "rfilename": "text_encoder/generation_config.json"
+    },
+    {
+      "rfilename": "text_encoder/model-00001-of-00004.safetensors"
+    },
+    {
+      "rfilename": "text_encoder/model-00002-of-00004.safetensors"
+    },
+    {
+      "rfilename": "text_encoder/model-00003-of-00004.safetensors"
+    },
+    {
+      "rfilename": "text_encoder/model-00004-of-00004.safetensors"
+    },
+    {
+      "rfilename": "text_encoder/model.safetensors.index.json"
+    },
+    {
+      "rfilename": "tokenizer/added_tokens.json"
+    },
+    {
+      "rfilename": "tokenizer/chat_template.jinja"
+    },
+    {
+      "rfilename": "tokenizer/merges.txt"
+    },
+    {
+      "rfilename": "tokenizer/special_tokens_map.json"
+    },
+    {
+      "rfilename": "tokenizer/tokenizer_config.json"
+    },
+    {
+      "rfilename": "tokenizer/vocab.json"
+    },
+    {
+      "rfilename": "transformer/config.json"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00001-of-00009.safetensors"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00002-of-00009.safetensors"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00003-of-00009.safetensors"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00004-of-00009.safetensors"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00005-of-00009.safetensors"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00006-of-00009.safetensors"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00007-of-00009.safetensors"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00008-of-00009.safetensors"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00009-of-00009.safetensors"
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json"
+    },
+    {
+      "rfilename": "vae/config.json"
+    },
+    {
+      "rfilename": "vae/diffusion_pytorch_model.safetensors"
+    }
+  ],
+  "pipeline_tag": "text-to-image",
+  "downloads": 367966,
+  "likes": 2698
+}

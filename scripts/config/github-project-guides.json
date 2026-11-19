@@ -1,0 +1,1041 @@
+[
+  {
+    "githubId": 1134543109,
+    "repo": "vercel-labs/skills",
+    "sourceHash": "219726a9d34faa5f88334e16e2c7f68b9c1d3d8c130866634eb2008cff8d3120",
+    "readmeSha": "d7973f93ec761f978f419ca71399dbdc41109355",
+    "readmePath": "README.md",
+    "category": "技能管理",
+    "introduction": "用于发现、安装和管理 Agent Skills 的命令行工具。你可以按任务查找技能，再选择要安装的技能与 AI 编程工具；适合给现有开发流程补充可复用能力。它是技能管理入口，实际功能由安装的技能提供。",
+    "uses": [
+      "按任务寻找可用技能",
+      "给不同编程工具安装技能"
+    ],
+    "quickStart": "从 README 的 Install a Skill 开始，确认 Node.js 与所用 AI 工具的要求，再选择技能和安装范围。",
+    "tasks": [
+      "agent"
+    ],
+    "conditions": {
+      "audience": "使用 AI 编程工具的人",
+      "runtime": "Node.js 22.20+；命令行安装与管理技能",
+      "credentials": "CLI 安装技能不要求模型密钥；执行技能取决于所用工具",
+      "cost": "CLI 为 MIT 许可；AI 工具、模型和外部服务费用单独确认"
+    },
+    "examples": [
+      {
+        "title": "技能安装与调用示例",
+        "url": "https://github.com/vercel-labs/skills#install-a-skill",
+        "sourceUrl": "https://github.com/vercel-labs/skills#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-skill-creator",
+        "relation": "task",
+        "reason": "配合技能管理制作自己的 Skill"
+      }
+    ]
+  },
+  {
+    "githubId": 1061953414,
+    "repo": "anthropics/skills",
+    "sourceHash": "7ae43e483891bab636c25a6784cd802ecb7a66fa06519e0a9179f3d11c21f487",
+    "readmeSha": "4171c2c9eba15bf2bdefb496d941ba559368438b",
+    "readmePath": "README.md",
+    "category": "Agent 技能",
+    "introduction": "Anthropic 提供的技能与示例仓库，把任务说明、脚本和资源组织成可重复使用的能力。覆盖文档处理、创意与开发等方向，也能参考模板制作自己的技能；不同目录的用途与许可需要分别查看。",
+    "uses": [
+      "处理 PDF、Word、PPT 与表格",
+      "参考模板编写自己的技能"
+    ],
+    "quickStart": "先在技能目录中选择任务，再阅读对应 SKILL.md；按 README 中适合你的 Claude 使用方式接入。",
+    "tasks": [
+      "office",
+      "web",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "处理文档、设计或开发任务的人",
+      "runtime": "Claude Code、Claude.ai 或 API；按所选技能准备依赖",
+      "credentials": "通过 Claude API 使用时需对应认证；其他入口按账号条件",
+      "cost": "各技能目录许可分别确认；Claude 账号与 API 的使用条件另计"
+    },
+    "examples": [
+      {
+        "title": "创建基础 Skill 示例",
+        "url": "https://github.com/anthropics/skills#creating-a-basic-skill",
+        "sourceUrl": "https://github.com/anthropics/skills#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-pdf",
+        "relation": "same-repo",
+        "reason": "本仓库文档技能"
+      },
+      {
+        "id": "skill:anthropics-skills-skills-frontend-design",
+        "relation": "same-repo",
+        "reason": "本仓库界面技能"
+      },
+      {
+        "id": "skill:anthropics-skills-skills-skill-creator",
+        "relation": "same-repo",
+        "reason": "本仓库技能制作"
+      }
+    ]
+  },
+  {
+    "githubId": 626805178,
+    "repo": "langgenius/dify",
+    "sourceHash": "d902a2fba0a0459c4b414d0bc69514093bf7a1e463d4f67f93a6b962ec423395",
+    "readmeSha": "1f2414728c9837eb0248680e1d1443c7b94a304d",
+    "readmePath": "README.md",
+    "category": "AI 应用",
+    "introduction": "把模型、知识库、工具和流程组织在同一工作区的 AI 应用平台。可以搭建工作流、RAG 检索和 Agent 应用，并管理模型接入与运行观察；适合把原型逐步整理成可部署的应用。",
+    "uses": [
+      "搭建知识库问答与 RAG 流程",
+      "编排模型与工具协作的应用"
+    ],
+    "quickStart": "先选择云端体验或自托管，再按 Quick start 准备环境、连接模型服务，并从一个简单应用开始。",
+    "tasks": [
+      "agent",
+      "office"
+    ],
+    "conditions": {
+      "audience": "AI 应用开发者与流程搭建者",
+      "runtime": "云端或 Docker Compose 自托管",
+      "credentials": "连接模型时按提供方配置凭证",
+      "cost": "云端方案、模型调用与自托管资源分别核算；不等同于全部免费",
+      "hardware": "自托管 README 最低要求：2 核 CPU、4 GiB 内存"
+    },
+    "examples": [
+      {
+        "title": "官方快速开始",
+        "url": "https://github.com/langgenius/dify#quick-start",
+        "sourceUrl": "https://github.com/langgenius/dify#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 193215554,
+    "repo": "n8n-io/n8n",
+    "sourceHash": "8631094c2598ff171e604c53ae2ed90d350972a23136eba0f50c6f6e7dcab202",
+    "readmeSha": "2d2053d58750e70ca43f946ab75a6ec5d532f87c",
+    "readmePath": "README.md",
+    "category": "工作流",
+    "introduction": "通过可视化画布连接应用、数据与 AI 服务，也能加入代码处理复杂逻辑。适合把多步操作组织成可观察的自动化流程，支持自托管或云端使用；服务连接权限和运行条件需要按实际流程配置。",
+    "uses": [
+      "串联业务应用与 AI 处理步骤",
+      "加入人工确认的多步自动化"
+    ],
+    "quickStart": "按 Quick Start 选择运行方式，先用少量节点跑通一个流程，再连接自己的账号、模型与业务数据。",
+    "tasks": [
+      "office",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "业务自动化与流程搭建者",
+      "runtime": "本地命令行、Docker 或 n8n Cloud",
+      "credentials": "按工作流节点连接账号、API 或 OAuth",
+      "cost": "云服务及外部模型/API 可能计费；自托管按项目许可与功能范围确认"
+    },
+    "examples": [
+      {
+        "title": "官方工作流入门",
+        "url": "https://github.com/n8n-io/n8n#quick-start",
+        "sourceUrl": "https://github.com/n8n-io/n8n#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 589831718,
+    "repo": "Comfy-Org/ComfyUI",
+    "sourceHash": "bc629431efefef6b4226e3e5ca099293f986b21f066d7dadc5a0f75df79181a8",
+    "readmeSha": "27bb751186bec902e59a61c0e1869f704144de72",
+    "readmePath": "README.md",
+    "category": "图像创作",
+    "introduction": "以节点图组织模型、输入与处理步骤的内容创作工具。可以组合图像等生成流程，保存并复用工作流，也可通过接口接入其他应用；适合希望控制制作步骤和模型配置的创作者与开发者。",
+    "uses": [
+      "搭建与复用图像生成工作流",
+      "组合模型、参考图与后处理步骤"
+    ],
+    "quickStart": "从 Get Started 选择桌面版、手动安装或云端方式；按工作流说明准备相应模型、节点和运行环境。",
+    "tasks": [
+      "media"
+    ],
+    "conditions": {
+      "audience": "图像视频创作者与工作流开发者",
+      "runtime": "本地桌面版、手动安装或官方云端",
+      "credentials": "本地模型工作流无需云模型密钥；API 节点按服务认证",
+      "cost": "官方云端为付费服务；API 节点与模型许可另行确认",
+      "hardware": "本地显存与内存取决于模型、分辨率和工作流，需按模板确认"
+    },
+    "examples": [
+      {
+        "title": "官方工作流示例",
+        "url": "https://github.com/Comfy-Org/ComfyUI#examples",
+        "sourceUrl": "https://github.com/Comfy-Org/ComfyUI#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 658928958,
+    "repo": "ollama/ollama",
+    "sourceHash": "e9fd9cefeae26b121200cfb1c3f924a3be1f985ab2a22399901cb01a11b79aca",
+    "readmeSha": "2a7dd787dc04fad1536797c7a64f9c3d85fa0782",
+    "readmePath": "README.md",
+    "category": "模型运行",
+    "introduction": "在电脑或服务中运行和管理开放模型，并提供命令行与 API 接入方式。可以用于本地对话，也能连接应用与编程工具；是否能够运行某个模型，需要结合模型大小、内存与硬件支持确认。",
+    "uses": [
+      "在本地试用与管理开放模型",
+      "通过 API 给应用接入模型"
+    ],
+    "quickStart": "按操作系统完成安装，从 Get started 选择一个适合机器配置的模型，再决定使用命令行还是 API。",
+    "tasks": [
+      "local",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "试用本地模型或接入应用的开发者",
+      "runtime": "macOS、Windows、Linux；命令行、Docker 与 API",
+      "credentials": "本地模型与云端模型认证方式不同，按所选入口确认",
+      "cost": "本地运行消耗自有算力；云端与模型使用条件单独确认",
+      "hardware": "硬件要求随模型大小变化，按所选模型确认"
+    },
+    "examples": [
+      {
+        "title": "API 调用示例",
+        "url": "https://github.com/ollama/ollama#rest-api",
+        "sourceUrl": "https://github.com/ollama/ollama#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 701547123,
+    "repo": "open-webui/open-webui",
+    "sourceHash": "2d510f52050049f7b06aee8b288ec0b2f83108ba21bc4a6b1c15f9d2d7ca8400",
+    "readmeSha": "82d20f3a2b4700c09bbfc25515869a279fd5334c",
+    "readmePath": "README.md",
+    "category": "AI 界面",
+    "introduction": "可自行部署的 AI 使用界面，能够连接 Ollama 与兼容 OpenAI API 的本地或云端模型。适合为已有模型服务提供统一的交互入口，也可按项目文档扩展；界面部署与模型运行是两部分配置。",
+    "uses": [
+      "给已有模型服务配置网页界面",
+      "统一使用本地与云端模型"
+    ],
+    "quickStart": "从 Installation 选择 Python、Docker 或桌面入口，完成启动后连接自己的模型服务并检查访问设置。",
+    "tasks": [
+      "local",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "搭建统一 AI 使用界面的人",
+      "runtime": "Python 3.12、Docker 或桌面入口",
+      "credentials": "连接 Ollama 或外部模型服务；API 服务按提供方配置",
+      "cost": "模型服务费用另计；界面品牌保留与使用范围按 Open WebUI License 确认"
+    },
+    "examples": [
+      {
+        "title": "官方部署教程",
+        "url": "https://docs.openwebui.com/getting-started/quick-start/",
+        "sourceUrl": "https://github.com/open-webui/open-webui#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 952688112,
+    "repo": "microsoft/playwright-mcp",
+    "sourceHash": "c5c7a4cdcc22ca33ad9d070438f450deae5a9bebe21b37aed796650ad42b22fb",
+    "readmeSha": "4b9fa171c615e6ace19011a04c28527449be0e46",
+    "readmePath": "README.md",
+    "category": "浏览器工具",
+    "introduction": "通过 MCP 把 Playwright 浏览器操作接入 AI 工具，使用页面结构信息完成导航、点击和输入。适合让支持 MCP 的客户端操作网页、检查流程；它提供浏览器能力，具体任务仍由使用它的 AI 工具组织。",
+    "uses": [
+      "检查网页表单与导航流程",
+      "让支持 MCP 的 AI 工具操作网页"
+    ],
+    "quickStart": "先确认客户端支持 MCP，再按 Getting started 添加服务配置，打开测试页面验证连接。",
+    "tasks": [
+      "web",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "网页测试与浏览器自动化开发者",
+      "runtime": "Node.js 20+；支持 MCP 的客户端和浏览器",
+      "credentials": "MCP 服务本身不要求模型密钥；客户端模型认证另配",
+      "cost": "仓库许可与所用 AI 客户端、模型服务费用分开确认"
+    },
+    "examples": [
+      {
+        "title": "客户端接入示例",
+        "url": "https://github.com/microsoft/playwright-mcp#getting-started",
+        "sourceUrl": "https://github.com/microsoft/playwright-mcp#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-webapp-testing",
+        "relation": "task",
+        "reason": "同类网页测试任务；使用 Playwright Python"
+      }
+    ]
+  },
+  {
+    "githubId": 1176011916,
+    "repo": "HKUDS/CLI-Anything",
+    "sourceHash": "16bea497cd1c27512f1b9d4e0d2fb3eb17c66c9d7e58d7d538219e7bdcc55b2c",
+    "readmeSha": "8a78b5420911eff5e7cc219bf1ecb2a12b562874",
+    "readmePath": "README.md",
+    "category": "Agent 工具",
+    "introduction": "为软件生成可由 Agent 调用的命令行入口，也提供发现和安装社区 CLI 的入口。适合把软件操作转成可重复的命令流程；生成或安装的 CLI 是否覆盖目标软件能力，需要结合对应项目检查。",
+    "uses": [
+      "查找已有软件的 Agent CLI",
+      "为目标软件制作命令行操作入口"
+    ],
+    "quickStart": "从 Quick Start 选择使用已有 CLI，或按所用 Agent 平台配置生成流程，再对照目标软件验证结果。",
+    "tasks": [
+      "agent",
+      "office"
+    ],
+    "conditions": {
+      "audience": "希望让 Agent 操作软件的开发者",
+      "runtime": "CLI-Hub 或所用 Agent 插件；目标软件可能需另装",
+      "credentials": "生成与调用流程按 Agent 及目标软件的认证要求配置",
+      "cost": "Agent 模型调用与目标软件许可分别确认"
+    },
+    "examples": [
+      {
+        "title": "CLI 使用与生成演示",
+        "url": "https://github.com/HKUDS/CLI-Anything#-quick-start",
+        "sourceUrl": "https://github.com/HKUDS/CLI-Anything#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 1140843380,
+    "repo": "mvanhorn/last30days-skill",
+    "sourceHash": "ee626e3e638bfc9b115b0442a83ead012f6badde53d386204b1a4293d461479a",
+    "readmeSha": "ee3f7f3b0f64f9ca996e579bfd2aa2383bace11b",
+    "readmePath": "README.md",
+    "category": "主题研究",
+    "introduction": "围绕主题检索社区讨论与网页资料，再汇总近期观点、经验和线索。适合调研用户反馈、工具用法和内容选题；研究结果应回到原始链接核对，不把社区热度直接当成事实结论。",
+    "uses": [
+      "收集某个主题的近期讨论",
+      "整理工具反馈与内容选题"
+    ],
+    "quickStart": "按 Install 选择工具对应的安装方式，查看数据来源和密钥要求，再用一个范围明确的主题试运行。",
+    "tasks": [
+      "research",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "研究选题、工具反馈与社区趋势的人",
+      "runtime": "支持 Agent Skills 的工具或项目列出的插件入口",
+      "credentials": "部分公开来源无需密钥；额外来源可配置自己的密钥",
+      "cost": "公开来源与带密钥服务条件不同；模型及付费数据按供应方确认"
+    },
+    "examples": [
+      {
+        "title": "主题调研使用场景",
+        "url": "https://github.com/mvanhorn/last30days-skill#what-people-actually-use-it-for",
+        "sourceUrl": "https://github.com/mvanhorn/last30days-skill#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 1278676884,
+    "repo": "NVIDIA/SkillEvaluator",
+    "sourceHash": "166390b685511e5741469f9b61101752f8756c764a278ff9485e1220cd0982d1",
+    "readmeSha": "00ccbe42b38ef21fe811796aa92476a682b90050",
+    "readmePath": "README.md",
+    "category": "技能评估",
+    "introduction": "评估 Agent 技能与插件的工具框架，检查结构质量、兼容性、重叠和实际行为影响。可从不需要密钥的检查开始，再配置更完整的评估；适合技能作者和维护技能集合的团队。",
+    "uses": [
+      "在发布前检查技能与插件",
+      "把技能评估接入仓库检查流程"
+    ],
+    "quickStart": "先按 Quickstart 运行基础检查，再根据需要准备模型访问条件，逐步使用更完整的评估流程。",
+    "tasks": [
+      "agent"
+    ],
+    "conditions": {
+      "audience": "Skill 作者与技能仓库维护者",
+      "runtime": "Python 3.12–3.14；完整评估按层级准备扫描器与 Docker",
+      "credentials": "基础静态检查无密钥；模型检查与 Agent 评估需相应配置",
+      "cost": "基础检查可离线；NVIDIA 原型额度受资格和限流条件约束，其他模型按供应方计费",
+      "hardware": "基础质量检查不要求 GPU；完整运行依所选评估层级确认"
+    },
+    "examples": [
+      {
+        "title": "无密钥基础检查示例",
+        "url": "https://github.com/NVIDIA/SkillEvaluator#quickstart",
+        "sourceUrl": "https://github.com/NVIDIA/SkillEvaluator#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-skill-creator",
+        "relation": "task",
+        "reason": "先制作技能，再准备评估"
+      }
+    ]
+  },
+  {
+    "githubId": 1226691771,
+    "repo": "google-research/paper-orchestra",
+    "sourceHash": "bc6d8a96c921deb03c5d39e01ff44ccd0ebcbed0df216b002775468a1ff1805c",
+    "readmeSha": "c79a45651aaf5f9ff5b9ec977c69ffd0c3e02095",
+    "readmePath": "README.md",
+    "category": "研究写作",
+    "introduction": "把研究想法、实验记录等材料组织成论文写作流程的多 Agent 框架。包含提纲、文献整理、章节起草、内容修改与图表制作，输出 LaTeX 文稿；适合辅助研究整理，引用与论述仍需研究者核验。",
+    "uses": [
+      "把实验材料整理成论文初稿",
+      "组织文献、章节与研究图表"
+    ],
+    "quickStart": "按 Installation 准备依赖，再查看 Usage 中的脚本或 Python 入口，用自己的研究材料验证输出与引用。",
+    "tasks": [
+      "research",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "整理研究材料与论文初稿的研究者",
+      "runtime": "Python 3.11 环境、研究材料与 LaTeX 模板",
+      "credentials": "按所用模型配置 API Key 或 Vertex AI 项目凭证",
+      "cost": "模型、检索等外部服务费用按各自提供方确认"
+    },
+    "examples": [
+      {
+        "title": "论文生成流程示例",
+        "url": "https://github.com/google-research/paper-orchestra#usage",
+        "sourceUrl": "https://github.com/google-research/paper-orchestra#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 1135847870,
+    "repo": "google-labs-code/stitch-skills",
+    "sourceHash": "5d0d6f9824bcbef0efd50a19c39f2f6996220fcf20459fb011cd13e1b7264f37",
+    "readmeSha": "e04cc601676a772474a023ba30e7064e6cf23dab",
+    "readmePath": "README.md",
+    "category": "设计开发",
+    "introduction": "配合 Google Stitch 使用的技能与插件集合，覆盖设计、实现与辅助任务。可接入不同的 AI 编程工具，把设计工作与页面实现衔接起来；所用客户端与 Stitch 服务需要分别准备。",
+    "uses": [
+      "在编程工具中使用 Stitch 设计能力",
+      "把设计结果衔接到页面与组件实现"
+    ],
+    "quickStart": "从 Quick Start 选择对应 AI 工具的安装方式，再配置 Stitch MCP 服务并检查可用技能。",
+    "tasks": [
+      "web",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "将界面设计衔接到开发的创作者",
+      "runtime": "支持技能的 AI 编程工具；配置 Stitch MCP",
+      "credentials": "需要按 Stitch MCP 官方设置准备凭证",
+      "cost": "Stitch 与 AI 编程工具的使用条件分别确认，仓库未给统一价格"
+    },
+    "examples": [
+      {
+        "title": "设计与实现任务示例",
+        "url": "https://github.com/google-labs-code/stitch-skills#available-plugins",
+        "sourceUrl": "https://github.com/google-labs-code/stitch-skills#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-frontend-design",
+        "relation": "task",
+        "reason": "同类界面设计任务，需分别安装"
+      }
+    ]
+  },
+  {
+    "githubId": 180190854,
+    "repo": "appwrite/appwrite",
+    "sourceHash": "59d657b9c35fd0b4ab04e906139b8351d8c6f1e24dd4cd25f0a7c78dd68154bb",
+    "readmeSha": "39a96d254f1d23e622630e5004d54a9de331ef7d",
+    "readmePath": "README.md",
+    "category": "应用后端",
+    "introduction": "为应用与 Agent 提供认证、数据库、文件存储、函数和消息等后端能力。支持托管云端或自托管，也能通过 SDK 与 MCP 接入开发流程；适合希望统一管理常用后端服务的项目。",
+    "uses": [
+      "为应用接入账号、数据与存储",
+      "让 Agent 连接已有后端项目"
+    ],
+    "quickStart": "先选择云端或自托管，按 Installation & Setup 创建项目，再选择所需产品、SDK 或 Agent 连接方式。",
+    "tasks": [
+      "web",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "需要账号、数据库与存储能力的开发者",
+      "runtime": "Appwrite Cloud 或 Docker 自托管",
+      "credentials": "托管 MCP 使用 OAuth；其他 SDK、服务端接口按项目权限配置",
+      "cost": "云端有免费与付费方案；自托管基础设施成本另计"
+    },
+    "examples": [
+      {
+        "title": "官方应用入门教程",
+        "url": "https://appwrite.io/docs/quick-starts/web",
+        "sourceUrl": "https://github.com/appwrite/appwrite#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-mcp-builder",
+        "relation": "task",
+        "reason": "自建 MCP 服务的补充参考"
+      }
+    ]
+  },
+  {
+    "githubId": 153097643,
+    "repo": "openvinotoolkit/openvino",
+    "sourceHash": "9617226aa653db4a7f205015ef1416f68edf1cfde1b69840d900b8d66ce7aee4",
+    "readmeSha": "7fa8d27f1e8f8e7d675aebc7a0a7c718c5b26d32",
+    "readmePath": "README.md",
+    "category": "模型推理",
+    "introduction": "用于优化和部署深度学习推理的工具包，提供模型转换、编译与运行等能力。可用于视觉、语音及生成式模型场景；适合需要在目标硬件上验证部署和推理表现的开发者。",
+    "uses": [
+      "转换并部署已有模型",
+      "在目标设备上检查推理性能"
+    ],
+    "quickStart": "先按 Installation 安装并验证环境，再从 Tutorials 选择与模型框架和目标设备匹配的例子。",
+    "tasks": [
+      "local",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "部署模型与优化推理的开发者",
+      "runtime": "本地安装工具包；Python/C++ 等入口",
+      "credentials": "本地推理示例无需云模型密钥；外部模型来源按服务认证",
+      "cost": "工具包 Apache-2.0；目标模型许可与硬件资源另行确认",
+      "hardware": "按官方支持设备与系统要求检查目标 CPU/GPU/NPU"
+    },
+    "examples": [
+      {
+        "title": "模型推理示例",
+        "url": "https://github.com/openvinotoolkit/openvino#tutorials-and-examples",
+        "sourceUrl": "https://github.com/openvinotoolkit/openvino#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 1073224795,
+    "repo": "obra/superpowers",
+    "sourceHash": "92f209e7344165c360d1025c9525accffea5726558abcc94d051ad7e8e55ac49",
+    "readmeSha": "c5bb59fdaf17ba154e803c549cd71a73ef36c24b",
+    "readmePath": "README.md",
+    "category": "开发流程",
+    "introduction": "为编程 Agent 组织的一组技能与软件开发方法，帮助把需求讨论、计划、实现和验证串成流程。适合希望让 AI 开发步骤更有结构的项目；不同客户端需要按各自说明安装与启用。",
+    "uses": [
+      "组织 AI 编程的计划与执行步骤",
+      "给项目接入可组合的开发技能"
+    ],
+    "quickStart": "在 Installation 中找到你的 AI 工具，完成接入后阅读 Basic Workflow，再用一个小任务确认流程。",
+    "tasks": [
+      "agent"
+    ],
+    "conditions": {
+      "audience": "使用编程 Agent 的开发者",
+      "runtime": "按 Claude Code、Codex 等具体客户端分别安装",
+      "credentials": "使用宿主工具已有模型认证；外部工具按任务另配",
+      "cost": "技能仓库 MIT；宿主工具或模型服务费用另计"
+    },
+    "examples": [
+      {
+        "title": "开发任务工作流",
+        "url": "https://github.com/obra/superpowers#how-it-works",
+        "sourceUrl": "https://github.com/obra/superpowers#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-skill-creator",
+        "relation": "task",
+        "reason": "制作可复用技能的参考"
+      }
+    ]
+  },
+  {
+    "githubId": 1136590548,
+    "repo": "affaan-m/ECC",
+    "sourceHash": "e4eb8aaa1f3709dfbddd66df722d80fd434b7b9b9867fddd8330683c2965308f",
+    "readmeSha": "12cec5467b2fe979aff27960641a251024517a71",
+    "readmePath": "README.md",
+    "category": "Agent 配置",
+    "introduction": "围绕编程 Agent 整理技能、规则、记忆与工作流的配置体系。适合为不同任务挑选需要的能力，并调整 Agent 的工作方式；应按客户端支持情况选择组件，避免一次导入所有配置。",
+    "uses": [
+      "为项目配置技能与开发规则",
+      "整理 Agent 的记忆和工作流程"
+    ],
+    "quickStart": "先阅读 README 的安装与客户端说明，选取与当前任务相关的组件，保留自己的配置后逐步接入。",
+    "tasks": [
+      "agent"
+    ],
+    "conditions": {
+      "audience": "维护 Agent 规则与开发流程的开发者",
+      "runtime": "通用安装包 Node.js 18+；不同宿主能力范围不同",
+      "credentials": "模型与 MCP 服务凭证按选用组件配置",
+      "cost": "仓库 MIT；另有托管付费产品，AI 与外部服务费用单独确认"
+    },
+    "examples": [
+      {
+        "title": "组件选择与接入示例",
+        "url": "https://github.com/affaan-m/ECC#install-ecc",
+        "sourceUrl": "https://github.com/affaan-m/ECC#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-skill-creator",
+        "relation": "task",
+        "reason": "制作可复用技能的参考"
+      }
+    ]
+  },
+  {
+    "githubId": 896335270,
+    "repo": "punkpeye/awesome-mcp-servers",
+    "sourceHash": "02bfcb486009cdd2eca4cc6f597572e5ae2d643ec6e8e85471db1cf049453134",
+    "readmeSha": "4d42d143433c9f448fc0184e2cb86f54305a2484",
+    "readmePath": "README.md",
+    "category": "MCP 目录",
+    "introduction": "按用途与类别整理 MCP 服务的资源目录，帮助查找可接入 AI 工具的外部能力。它提供发现入口，不是统一托管的服务；每个条目的安装、权限、计费和维护情况要回到对应项目确认。",
+    "uses": [
+      "按领域寻找 MCP 服务",
+      "比较候选服务的接入方式"
+    ],
+    "quickStart": "从目录选择领域，打开具体服务的仓库或文档，确认维护状态、权限和使用条件后再配置客户端。",
+    "tasks": [
+      "agent"
+    ],
+    "conditions": {
+      "audience": "寻找 MCP 服务的开发者",
+      "runtime": "资源目录；选择具体服务后在 MCP 客户端接入",
+      "credentials": "各条目不同，需到服务原仓库核对认证",
+      "cost": "目录不提供统一托管或计费；每个服务单独核对"
+    },
+    "examples": [
+      {
+        "title": "MCP 接入教程目录",
+        "url": "https://github.com/punkpeye/awesome-mcp-servers#tutorials",
+        "sourceUrl": "https://github.com/punkpeye/awesome-mcp-servers#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-mcp-builder",
+        "relation": "task",
+        "reason": "为缺少的能力制作 MCP 服务"
+      }
+    ]
+  },
+  {
+    "githubId": 1143633223,
+    "repo": "GoogleChrome/modern-web-guidance-src",
+    "sourceHash": "a91cb804076e96e1afab4ea265c5964222cc1064142df14ad6aa125e01688e65",
+    "readmeSha": "705d5b77f74d109637faffbdda9aacc035b181e8",
+    "readmePath": "README.md",
+    "category": "前端开发",
+    "introduction": "现代 Web 开发指导的源仓库，维护供编程 Agent 使用的实践资料、技能与评估内容。适合查找平台能力、兼容性和旧代码现代化的参考；使用技能与参与内容维护有不同入口。",
+    "uses": [
+      "为编程 Agent 查找现代 Web 实践",
+      "检查旧代码中可改进的平台用法"
+    ],
+    "quickStart": "从 Quickstart 选择试用或安装入口；如果只需要使用技能，优先查看 README 指向的分发仓库与文档。",
+    "tasks": [
+      "web",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "现代 Web 开发与代码改进的开发者",
+      "runtime": "源仓库维护资料；使用入口见分发仓库与 README",
+      "credentials": "指导资料与工具调用无统一密钥要求；宿主认证另配",
+      "cost": "资料许可与宿主工具费用分别确认，仓库未给统一服务价格"
+    },
+    "examples": [
+      {
+        "title": "导航抽屉实现指南",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance/blob/main/skills/modern-web-guidance/guides/ui-components/navigation-drawer.md",
+        "sourceUrl": "https://github.com/GoogleChrome/modern-web-guidance-src#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:vercel-labs-agent-skills-skills-web-design-guidelines",
+        "relation": "task",
+        "reason": "网页体验检查的补充参考"
+      }
+    ]
+  },
+  {
+    "githubId": 1123956658,
+    "repo": "backnotprop/plannotator",
+    "sourceHash": "86c6f6570c43d9656e9b531fbcd8163572cb9ae86f4a50d24106b8d59ce04742",
+    "readmeSha": "b8de95afdf52a703d9013c6ee51bbb5d22f44b18",
+    "readmePath": "README.md",
+    "category": "Agent 协作",
+    "introduction": "为 AI 编程提供本地浏览器审阅界面，可查看计划、文档、交互产物与代码变化，并将标注反馈给 Agent。适合在任务推进时保留人工判断与修改意见；先按所用工具接入相应工作流。",
+    "uses": [
+      "审阅并标注 Agent 的计划或产物",
+      "检查代码变化并集中返回反馈"
+    ],
+    "quickStart": "先选择所用 Agent 对应的接入方式，打开一份计划或代码变化，完成一次标注与反馈流程。",
+    "tasks": [
+      "agent",
+      "web"
+    ],
+    "conditions": {
+      "audience": "需要审阅 Agent 计划与产物的人",
+      "runtime": "本地浏览器审阅界面；按所用 Agent 接入",
+      "credentials": "可选 AI 或 URL 读取能力按服务配置认证",
+      "cost": "项目 Apache-2.0 或 MIT 双许可；可选服务与宿主模型费用另计"
+    },
+    "examples": [
+      {
+        "title": "需求文档审阅案例",
+        "url": "https://docs.plannotator.ai/templates/product-requirements-document",
+        "sourceUrl": "https://github.com/backnotprop/plannotator#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 1131202426,
+    "repo": "meta/astryx",
+    "sourceHash": "6b168f4400b9dd194918c91690578f80be16e7a98b6f2ee95f4b8055f679de8d",
+    "readmeSha": "d30ee50759fdfb941a9f1a681f13b02910601bb5",
+    "readmePath": "README.md",
+    "category": "UI 组件",
+    "introduction": "可定制的 React 设计系统，提供界面组件、主题与模板，并考虑人和 Agent 共同开发的使用方式。适合搭建协调的产品界面；需要结合项目框架、样式方案与当前版本要求选择接入方式。",
+    "uses": [
+      "为 React 产品搭建统一界面",
+      "定制组件主题并复用页面模板"
+    ],
+    "quickStart": "先在文档或 Storybook 查看组件，再按 README 的安装与主题设置接入现有 React 项目。",
+    "tasks": [
+      "web"
+    ],
+    "conditions": {
+      "audience": "构建 React 产品界面的开发者",
+      "runtime": "React 19+、主题、StyleX 与项目构建配置",
+      "credentials": "组件库接入步骤未要求模型 API Key",
+      "cost": "组件库 MIT；项目中接入的外部服务单独计费"
+    },
+    "examples": [
+      {
+        "title": "组件与主题接入示例",
+        "url": "https://github.com/meta/astryx#getting-started",
+        "sourceUrl": "https://github.com/meta/astryx#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:vercel-labs-agent-skills-skills-react-best-practices",
+        "relation": "task",
+        "reason": "React 项目性能参考"
+      },
+      {
+        "id": "skill:vercel-labs-agent-skills-skills-web-design-guidelines",
+        "relation": "task",
+        "reason": "界面体验检查"
+      }
+    ]
+  },
+  {
+    "githubId": 1241960226,
+    "repo": "alibaba/open-code-review",
+    "sourceHash": "c0beefd0eda93c6f27e5d824f21a542024cc07d035d81646c605d2a1a7d16833",
+    "readmeSha": "8728015fc50b50da660a793da84694df9652aa80",
+    "readmePath": "README.md",
+    "category": "代码审查",
+    "introduction": "结合确定性检查与 LLM Agent 的代码审查工具，可读取 Git 变化或检查完整文件，生成定位到代码行的审阅意见。适合本地审查和自动化检查；模型连接、审查范围与反馈需要按项目配置。",
+    "uses": [
+      "审查工作区或分支代码变化",
+      "对陌生文件进行完整代码检查"
+    ],
+    "quickStart": "从 How to Use 选择 Skill 或 CLI 入口，确认审查范围与模型配置，再在小范围变化上验证输出。",
+    "tasks": [
+      "agent"
+    ],
+    "conditions": {
+      "audience": "希望审查代码变化的开发者",
+      "runtime": "Git 2.41+、ocr CLI；可接入 Agent Skills",
+      "credentials": "原生模式配置模型提供方；委托模式沿用宿主认证",
+      "cost": "委托模式不代表模型免费，宿主订阅与 API 凭证分开确认"
+    },
+    "examples": [
+      {
+        "title": "代码审查模式示例",
+        "url": "https://github.com/alibaba/open-code-review#how-to-use",
+        "sourceUrl": "https://github.com/alibaba/open-code-review#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 1079356098,
+    "repo": "tradermonty/claude-trading-skills",
+    "sourceHash": "7827a95c18cae38d9a6187da3e1f2dd3cc004729866477175d4d453650bd02d7",
+    "readmeSha": "a3c2d91c57fb18cbe5cdb5b2aaca5e34f44b63b8",
+    "readmePath": "README.md",
+    "category": "研究工具",
+    "introduction": "围绕市场回顾、风险管理、交易计划与复盘组织的 Claude 技能集合。适合整理研究流程与检查清单，帮助用户形成可回顾的记录；它提供研究辅助，不替用户作出买卖决定。",
+    "uses": [
+      "整理市场观察与研究清单",
+      "记录交易计划和复盘过程"
+    ],
+    "quickStart": "先阅读 Recommended Starting Path 与示例输出，从不需要 API Key 的路径或单个技能开始，确认数据条件。",
+    "tasks": [
+      "research",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "整理市场研究与复盘流程的人",
+      "runtime": "Claude 或支持技能的客户端；按具体技能准备输入",
+      "credentials": "基础起步路径不需要付费数据 API；部分技能需数据服务密钥",
+      "cost": "基础资料与付费行情服务条件不同；模型与数据订阅分别确认"
+    },
+    "examples": [
+      {
+        "title": "无付费数据 API 起步示例",
+        "url": "https://github.com/tradermonty/claude-trading-skills#no-api-key-starter-path",
+        "sourceUrl": "https://github.com/tradermonty/claude-trading-skills#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 1054793726,
+    "repo": "ChromeDevTools/chrome-devtools-mcp",
+    "sourceHash": "974036aa8626db5ee58ec95051ef5309c0ac2a586bdf5fa4805681a338838eef",
+    "readmeSha": "2dca1a052a314a7c2635fb9da68c96221441e380",
+    "readmePath": "README.md",
+    "category": "浏览器调试",
+    "introduction": "把 Chrome 开发者工具能力接入编程 Agent，可查看网络请求、控制台与性能记录，也支持浏览器操作。适合排查网页问题与分析运行表现；需要准备浏览器、运行环境和对应客户端连接。",
+    "uses": [
+      "排查网页网络与控制台错误",
+      "记录并分析页面性能问题"
+    ],
+    "quickStart": "按 Requirements 准备环境，再从 Getting started 选择 MCP 或 CLI 入口，使用测试页面验证连接。",
+    "tasks": [
+      "web",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "网页性能分析与调试开发者",
+      "runtime": "Node.js LTS、Chrome 与对应 MCP/CLI 客户端",
+      "credentials": "工具连接与宿主模型认证分别设置",
+      "cost": "仓库 Apache-2.0；所用 Agent 或模型服务费用另计"
+    },
+    "examples": [
+      {
+        "title": "网页调试首个任务",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp#your-first-prompt",
+        "sourceUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-webapp-testing",
+        "relation": "task",
+        "reason": "同类网页测试任务；工具入口不同"
+      }
+    ]
+  },
+  {
+    "githubId": 1131513930,
+    "repo": "ZhuLinsen/daily_stock_analysis",
+    "sourceHash": "dac6a74e567b7edcc342cd0986e096c46789dbeeec1f7a22267b5205cc59680a",
+    "readmeSha": "23af9944b9a8597549778661357d4eeb3039f72b",
+    "readmePath": "README.md",
+    "category": "研究看板",
+    "introduction": "使用多源行情、新闻与大语言模型分析自选股，生成研究看板并可配置通知。支持定时运行与不同部署方式；模型、数据源和推送渠道需要各自配置，输出适合辅助研究与复盘。",
+    "uses": [
+      "汇总自选股行情与新闻",
+      "定时生成研究看板和通知"
+    ],
+    "quickStart": "从快速开始选择 GitHub Actions、本地或 Docker 部署，配置模型与数据条件，先手动运行并核对结果。",
+    "tasks": [
+      "research",
+      "office"
+    ],
+    "conditions": {
+      "audience": "整理自选股研究与定时看板的人",
+      "runtime": "Python 3.10+、Docker 或 GitHub Actions",
+      "credentials": "云端运行配置模型 API Key；本地 Ollama 路径按文档配置",
+      "cost": "模型、行情、搜索与推送服务按所选提供方确认"
+    },
+    "examples": [
+      {
+        "title": "部署与研究看板教程",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/main/docs/full-guide.md",
+        "sourceUrl": "https://github.com/ZhuLinsen/daily_stock_analysis#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 979392131,
+    "repo": "ag-ui-protocol/ag-ui",
+    "sourceHash": "ed59976bc090a991b2a79521ae4a1a913164f513f2c66391fb25ac2de13df2ab",
+    "readmeSha": "511991757bea32ccb96348a311469f0fd345c88b",
+    "readmePath": "README.md",
+    "category": "交互协议",
+    "introduction": "规范 Agent 与用户界面之间事件传递的开放协议，用事件流连接模型输出、工具调用与共享状态。适合把已有 Agent 接到应用中，减少不同框架各自连接的工作；它是协议与 SDK，不是完整业务应用。",
+    "uses": [
+      "把 Agent 接入网页或其他前端",
+      "处理流式输出、工具与状态事件"
+    ],
+    "quickStart": "从 Quick start 和示例选择与你的服务端、前端匹配的 SDK，再跑通一条事件流。",
+    "tasks": [
+      "agent",
+      "web"
+    ],
+    "conditions": {
+      "audience": "连接 Agent 与应用界面的开发者",
+      "runtime": "协议与 SDK；README 示例使用 Python 3.9+、Node.js 20+",
+      "credentials": "最小事件流示例无模型密钥；接入真实模型后按提供方配置",
+      "cost": "协议与 SDK 为 MIT；模型和运行基础设施费用单独确认"
+    },
+    "examples": [
+      {
+        "title": "服务端与客户端示例",
+        "url": "https://github.com/ag-ui-protocol/ag-ui#quick-start",
+        "sourceUrl": "https://github.com/ag-ui-protocol/ag-ui#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-mcp-builder",
+        "relation": "task",
+        "reason": "补充工具接入；MCP 与 AG-UI 职责不同"
+      }
+    ]
+  },
+  {
+    "githubId": 1132001614,
+    "repo": "vercel-labs/agent-browser",
+    "sourceHash": "08a0dbf0846865d0cb036c770c13a4d82697e4f39a4abf673d1ee2ec308fd566",
+    "readmeSha": "53f71fd42a568994479edfa5063c58ca0b5dad8d",
+    "readmePath": "README.md",
+    "category": "浏览器自动化",
+    "introduction": "供 Agent 从命令行操作浏览器的工具，通过页面快照读取结构，再按元素标识执行点击、输入与导航。适合重复网页操作和功能检查；浏览器在命令之间保持状态，可逐步读取结果确认动作。",
+    "uses": [
+      "用命令行执行可重复的网页流程",
+      "让 Agent 检查表单与页面状态"
+    ],
+    "quickStart": "先按 Install 准备 CLI 与浏览器，再跟随 Quick start 打开测试页面、读取快照并执行一个动作。",
+    "tasks": [
+      "agent",
+      "web"
+    ],
+    "conditions": {
+      "audience": "让 Agent 执行网页流程的开发者",
+      "runtime": "CLI 与所选浏览器运行环境",
+      "credentials": "浏览器 CLI 与宿主 Agent 的模型认证分开设置",
+      "cost": "CLI Apache-2.0；宿主工具与外部浏览器服务费用另计"
+    },
+    "examples": [
+      {
+        "title": "浏览器操作示例",
+        "url": "https://github.com/vercel-labs/agent-browser#quick-start",
+        "sourceUrl": "https://github.com/vercel-labs/agent-browser#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:vercel-labs-agent-browser-skills-agent-browser",
+        "relation": "same-repo",
+        "reason": "本项目官方配套技能"
+      }
+    ]
+  },
+  {
+    "githubId": 1299769220,
+    "repo": "openai/codex-security",
+    "sourceHash": "1500121ba7620a690c90fc37fa781acafab71b79d69be22c6d8d9adca7a84a99",
+    "readmeSha": "985e1e45098f5a02d7ef3932ae164823e9435acb",
+    "readmePath": "README.md",
+    "category": "安全开发",
+    "introduction": "提供漏洞发现、调查、验证和修复工作流，支持在 Codex 中使用，或通过 CLI、TypeScript SDK 与自动化流程接入。适合在授权的代码范围内进行安全检查，结果仍需结合项目上下文审阅。",
+    "uses": [
+      "扫描代码变化并验证可疑问题",
+      "把安全检查接入开发流程"
+    ],
+    "quickStart": "从 Quick start 或 Codex 工作流开始，明确授权仓库与扫描范围，先查看结果再审阅修复方案。",
+    "tasks": [
+      "agent"
+    ],
+    "conditions": {
+      "audience": "在授权代码范围内进行安全检查的开发者",
+      "runtime": "Node.js 22.13+（22.x）或 24/26；Python 3.10+",
+      "credentials": "CI 配置 OpenAI/Codex API Key；其他入口按授权方式认证",
+      "cost": "模型扫描消耗由所选账户与提供方计费；示例预算不代表固定价格"
+    },
+    "examples": [
+      {
+        "title": "安全检查工作流示例",
+        "url": "https://github.com/openai/codex-security#github-actions",
+        "sourceUrl": "https://github.com/openai/codex-security#readme"
+      }
+    ]
+  },
+  {
+    "githubId": 543101941,
+    "repo": "dream-num/univer",
+    "sourceHash": "238f3c111a4617fc1f1e7dafee6c61f59f22091312216466a303ae3f8e5ae853",
+    "readmeSha": "3244196198837cd4b1a8d4eb0d3350273af9a260",
+    "readmePath": "README.md",
+    "category": "办公 SDK",
+    "introduction": "把电子表格与文档的编辑、计算、文件处理等能力接入自己的产品，也可通过 API 和事件与 Agent 协作。适合构建嵌入式办公界面；开源核心与扩展能力的范围、运行条件和许可需要分别确认。",
+    "uses": [
+      "给产品嵌入表格或文档编辑器",
+      "通过 API 让应用与 Agent 操作文档"
+    ],
+    "quickStart": "先运行 README 的开源表格编辑器 Quick start，再查看需要的功能范围、集成方式和许可。",
+    "tasks": [
+      "web",
+      "office",
+      "agent"
+    ],
+    "conditions": {
+      "audience": "为产品嵌入表格与文档能力的开发者",
+      "runtime": "Web SDK；浏览器集成，也有 Node.js Headless 能力",
+      "credentials": "开源编辑器示例不需模型密钥；应用自行接入的 AI 另配",
+      "cost": "开源核心 Apache-2.0；商业插件、Server SDK 与 AI SDK 分开授权"
+    },
+    "examples": [
+      {
+        "title": "开源表格编辑器示例",
+        "url": "https://github.com/dream-num/univer#quick-start-an-open-source-spreadsheet-editor",
+        "sourceUrl": "https://github.com/dream-num/univer#readme"
+      }
+    ],
+    "relatedSkills": [
+      {
+        "id": "skill:anthropics-skills-skills-xlsx",
+        "relation": "task",
+        "reason": "同类表格处理任务；并非 Univer SDK 技能"
+      }
+    ]
+  },
+  {
+    "githubId": 1401461555,
+    "repo": "Vincentwei1021/mg-styles-15",
+    "sourceHash": "b6a129e0c864eb751c09fa7c57277ea4aa6c44e7a4c06fadd845cb595004b664",
+    "readmeSha": "980c78086322c240803af15f9f09759b3a5fd7c5",
+    "readmePath": "README.md",
+    "category": "创作工具",
+    "introduction": "15 种风格的十秒动效案例，提供成片、代码与提示词，可用于选择视觉方向和研究实现。当前仓库未提供可安装的 SKILL.md，因此作为动效参考项目收录。",
+    "uses": [
+      "挑选动效风格，研究代码与提示词",
+      "对照案例制作自己的视频"
+    ],
+    "quickStart": "先在 README 查看风格目录和案例，再按需阅读对应源码。仅浏览参考不需要安装；本地渲染前检查项目依赖。",
+    "tasks": [
+      "media"
+    ],
+    "conditions": {
+      "audience": "需要代码动效参考的设计师与开发者",
+      "runtime": "本地渲染需要 Node.js 22.12+、Python 3.11+ 与 ffmpeg",
+      "cost": "项目代码、提示词与原创案例采用 MIT 许可；第三方素材保留各自许可"
+    }
+  }
+]

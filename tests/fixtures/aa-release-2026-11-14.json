@@ -1,0 +1,3380 @@
+{
+  "source": "https://artificialanalysis.ai/leaderboards/models",
+  "detailSource": "https://artificialanalysis.ai/models/claude-fable-5-2",
+  "capturedOn": "2026-11-14",
+  "indexVersion": "v5.0.1",
+  "ranking": [
+    {
+      "id": "593f2d23-247b-41c9-a679-cebd225f0a9a",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2"
+      },
+      "name": "Claude Fable 5.2 (Max, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (max)",
+      "suffix": "Max, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 64.563595756626,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 26.53855780398091,
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": 10,
+      "intelligenceIndexTimePerTask": 2715.963878873451
+    },
+    {
+      "id": "76942526-cc96-46b0-bc27-29561c53ed70",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2"
+      },
+      "name": "Claude Fable 5.2 (Xhigh, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (xhigh)",
+      "suffix": "Xhigh, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 62.2167392403357,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 14.828587632511116,
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": 10,
+      "intelligenceIndexTimePerTask": 1663.42178137454
+    },
+    {
+      "id": "fdc1913b-9497-45ef-83f7-17dae756f37e",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2"
+      },
+      "name": "Claude Fable 5.2 (High, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (high)",
+      "suffix": "High, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 61.8218785440284,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 9.078414777860381,
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": 10,
+      "intelligenceIndexTimePerTask": 965.3653402668734
+    },
+    {
+      "id": "909ed0ba-bcc5-4f38-8162-08a4e187a772",
+      "release": {
+        "slug": "gemini-4-carbon",
+        "name": "Gemini 4 Carbon"
+      },
+      "name": "Gemini 4 Carbon (High)",
+      "shortName": "Gemini 4 Carbon (high)",
+      "suffix": "High",
+      "modelCreatorName": "Google",
+      "intelligenceIndex": 60.025738829526,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 5.484780948230178,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": 4,
+      "intelligenceIndexTimePerTask": 1878.6392121384233
+    },
+    {
+      "id": "2f3c4dc9-a450-4303-8697-0237257cf08f",
+      "release": {
+        "slug": "claude-opus-5-5",
+        "name": "Claude Opus 5.5"
+      },
+      "name": "Claude Opus 5.5 (Max, Default Fallback)",
+      "shortName": "Claude Opus 5.5 (max)",
+      "suffix": "Max, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 59.1060336078904,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 10.036409719512749,
+      "price1mInputTokens": 4,
+      "price1mOutputTokens": 20,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": 5,
+      "intelligenceIndexTimePerTask": 1523.2596504377857
+    },
+    {
+      "id": "0d3eaafd-54ed-4f78-bdd7-05a2db883986",
+      "release": {
+        "slug": "gemini-4-carbon",
+        "name": "Gemini 4 Carbon"
+      },
+      "name": "Gemini 4 Carbon (Medium)",
+      "shortName": "Gemini 4 Carbon (medium)",
+      "suffix": "Medium",
+      "modelCreatorName": "Google",
+      "intelligenceIndex": 58.2587824022788,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 4.677653677420589,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": 4,
+      "intelligenceIndexTimePerTask": 1668.8853537474126
+    },
+    {
+      "id": "df5bf99d-d228-4715-b41b-19ca86118777",
+      "release": {
+        "slug": "claude-opus-5-5",
+        "name": "Claude Opus 5.5"
+      },
+      "name": "Claude Opus 5.5 (Xhigh, Default Fallback)",
+      "shortName": "Claude Opus 5.5 (xhigh)",
+      "suffix": "Xhigh, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 57.4447060170507,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 6.047194490848774,
+      "price1mInputTokens": 4,
+      "price1mOutputTokens": 20,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": 5,
+      "intelligenceIndexTimePerTask": 939.6605230428011
+    },
+    {
+      "id": "2f339a97-9a0d-499a-9cb5-e0db665bfa25",
+      "release": {
+        "slug": "gpt-6-astra",
+        "name": "GPT-6 Astra"
+      },
+      "name": "GPT-6 Astra (Max)",
+      "shortName": "GPT-6 Astra (max)",
+      "suffix": "Max",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 56.8538559596797,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 6.244666943602518,
+      "price1mInputTokens": 10,
+      "price1mOutputTokens": 50,
+      "cacheHitPrice": 1,
+      "cacheWritePrice": 12.5,
+      "intelligenceIndexTimePerTask": 1427.2783532399321
+    },
+    {
+      "id": "0c9b4e05-9259-42cc-b40e-d6acbbeaa7e8",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2"
+      },
+      "name": "Claude Fable 5.2 (Medium, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (medium)",
+      "suffix": "Medium, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 56.4083157101519,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 3.8026050641787634,
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": 10,
+      "intelligenceIndexTimePerTask": 456.8638240666126
+    },
+    {
+      "id": "1f541ef3-913f-4eb2-9d07-0e93c7a9a5e3",
+      "release": {
+        "slug": "gpt-6-astra",
+        "name": "GPT-6 Astra"
+      },
+      "name": "GPT-6 Astra (Xhigh)",
+      "shortName": "GPT-6 Astra (xhigh)",
+      "suffix": "Xhigh",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 55.3057468569681,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 3.6589264906126227,
+      "price1mInputTokens": 10,
+      "price1mOutputTokens": 50,
+      "cacheHitPrice": 1,
+      "cacheWritePrice": 12.5,
+      "intelligenceIndexTimePerTask": 712.171067557583
+    },
+    {
+      "id": "e05a4828-0536-4876-870d-a235023f992b",
+      "release": {
+        "slug": "gpt-6-astra",
+        "name": "GPT-6 Astra"
+      },
+      "name": "GPT-6 Astra (High)",
+      "shortName": "GPT-6 Astra (high)",
+      "suffix": "High",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 54.849838322506,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 3.2385719685518306,
+      "price1mInputTokens": 10,
+      "price1mOutputTokens": 50,
+      "cacheHitPrice": 1,
+      "cacheWritePrice": 12.5,
+      "intelligenceIndexTimePerTask": 568.99073902566
+    },
+    {
+      "id": "b25ac058-1e33-4c31-bbc9-a20c3ad0717a",
+      "release": {
+        "slug": "gpt-6-1-sol",
+        "name": "GPT-6.1 Sol"
+      },
+      "name": "GPT-6.1 Sol (Max)",
+      "shortName": "GPT-6.1 Sol (max)",
+      "suffix": "Max",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 54.6087338138148,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 1.2720632679446995,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": 2.5,
+      "intelligenceIndexTimePerTask": 1384.8560122699591
+    },
+    {
+      "id": "b171d979-5ec1-45de-b8b9-db1ee65e77ec",
+      "release": {
+        "slug": "claude-sonnet-5-5",
+        "name": "Claude Sonnet 5.5"
+      },
+      "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
+      "shortName": "Claude Sonnet 5.5 (max)",
+      "suffix": "Max, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 54.54133407109,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 10.020621343395753,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": 2.5,
+      "intelligenceIndexTimePerTask": 2031.1647767968998
+    },
+    {
+      "id": "b3866703-a9f7-4ea2-8f3f-b361c90aaf0e",
+      "release": {
+        "slug": "gemini-4-carbon",
+        "name": "Gemini 4 Carbon"
+      },
+      "name": "Gemini 4 Carbon (Low)",
+      "shortName": "Gemini 4 Carbon (low)",
+      "suffix": "Low",
+      "modelCreatorName": "Google",
+      "intelligenceIndex": 54.2206114502924,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 5.221404723668021,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": 4,
+      "intelligenceIndexTimePerTask": 1681.9269498407118
+    },
+    {
+      "id": "cfc7acb1-d903-4858-9b6c-6c7776caf8f9",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2"
+      },
+      "name": "Claude Fable 5.2 (Low, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (low)",
+      "suffix": "Low, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 53.9249388799182,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 3.097241904274546,
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": 10,
+      "intelligenceIndexTimePerTask": 349.75665088691073
+    },
+    {
+      "id": "dad0e3b1-e3e7-477a-99f9-c14457a91114",
+      "release": {
+        "slug": "gemini-4-hydrogen",
+        "name": "Gemini 4 Hydrogen"
+      },
+      "name": "Gemini 4 Hydrogen (Xhigh)",
+      "shortName": "Gemini 4 Hydrogen (xhigh)",
+      "suffix": "Xhigh",
+      "modelCreatorName": "Google",
+      "intelligenceIndex": 53.9192287317542,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 3.1601590757006157,
+      "price1mInputTokens": 1.5,
+      "price1mOutputTokens": 7.5,
+      "cacheHitPrice": 0.075,
+      "cacheWritePrice": null,
+      "intelligenceIndexTimePerTask": 889.4953257981133
+    },
+    {
+      "id": "092a3b0e-c5c8-45dc-bf1b-53673c8ff352",
+      "release": {
+        "slug": "gpt-6-1-sol",
+        "name": "GPT-6.1 Sol"
+      },
+      "name": "GPT-6.1 Sol (Xhigh)",
+      "shortName": "GPT-6.1 Sol (xhigh)",
+      "suffix": "Xhigh",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 52.458219253291,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 0.7639949356156494,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": 2.5,
+      "intelligenceIndexTimePerTask": 637.6714234311979
+    },
+    {
+      "id": "f314eade-2232-44bf-a3ab-9b326bc67de6",
+      "release": {
+        "slug": "claude-opus-5-5",
+        "name": "Claude Opus 5.5"
+      },
+      "name": "Claude Opus 5.5 (High, Default Fallback)",
+      "shortName": "Claude Opus 5.5 (high)",
+      "suffix": "High, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 51.8359958227294,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 3.4646622820973185,
+      "price1mInputTokens": 4,
+      "price1mOutputTokens": 20,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": 5,
+      "intelligenceIndexTimePerTask": 569.2832000826174
+    },
+    {
+      "id": "e97a4ef5-e817-480e-9595-12f81dc4974f",
+      "release": {
+        "slug": "gpt-6-astra",
+        "name": "GPT-6 Astra"
+      },
+      "name": "GPT-6 Astra (Medium)",
+      "shortName": "GPT-6 Astra (medium)",
+      "suffix": "Medium",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 51.5548393864113,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 2.732438933013427,
+      "price1mInputTokens": 10,
+      "price1mOutputTokens": 50,
+      "cacheHitPrice": 1,
+      "cacheWritePrice": 12.5,
+      "intelligenceIndexTimePerTask": 459.31463786901645
+    },
+    {
+      "id": "b0c462cf-f2d0-4126-9434-28db9502219f",
+      "release": {
+        "slug": "gpt-6-1-terra",
+        "name": "GPT-6.1 Terra"
+      },
+      "name": "GPT-6.1 Terra (Max)",
+      "shortName": "GPT-6.1 Terra (max)",
+      "suffix": "Max",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 51.3265188577015,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 0.961108031081634,
+      "price1mInputTokens": 1,
+      "price1mOutputTokens": 5,
+      "cacheHitPrice": 0.05,
+      "cacheWritePrice": 1.25,
+      "intelligenceIndexTimePerTask": 873.4749641166119
+    },
+    {
+      "id": "dae0262d-26a4-44d1-925a-6f2731cbda6a",
+      "release": {
+        "slug": "gemini-4-hydrogen",
+        "name": "Gemini 4 Hydrogen"
+      },
+      "name": "Gemini 4 Hydrogen (High)",
+      "shortName": "Gemini 4 Hydrogen (high)",
+      "suffix": "High",
+      "modelCreatorName": "Google",
+      "intelligenceIndex": 50.7870826951304,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 1.8733140062520008,
+      "price1mInputTokens": 1.5,
+      "price1mOutputTokens": 7.5,
+      "cacheHitPrice": 0.075,
+      "cacheWritePrice": null,
+      "intelligenceIndexTimePerTask": 505.5195686681519
+    },
+    {
+      "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+      "release": {
+        "slug": "gemini-4-argon",
+        "name": "Gemini 4 Argon"
+      },
+      "name": "Gemini 4 Argon (High)",
+      "shortName": "Gemini 4 Argon (high)",
+      "suffix": "High",
+      "modelCreatorName": "Google",
+      "intelligenceIndex": 50.4121935905389,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 4.973304355775267,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": null,
+      "intelligenceIndexTimePerTask": 1762.8876218422429
+    },
+    {
+      "id": "3b84fee3-b70a-41bc-819e-5fbdef9a0042",
+      "release": {
+        "slug": "gpt-6-1-sol",
+        "name": "GPT-6.1 Sol"
+      },
+      "name": "GPT-6.1 Sol (High)",
+      "shortName": "GPT-6.1 Sol (high)",
+      "suffix": "High",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 50.3291231936536,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 0.5909853515780825,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": 2.5,
+      "intelligenceIndexTimePerTask": 472.72151087037355
+    },
+    {
+      "id": "e994a6e0-d36b-4dab-8ae1-c1b469e4d9e2",
+      "release": {
+        "slug": "muse-wonder-full",
+        "name": "Muse Wonder Full"
+      },
+      "name": "Muse Wonder Full (Max)",
+      "shortName": "Muse Wonder Full (max)",
+      "suffix": "Max",
+      "modelCreatorName": "Meta",
+      "intelligenceIndex": 50.0772123627021,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "price1mInputTokens": null,
+      "price1mOutputTokens": null,
+      "cacheHitPrice": null,
+      "cacheWritePrice": null
+    },
+    {
+      "id": "975aeaef-50bd-4a65-9c73-f1015adcd4d4",
+      "release": {
+        "slug": "claude-sonnet-5-5",
+        "name": "Claude Sonnet 5.5"
+      },
+      "name": "Claude Sonnet 5.5 (Xhigh, Default Fallback)",
+      "shortName": "Claude Sonnet 5.5 (xhigh)",
+      "suffix": "Xhigh, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 49.9240327787242,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 4.091984916321919,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": 2.5,
+      "intelligenceIndexTimePerTask": 861.8116961863043
+    },
+    {
+      "id": "ea9e0da6-169f-43c6-92f5-730a10d6ff8d",
+      "release": {
+        "slug": "claude-opus-5-5",
+        "name": "Claude Opus 5.5"
+      },
+      "name": "Claude Opus 5.5 (Medium, Default Fallback)",
+      "shortName": "Claude Opus 5.5 (medium)",
+      "suffix": "Medium, Default Fallback",
+      "modelCreatorName": "Anthropic",
+      "intelligenceIndex": 48.2081024960691,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 2.4510894376611723,
+      "price1mInputTokens": 4,
+      "price1mOutputTokens": 20,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": 5,
+      "intelligenceIndexTimePerTask": 416.6113854341372
+    },
+    {
+      "id": "48e6f735-f2bc-418f-b99f-3dc5a0ddda77",
+      "release": {
+        "slug": "gemini-4-argon",
+        "name": "Gemini 4 Argon"
+      },
+      "name": "Gemini 4 Argon (Medium)",
+      "shortName": "Gemini 4 Argon (medium)",
+      "suffix": "Medium",
+      "modelCreatorName": "Google",
+      "intelligenceIndex": 47.6040598289046,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 4.314621569087732,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": null,
+      "intelligenceIndexTimePerTask": 1735.6124598805548
+    },
+    {
+      "id": "665c67ca-09eb-48f0-a7a3-0096e1d5de51",
+      "release": {
+        "slug": "kimi-k3-1-pro",
+        "name": "Kimi K3.1 Pro"
+      },
+      "name": "Kimi K3.1 Pro",
+      "shortName": "Kimi K3.1 Pro",
+      "suffix": null,
+      "modelCreatorName": "Kimi",
+      "intelligenceIndex": 46.4526236744189,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": true,
+      "intelligenceIndexCostPerTask": 3.6812002895742055,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.2,
+      "cacheWritePrice": null,
+      "intelligenceIndexTimePerTask": 2381.225877510815
+    },
+    {
+      "id": "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",
+      "release": {
+        "slug": "gpt-6-1-sol",
+        "name": "GPT-6.1 Sol"
+      },
+      "name": "GPT-6.1 Sol (Medium)",
+      "shortName": "GPT-6.1 Sol (medium)",
+      "suffix": "Medium",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 46.3468797067114,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 0.3593898648025732,
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "cacheWritePrice": 2.5,
+      "intelligenceIndexTimePerTask": 273.9221889652349
+    },
+    {
+      "id": "e8d443ba-8aca-4830-a186-ae869bb9c6fe",
+      "release": {
+        "slug": "gpt-6-1-terra",
+        "name": "GPT-6.1 Terra"
+      },
+      "name": "GPT-6.1 Terra (Xhigh)",
+      "shortName": "GPT-6.1 Terra (xhigh)",
+      "suffix": "Xhigh",
+      "modelCreatorName": "OpenAI",
+      "intelligenceIndex": 45.250051789066,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "intelligenceIndexCostPerTask": 0.40068900166662513,
+      "price1mInputTokens": 1,
+      "price1mOutputTokens": 5,
+      "cacheHitPrice": 0.05,
+      "cacheWritePrice": 1.25,
+      "intelligenceIndexTimePerTask": 397.7400011941381
+    }
+  ],
+  "details": [
+    {
+      "id": "593f2d23-247b-41c9-a679-cebd225f0a9a",
+      "slug": "claude-fable-5-2",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2",
+        "deprecatedTo": null
+      },
+      "name": "Claude Fable 5.2 (Max, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (max)",
+      "suffix": "Max, Default Fallback",
+      "intelligenceIndex": 64.563595756626,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 100.80250421218814,
+        "timeToFirstToken": 268.4313495212288,
+        "timeToFirstAnswerToken": 268.4313495212288
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 26.53855780398091,
+          "input": 15.64678043132377,
+          "nonCacheInput": 0.07111078298630708,
+          "cacheRead": 8.52535562933377,
+          "cacheWrite": 7.050314019003696,
+          "output": 10.891777372657142,
+          "reasoning": 7.666608882155873,
+          "answer": 3.225168490501267
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 8.902730229707965
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.22241591274403966
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 3.15897693022129
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 6.506110742387084
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.03284773122176135
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.1258948491622445
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.1733883952
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.635304112146068
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 6.780888901190461
+          }
+        ]
+      },
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 2715.963878873451,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.487597222222222,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1784.88,
+          "lower95ci": 1772.55,
+          "upper95ci": 1797.66
+        }
+      },
+      "omniscienceAccuracy": 0.7913333333333333,
+      "omniscienceHallucinationRate": 0.5926517571884984,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "76942526-cc96-46b0-bc27-29561c53ed70",
+      "slug": "claude-fable-5-2-xhigh",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2",
+        "deprecatedTo": null
+      },
+      "name": "Claude Fable 5.2 (Xhigh, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (xhigh)",
+      "suffix": "Xhigh, Default Fallback",
+      "intelligenceIndex": 62.2167392403357,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 97.3560197169154,
+        "timeToFirstToken": 91.1189360562055,
+        "timeToFirstAnswerToken": 91.1189360562055
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 14.828587632511116,
+          "input": 8.397892264788894,
+          "nonCacheInput": 0.0711322908411501,
+          "cacheRead": 4.383129741240549,
+          "cacheWrite": 3.943630232707196,
+          "output": 6.430695367722222,
+          "reasoning": 4.22269251108988,
+          "answer": 2.2080028566323415
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 4.284497881546184
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.11370283492342466
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 2.08121385936618
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 3.2120853472627293
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.00488897301155435
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.09245762259271
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.08755616879999999
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.24721107765679204
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 4.7049738673515415
+          }
+        ]
+      },
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 1663.42178137454,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.475810858585859,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1737.43,
+          "lower95ci": 1727.26,
+          "upper95ci": 1748.29
+        }
+      },
+      "omniscienceAccuracy": 0.7803333333333333,
+      "omniscienceHallucinationRate": 0.6039453717754173,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "fdc1913b-9497-45ef-83f7-17dae756f37e",
+      "slug": "claude-fable-5-2-high",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2",
+        "deprecatedTo": null
+      },
+      "name": "Claude Fable 5.2 (High, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (high)",
+      "suffix": "High, Default Fallback",
+      "intelligenceIndex": 61.8218785440284,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 101.35127118491823,
+        "timeToFirstToken": 28.1604701704083,
+        "timeToFirstAnswerToken": 28.1604701704083
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 9.078414777860381,
+          "input": 5.190098815448977,
+          "nonCacheInput": 0.07112227306398805,
+          "cacheRead": 2.596983633522906,
+          "cacheWrite": 2.5219929088620816,
+          "output": 3.8883159624114056,
+          "reasoning": 2.3148246519898654,
+          "answer": 1.5734913104215404
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 2.3229852805274547
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.08456010438232674
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 1.3468788577499402
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 1.445298346217908
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.00293308231915455
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.08221409868674348
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.046448924800000006
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.1049383457348336
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 3.6421577374420204
+          }
+        ]
+      },
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 965.3653402668734,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.491275757575758,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1677.08,
+          "lower95ci": 1667.68,
+          "upper95ci": 1688.98
+        }
+      },
+      "omniscienceAccuracy": 0.7723333333333333,
+      "omniscienceHallucinationRate": 0.5797950219619327,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "0c9b4e05-9259-42cc-b40e-d6acbbeaa7e8",
+      "slug": "claude-fable-5-2-medium",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2",
+        "deprecatedTo": null
+      },
+      "name": "Claude Fable 5.2 (Medium, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (medium)",
+      "suffix": "Medium, Default Fallback",
+      "intelligenceIndex": 56.4083157101519,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 94.40575393412881,
+        "timeToFirstToken": 11.460896088940515,
+        "timeToFirstAnswerToken": 11.460896088940515
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 3.8026050641787634,
+          "input": 2.0923746150090006,
+          "nonCacheInput": 0.07112351022654609,
+          "cacheRead": 0.8643275943115216,
+          "cacheWrite": 1.1569235104709328,
+          "output": 1.7102304491697624,
+          "reasoning": 0.8169886850709354,
+          "answer": 0.8932417640988272
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 1.025286859973574
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.06658318675877178
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.5251012275091596
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.40296734116223343
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0023011982665591
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.07787361423193599
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.0183118464
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.036693128485600066
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.6474866613909291
+          }
+        ]
+      },
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 456.8638240666126,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.412984090909091,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1622.24,
+          "lower95ci": 1613.04,
+          "upper95ci": 1631.43
+        }
+      },
+      "omniscienceAccuracy": 0.7696666666666667,
+      "omniscienceHallucinationRate": 0.5846599131693199,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "cfc7acb1-d903-4858-9b6c-6c7776caf8f9",
+      "slug": "claude-fable-5-2-low",
+      "release": {
+        "slug": "claude-fable-5-2",
+        "name": "Claude Fable 5.2",
+        "deprecatedTo": null
+      },
+      "name": "Claude Fable 5.2 (Low, Default Fallback)",
+      "shortName": "Claude Fable 5.2 (low)",
+      "suffix": "Low, Default Fallback",
+      "intelligenceIndex": 53.9249388799182,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 102.5290643374113,
+        "timeToFirstToken": 8.90537120125375,
+        "timeToFirstAnswerToken": 8.90537120125375
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 3.097241904274546,
+          "input": 1.6731499433150656,
+          "nonCacheInput": 0.07112393519574535,
+          "cacheRead": 0.6324847856680946,
+          "cacheWrite": 0.9695412224512256,
+          "output": 1.4240919609594807,
+          "reasoning": 0.6536888193013586,
+          "answer": 0.7704031416581217
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.8425991147169233
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.06391931730924605
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.43399185175244226
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.31748706371344754
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0020625313294748496
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.076634633100451
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.0128247592
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.031296328663192194
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.3164263044893687
+          }
+        ]
+      },
+      "price1mInputTokens": 8,
+      "price1mOutputTokens": 40,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 349.75665088691073,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.384397474747475,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1562.73,
+          "lower95ci": 1553.18,
+          "upper95ci": 1572.27
+        }
+      },
+      "omniscienceAccuracy": 0.763,
+      "omniscienceHallucinationRate": 0.5639943741209564,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "909ed0ba-bcc5-4f38-8162-08a4e187a772",
+      "slug": "gemini-4-carbon",
+      "release": {
+        "slug": "gemini-4-carbon",
+        "name": "Gemini 4 Carbon",
+        "deprecatedTo": null
+      },
+      "name": "Gemini 4 Carbon (High)",
+      "shortName": "Gemini 4 Carbon (high)",
+      "suffix": "High",
+      "intelligenceIndex": 60.025738829526,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 65.3493204448563,
+        "timeToFirstToken": 69.5569601214328,
+        "timeToFirstAnswerToken": 69.5569601214328
+      },
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "slug": "google",
+        "name": "Google",
+        "logo": "/img/logos/google.svg",
+        "color": "#34A853",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 5.484780948230178,
+          "input": 4.257102989487116,
+          "nonCacheInput": 0.0235140179,
+          "cacheRead": 1.0195728204133172,
+          "cacheWrite": 3.214016151173799,
+          "output": 1.2276779587430622,
+          "reasoning": 0.7217785657682819,
+          "answer": 0.5058993929747801
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.8771039166898146
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.06390936065873529
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.7113908956231779
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 1.3319482399182012
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0184733989
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.021176153
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.08138023900000001
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.24379593472764768
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 2.135602809712601
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 1878.6392121384233,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.405606060606061,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1610.63,
+          "lower95ci": 1600.75,
+          "upper95ci": 1621.24
+        }
+      },
+      "omniscienceAccuracy": 0.5826666666666667,
+      "omniscienceHallucinationRate": 0.11421725239616613,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": true,
+      "inputModalityVideo": true,
+      "outputModalityText": true
+    },
+    {
+      "id": "2f3c4dc9-a450-4303-8697-0237257cf08f",
+      "slug": "claude-opus-5-5",
+      "release": {
+        "slug": "claude-opus-5-5",
+        "name": "Claude Opus 5.5",
+        "deprecatedTo": null
+      },
+      "name": "Claude Opus 5.5 (Max, Default Fallback)",
+      "shortName": "Claude Opus 5.5 (max)",
+      "suffix": "Max, Default Fallback",
+      "intelligenceIndex": 59.1060336078904,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 113.77747635259304,
+        "timeToFirstToken": 399.35687772648254,
+        "timeToFirstAnswerToken": 399.35687772648254
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 10.036409719512749,
+          "input": 6.569951348193785,
+          "nonCacheInput": 0.03567811040435136,
+          "cacheRead": 4.738378412876434,
+          "cacheWrite": 1.795894824912998,
+          "output": 3.4664583713189643,
+          "reasoning": 2.409395982770641,
+          "answer": 1.0570623885483243
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 3.1568959073487983
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.07143775552710561
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 1.3109276120148785
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 2.018273664779455
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.028107725802746696
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.077616774
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.11983133578968388
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.257671340257224
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 2.9956476039928566
+          }
+        ]
+      },
+      "price1mInputTokens": 4,
+      "price1mOutputTokens": 20,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 1523.2596504377857,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.464359595959596,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1800.84,
+          "lower95ci": 1790.7,
+          "upper95ci": 1811.76
+        }
+      },
+      "omniscienceAccuracy": 0.655,
+      "omniscienceHallucinationRate": 0.5033816425120773,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "0d3eaafd-54ed-4f78-bdd7-05a2db883986",
+      "slug": "gemini-4-carbon-medium",
+      "release": {
+        "slug": "gemini-4-carbon",
+        "name": "Gemini 4 Carbon",
+        "deprecatedTo": null
+      },
+      "name": "Gemini 4 Carbon (Medium)",
+      "shortName": "Gemini 4 Carbon (medium)",
+      "suffix": "Medium",
+      "intelligenceIndex": 58.2587824022788,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 61.72532775061739,
+        "timeToFirstToken": 23.11626325418339,
+        "timeToFirstAnswerToken": 23.11626325418339
+      },
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "slug": "google",
+        "name": "Google",
+        "logo": "/img/logos/google.svg",
+        "color": "#34A853",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 4.677653677420589,
+          "input": 3.6475287230379485,
+          "nonCacheInput": 0.014227854900000001,
+          "cacheRead": 0.8637703805223151,
+          "cacheWrite": 2.7695304876156333,
+          "output": 1.0301249543826412,
+          "reasoning": 0.5620429841863973,
+          "answer": 0.46808197019624365
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.7584223560327658
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.05624039886378578
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.6235858764113192
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 1.1159395497072848
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0018966328
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.011993197
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.0393047286
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.1929945215540336
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.8772764164514004
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 1668.8853537474126,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.394523232323232,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1601.74,
+          "lower95ci": 1590.49,
+          "upper95ci": 1612.33
+        }
+      },
+      "omniscienceAccuracy": 0.48933333333333334,
+      "omniscienceHallucinationRate": 0.04242819843342036,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": true,
+      "inputModalityVideo": true,
+      "outputModalityText": true
+    },
+    {
+      "id": "df5bf99d-d228-4715-b41b-19ca86118777",
+      "slug": "claude-opus-5-5-xhigh",
+      "release": {
+        "slug": "claude-opus-5-5",
+        "name": "Claude Opus 5.5",
+        "deprecatedTo": null
+      },
+      "name": "Claude Opus 5.5 (Xhigh, Default Fallback)",
+      "shortName": "Claude Opus 5.5 (xhigh)",
+      "suffix": "Xhigh, Default Fallback",
+      "intelligenceIndex": 57.4447060170507,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 110.03470344513005,
+        "timeToFirstToken": 87.79054940662023,
+        "timeToFirstAnswerToken": 87.79054940662023
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 6.047194490848774,
+          "input": 3.979168177665878,
+          "nonCacheInput": 0.03568516765942291,
+          "cacheRead": 2.7927356836910775,
+          "cacheWrite": 1.1507473263153778,
+          "output": 2.0680263131828958,
+          "reasoning": 1.2753733335435382,
+          "answer": 0.7926529796393574
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 1.8399278300386313
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.04390178155427155
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.877835633170967
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.9740859690151908
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0022164435855808
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.048213644
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.04699965441452961
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.09657351298194344
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 2.117440022087659
+          }
+        ]
+      },
+      "price1mInputTokens": 4,
+      "price1mOutputTokens": 20,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 939.6605230428011,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.437547474747475,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1760.9,
+          "lower95ci": 1752.13,
+          "upper95ci": 1770.88
+        }
+      },
+      "omniscienceAccuracy": 0.6553333333333333,
+      "omniscienceHallucinationRate": 0.6499032882011605,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "2f339a97-9a0d-499a-9cb5-e0db665bfa25",
+      "slug": "gpt-6-astra",
+      "release": {
+        "slug": "gpt-6-astra",
+        "name": "GPT-6 Astra",
+        "deprecatedTo": null
+      },
+      "name": "GPT-6 Astra (Max)",
+      "shortName": "GPT-6 Astra (max)",
+      "suffix": "Max",
+      "intelligenceIndex": 56.8538559596797,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 36.41419969584626,
+        "timeToFirstToken": 251.67273015029127,
+        "timeToFirstAnswerToken": 251.67273015029127
+      },
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "slug": "openai",
+        "name": "OpenAI",
+        "logo": "/img/logos/openai.svg",
+        "color": "#1f1f1f",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 6.244666943602518,
+          "input": 3.6460069947806435,
+          "nonCacheInput": 0.0815024655,
+          "cacheRead": 2.1747247960716,
+          "cacheWrite": 1.3897797332090436,
+          "output": 2.598659948821875,
+          "reasoning": 1.7879848417442221,
+          "answer": 0.8106751070776523
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 1.4253125872586803
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.07977961555688814
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.8498119471851334
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.9808143266315885
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.014827424999999998
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.10379103499999999
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.055121698000000004
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.11377333332804072
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 2.621434975642187
+          }
+        ]
+      },
+      "price1mInputTokens": 10,
+      "price1mOutputTokens": 50,
+      "cacheHitPrice": 1,
+      "intelligenceIndexTimePerTask": 1427.2783532399321,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.42374797979798,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1568.82,
+          "lower95ci": 1561.64,
+          "upper95ci": 1577.67
+        }
+      },
+      "omniscienceAccuracy": 0.6156666666666667,
+      "omniscienceHallucinationRate": 0.4978317432784042,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "1f541ef3-913f-4eb2-9d07-0e93c7a9a5e3",
+      "slug": "gpt-6-astra-xhigh",
+      "release": {
+        "slug": "gpt-6-astra",
+        "name": "GPT-6 Astra",
+        "deprecatedTo": null
+      },
+      "name": "GPT-6 Astra (Xhigh)",
+      "shortName": "GPT-6 Astra (xhigh)",
+      "suffix": "Xhigh",
+      "intelligenceIndex": 55.3057468569681,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 37.5243530842237,
+        "timeToFirstToken": 113.1297822884543,
+        "timeToFirstAnswerToken": 113.1297822884543
+      },
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "slug": "openai",
+        "name": "OpenAI",
+        "logo": "/img/logos/openai.svg",
+        "color": "#1f1f1f",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 3.6589264906126227,
+          "input": 2.3227385608426587,
+          "nonCacheInput": 0.0825188705,
+          "cacheRead": 1.3425376954282364,
+          "cacheWrite": 0.8976819949144229,
+          "output": 1.3361879297699635,
+          "reasoning": 0.7346434320397106,
+          "answer": 0.601544497730253
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.9845281987639405
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.07031943574056776
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.5855482520522051
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.6064502289294526
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.007766557499999998
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.09563615499999999
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.037042833
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.08492838930716662
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.1867064403192904
+          }
+        ]
+      },
+      "price1mInputTokens": 10,
+      "price1mOutputTokens": 50,
+      "cacheHitPrice": 1,
+      "intelligenceIndexTimePerTask": 712.171067557583,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.414029545454545,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1543.31,
+          "lower95ci": 1535.77,
+          "upper95ci": 1551.16
+        }
+      },
+      "omniscienceAccuracy": 0.6103333333333333,
+      "omniscienceHallucinationRate": 0.44568006843455943,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "e05a4828-0536-4876-870d-a235023f992b",
+      "slug": "gpt-6-astra-high",
+      "release": {
+        "slug": "gpt-6-astra",
+        "name": "GPT-6 Astra",
+        "deprecatedTo": null
+      },
+      "name": "GPT-6 Astra (High)",
+      "shortName": "GPT-6 Astra (high)",
+      "suffix": "High",
+      "intelligenceIndex": 54.849838322506,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 40.657023128534185,
+        "timeToFirstToken": 64.0546354763533,
+        "timeToFirstAnswerToken": 64.0546354763533
+      },
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "slug": "openai",
+        "name": "OpenAI",
+        "logo": "/img/logos/openai.svg",
+        "color": "#1f1f1f",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 3.2385719685518306,
+          "input": 2.0818984867274293,
+          "nonCacheInput": 0.0825188705,
+          "cacheRead": 1.198372711238285,
+          "cacheWrite": 0.8010069049891446,
+          "output": 1.1566734818244009,
+          "reasoning": 0.6045759954179231,
+          "answer": 0.5520974864064778
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.7145288690796738
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.06475923848785373
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.40469926217499436
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.5648530377647356
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0041945125
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.08974120499999999
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.025744073000000003
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.07141818093543038
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.2986335896091428
+          }
+        ]
+      },
+      "price1mInputTokens": 10,
+      "price1mOutputTokens": 50,
+      "cacheHitPrice": 1,
+      "intelligenceIndexTimePerTask": 568.99073902566,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.401351515151515,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1502.9,
+          "lower95ci": 1495.18,
+          "upper95ci": 1510.98
+        }
+      },
+      "omniscienceAccuracy": 0.611,
+      "omniscienceHallucinationRate": 0.4250214224507284,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "b25ac058-1e33-4c31-bbc9-a20c3ad0717a",
+      "slug": "gpt-6-1-sol",
+      "release": {
+        "slug": "gpt-6-1-sol",
+        "name": "GPT-6.1 Sol",
+        "deprecatedTo": null
+      },
+      "name": "GPT-6.1 Sol (Max)",
+      "shortName": "GPT-6.1 Sol (max)",
+      "suffix": "Max",
+      "intelligenceIndex": 54.6087338138148,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 48.97526611925983,
+        "timeToFirstToken": 200.67501824354758,
+        "timeToFirstAnswerToken": 200.67501824354758
+      },
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "slug": "openai",
+        "name": "OpenAI",
+        "logo": "/img/logos/openai.svg",
+        "color": "#1f1f1f",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 1.2720632679446995,
+          "input": 0.5938263505669177,
+          "nonCacheInput": 0.016300453700000002,
+          "cacheRead": 0.25176175122452343,
+          "cacheWrite": 0.3257641456423942,
+          "output": 0.678236917377782,
+          "reasoning": 0.4921293730141594,
+          "answer": 0.18610754436362267
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.3468904165964641
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.014840974258735366
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.18227634618325742
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.16955699611735967
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.002746373499999999
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.020993322
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.010916368200000002
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.023002416704541756
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 0.5008400543843414
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 1384.8560122699591,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.406262878787879,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1554.87,
+          "lower95ci": 1546.8,
+          "upper95ci": 1564.46
+        }
+      },
+      "omniscienceAccuracy": 0.6183333333333333,
+      "omniscienceHallucinationRate": 0.5187772925764192,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "b171d979-5ec1-45de-b8b9-db1ee65e77ec",
+      "slug": "claude-sonnet-5-5",
+      "release": {
+        "slug": "claude-sonnet-5-5",
+        "name": "Claude Sonnet 5.5",
+        "deprecatedTo": null
+      },
+      "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
+      "shortName": "Claude Sonnet 5.5 (max)",
+      "suffix": "Max, Default Fallback",
+      "intelligenceIndex": 54.54133407109,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 140.50416618613204,
+        "timeToFirstToken": 278.7773703721654,
+        "timeToFirstAnswerToken": 278.7773703721654
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 10.020621343395753,
+          "input": 7.166750209890859,
+          "nonCacheInput": 0.017801421600000002,
+          "cacheRead": 4.879029232925522,
+          "cacheWrite": 2.2699195553653375,
+          "output": 2.853871133504894,
+          "reasoning": 2.0636169402177984,
+          "answer": 0.7902541932870957
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 3.071086362898891
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.051622199990514886
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 1.2646441608317138
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 1.733627426843996
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.022773200799999997
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.039716396
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.0803716788
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.1926741603570175
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 3.5641057568736194
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 2031.1647767968998,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.416993434343434,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1816.2,
+          "lower95ci": 1806.34,
+          "upper95ci": 1827.04
+        }
+      },
+      "omniscienceAccuracy": 0.5146666666666667,
+      "omniscienceHallucinationRate": 0.4326923076923077,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "b3866703-a9f7-4ea2-8f3f-b361c90aaf0e",
+      "slug": "gemini-4-carbon-low",
+      "release": {
+        "slug": "gemini-4-carbon",
+        "name": "Gemini 4 Carbon",
+        "deprecatedTo": null
+      },
+      "name": "Gemini 4 Carbon (Low)",
+      "shortName": "Gemini 4 Carbon (low)",
+      "suffix": "Low",
+      "intelligenceIndex": 54.2206114502924,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 51.23007161152544,
+        "timeToFirstToken": 12.857483723146586,
+        "timeToFirstAnswerToken": 12.857483723146586
+      },
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "slug": "google",
+        "name": "Google",
+        "logo": "/img/logos/google.svg",
+        "color": "#34A853",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 5.221404723668021,
+          "input": 4.35975234281108,
+          "nonCacheInput": 0.014129731900000001,
+          "cacheRead": 1.0893904265270093,
+          "cacheWrite": 3.2562321843840705,
+          "output": 0.8616523808569421,
+          "reasoning": 0.3239578625326842,
+          "answer": 0.5376945183242579
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.7997603888511885
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.03380240944978359
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.6054520229204888
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 1.518402983766976
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0001139377
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.009530474
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.0343339322
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.1912291293553597
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 2.028779445424225
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 1681.9269498407118,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.296189898989899,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1567.14,
+          "lower95ci": 1556.43,
+          "upper95ci": 1578.45
+        }
+      },
+      "omniscienceAccuracy": 0.49233333333333335,
+      "omniscienceHallucinationRate": 0.19763624425476034,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": true,
+      "inputModalityVideo": true,
+      "outputModalityText": true
+    },
+    {
+      "id": "dad0e3b1-e3e7-477a-99f9-c14457a91114",
+      "slug": "gemini-4-hydrogen",
+      "release": {
+        "slug": "gemini-4-hydrogen",
+        "name": "Gemini 4 Hydrogen",
+        "deprecatedTo": null
+      },
+      "name": "Gemini 4 Hydrogen (Xhigh)",
+      "shortName": "Gemini 4 Hydrogen (xhigh)",
+      "suffix": "Xhigh",
+      "intelligenceIndex": 53.9192287317542,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 173.5878814057869,
+        "timeToFirstToken": 43.33840287813703,
+        "timeToFirstAnswerToken": 43.33840287813703
+      },
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "slug": "google",
+        "name": "Google",
+        "logo": "/img/logos/google.svg",
+        "color": "#34A853",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 3.1601590757006157,
+          "input": 2.0021170072582803,
+          "nonCacheInput": 0.045805470225,
+          "cacheRead": 1.2078948993714356,
+          "cacheWrite": 0.7484166376618447,
+          "output": 1.158042068442335,
+          "reasoning": 0.7267632376061763,
+          "answer": 0.4312788308361587
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.47823245037457407
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.03580800631005138
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.3657172764611365
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.6697743237853979
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.025125588525
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.0218406
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.1291320477
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.1899471247543125
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.2445816577901432
+          }
+        ]
+      },
+      "price1mInputTokens": 1.5,
+      "price1mOutputTokens": 7.5,
+      "cacheHitPrice": 0.075,
+      "intelligenceIndexTimePerTask": 889.4953257981133,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.389591919191919,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1567.52,
+          "lower95ci": 1557.41,
+          "upper95ci": 1578.57
+        }
+      },
+      "omniscienceAccuracy": 0.5046666666666667,
+      "omniscienceHallucinationRate": 0.0847913862718708,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": true,
+      "inputModalityVideo": true,
+      "outputModalityText": true
+    },
+    {
+      "id": "092a3b0e-c5c8-45dc-bf1b-53673c8ff352",
+      "slug": "gpt-6-1-sol-xhigh",
+      "release": {
+        "slug": "gpt-6-1-sol",
+        "name": "GPT-6.1 Sol",
+        "deprecatedTo": null
+      },
+      "name": "GPT-6.1 Sol (Xhigh)",
+      "shortName": "GPT-6.1 Sol (xhigh)",
+      "suffix": "Xhigh",
+      "intelligenceIndex": 52.458219253291,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 47.42439889300878,
+        "timeToFirstToken": 84.55717762670997,
+        "timeToFirstAnswerToken": 84.55717762670997
+      },
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "slug": "openai",
+        "name": "OpenAI",
+        "logo": "/img/logos/openai.svg",
+        "color": "#1f1f1f",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 0.7639949356156494,
+          "input": 0.461583096140911,
+          "nonCacheInput": 0.0163007251,
+          "cacheRead": 0.22654500250139165,
+          "cacheWrite": 0.2187373685395193,
+          "output": 0.3024118394747384,
+          "reasoning": 0.1552665846433734,
+          "answer": 0.14714525483136498
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.15578439317634687
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.012527894630593941
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.10259491542428137
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.10542294964469211
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0013764744999999999
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.018402532
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.0066290526
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.016709518854234835
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 0.3445472047855002
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 637.6714234311979,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.385190909090909,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1504.37,
+          "lower95ci": 1494.78,
+          "upper95ci": 1514.97
+        }
+      },
+      "omniscienceAccuracy": 0.6106666666666667,
+      "omniscienceHallucinationRate": 0.4803082191780822,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "f314eade-2232-44bf-a3ab-9b326bc67de6",
+      "slug": "claude-opus-5-5-high",
+      "release": {
+        "slug": "claude-opus-5-5",
+        "name": "Claude Opus 5.5",
+        "deprecatedTo": null
+      },
+      "name": "Claude Opus 5.5 (High, Default Fallback)",
+      "shortName": "Claude Opus 5.5 (high)",
+      "suffix": "High, Default Fallback",
+      "intelligenceIndex": 51.8359958227294,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 105.52034303265998,
+        "timeToFirstToken": 27.678962308061305,
+        "timeToFirstAnswerToken": 27.678962308061305
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 3.4646622820973185,
+          "input": 2.263148195065425,
+          "nonCacheInput": 0.035685698925989995,
+          "cacheRead": 1.5114224997613959,
+          "cacheWrite": 0.7160399963780391,
+          "output": 1.201514087031893,
+          "reasoning": 0.6313058524821984,
+          "answer": 0.5702082345496947
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.9406232854012683
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.034930580701925125
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.5118905183990514
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.37327136655258486
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0013971011167225
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.041271282
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.019354525732196502
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.03843972036498265
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.503483901828587
+          }
+        ]
+      },
+      "price1mInputTokens": 4,
+      "price1mOutputTokens": 20,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 569.2832000826174,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.359278535353535,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1682.08,
+          "lower95ci": 1674.11,
+          "upper95ci": 1691.88
+        }
+      },
+      "omniscienceAccuracy": 0.6483333333333333,
+      "omniscienceHallucinationRate": 0.6388625592417062,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "e97a4ef5-e817-480e-9595-12f81dc4974f",
+      "slug": "gpt-6-astra-medium",
+      "release": {
+        "slug": "gpt-6-astra",
+        "name": "GPT-6 Astra",
+        "deprecatedTo": null
+      },
+      "name": "GPT-6 Astra (Medium)",
+      "shortName": "GPT-6 Astra (medium)",
+      "suffix": "Medium",
+      "intelligenceIndex": 51.5548393864113,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 39.30121737657141,
+        "timeToFirstToken": 7.174082669639098,
+        "timeToFirstAnswerToken": 7.174082669639098
+      },
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "slug": "openai",
+        "name": "OpenAI",
+        "logo": "/img/logos/openai.svg",
+        "color": "#1f1f1f",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 2.732438933013427,
+          "input": 1.829857711656857,
+          "nonCacheInput": 0.0825188705,
+          "cacheRead": 1.0772476392711448,
+          "cacheWrite": 0.6700912018857125,
+          "output": 0.9025812213565696,
+          "reasoning": 0.4290352028581502,
+          "answer": 0.4735460184984194
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.5909978493212386
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.05885103741150899
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.4430107637760555
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.4193049093540063
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.001641505
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.08599042999999999
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.012000677999999999
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.040670732750786864
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.0799710273998309
+          }
+        ]
+      },
+      "price1mInputTokens": 10,
+      "price1mOutputTokens": 50,
+      "cacheHitPrice": 1,
+      "intelligenceIndexTimePerTask": 459.31463786901645,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.365771717171717,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1462.27,
+          "lower95ci": 1454.73,
+          "upper95ci": 1470.32
+        }
+      },
+      "omniscienceAccuracy": 0.5963333333333334,
+      "omniscienceHallucinationRate": 0.4516928158546656,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "b0c462cf-f2d0-4126-9434-28db9502219f",
+      "slug": "gpt-6-1-terra",
+      "release": {
+        "slug": "gpt-6-1-terra",
+        "name": "GPT-6.1 Terra",
+        "deprecatedTo": null
+      },
+      "name": "GPT-6.1 Terra (Max)",
+      "shortName": "GPT-6.1 Terra (max)",
+      "suffix": "Max",
+      "intelligenceIndex": 51.3265188577015,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 68.55739108500603,
+        "timeToFirstToken": 184.8042467160017,
+        "timeToFirstAnswerToken": 184.8042467160017
+      },
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "slug": "openai",
+        "name": "OpenAI",
+        "logo": "/img/logos/openai.svg",
+        "color": "#1f1f1f",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 0.961108031081634,
+          "input": 0.6616922074921133,
+          "nonCacheInput": 0.00815032475,
+          "cacheRead": 0.4264246328151169,
+          "cacheWrite": 0.22711724992699645,
+          "output": 0.2994158235895208,
+          "reasoning": 0.19680942126498924,
+          "answer": 0.10260640232453162
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.12116643604459638
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.009264252671692034
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.14853125323157165
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.1938772227330226
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.006377197449999999
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.011758996
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.014650311800000001
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.025052344669855186
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 0.43043001648089624
+          }
+        ]
+      },
+      "price1mInputTokens": 1,
+      "price1mOutputTokens": 5,
+      "cacheHitPrice": 0.05,
+      "intelligenceIndexTimePerTask": 873.4749641166119,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.423200505050505,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1401.3,
+          "lower95ci": 1391.44,
+          "upper95ci": 1411.49
+        }
+      },
+      "omniscienceAccuracy": 0.47633333333333333,
+      "omniscienceHallucinationRate": 0.3450031826861871,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "dae0262d-26a4-44d1-925a-6f2731cbda6a",
+      "slug": "gemini-4-hydrogen-high",
+      "release": {
+        "slug": "gemini-4-hydrogen",
+        "name": "Gemini 4 Hydrogen",
+        "deprecatedTo": null
+      },
+      "name": "Gemini 4 Hydrogen (High)",
+      "shortName": "Gemini 4 Hydrogen (high)",
+      "suffix": "High",
+      "intelligenceIndex": 50.7870826951304,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 168.10110535508406,
+        "timeToFirstToken": 17.60348344639468,
+        "timeToFirstAnswerToken": 17.60348344639468
+      },
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "slug": "google",
+        "name": "Google",
+        "logo": "/img/logos/google.svg",
+        "color": "#34A853",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 1.8733140062520008,
+          "input": 1.2359760192139384,
+          "nonCacheInput": 0.013416037425000003,
+          "cacheRead": 0.5723693381002419,
+          "cacheWrite": 0.6501906436886964,
+          "output": 0.6373379870380624,
+          "reasoning": 0.35630123687169907,
+          "answer": 0.2810367501663633
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.2601457295461813
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.018758774777009136
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.27986649858863644
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.3870274938308525
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0021094862250000002
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.010073674500000001
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.037253114700000006
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.08776583609325002
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 0.7903133979910715
+          }
+        ]
+      },
+      "price1mInputTokens": 1.5,
+      "price1mOutputTokens": 7.5,
+      "cacheHitPrice": 0.075,
+      "intelligenceIndexTimePerTask": 505.5195686681519,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.363275252525253,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1496.74,
+          "lower95ci": 1485.02,
+          "upper95ci": 1507.57
+        }
+      },
+      "omniscienceAccuracy": 0.4816666666666667,
+      "omniscienceHallucinationRate": 0.08681672025723473,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": true,
+      "inputModalityVideo": true,
+      "outputModalityText": true
+    },
+    {
+      "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+      "slug": "gemini-4-argon",
+      "release": {
+        "slug": "gemini-4-argon",
+        "name": "Gemini 4 Argon",
+        "deprecatedTo": null
+      },
+      "name": "Gemini 4 Argon (High)",
+      "shortName": "Gemini 4 Argon (high)",
+      "suffix": "High",
+      "intelligenceIndex": 50.4121935905389,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 66.00989627814586,
+        "timeToFirstToken": 45.20309396235143,
+        "timeToFirstAnswerToken": 45.20309396235143
+      },
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "slug": "google",
+        "name": "Google",
+        "logo": "/img/logos/google.svg",
+        "color": "#34A853",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 4.973304355775267,
+          "input": 3.8096240650969295,
+          "nonCacheInput": 0.01227186,
+          "cacheRead": 0.9761531143565938,
+          "cacheWrite": 2.821199090740336,
+          "output": 1.1636802906783368,
+          "reasoning": 0.6830086793708248,
+          "answer": 0.4806716113075122
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.8741624070672435
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.030432821951646247
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.6780140181187823
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 1.4052728318171093
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0013664153999999999
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.012966569
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.0241777746
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.11743799090095036
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.8294735269195348
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 1762.8876218422429,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.257076262626263,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1484.72,
+          "lower95ci": 1476.16,
+          "upper95ci": 1494.69
+        }
+      },
+      "omniscienceAccuracy": 0.483,
+      "omniscienceHallucinationRate": 0.0425531914893617,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "3b84fee3-b70a-41bc-819e-5fbdef9a0042",
+      "slug": "gpt-6-1-sol-high",
+      "release": {
+        "slug": "gpt-6-1-sol",
+        "name": "GPT-6.1 Sol",
+        "deprecatedTo": null
+      },
+      "name": "GPT-6.1 Sol (High)",
+      "shortName": "GPT-6.1 Sol (high)",
+      "suffix": "High",
+      "intelligenceIndex": 50.3291231936536,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 47.821388601831735,
+        "timeToFirstToken": 42.450638095525846,
+        "timeToFirstAnswerToken": 42.450638095525846
+      },
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "slug": "openai",
+        "name": "OpenAI",
+        "logo": "/img/logos/openai.svg",
+        "color": "#1f1f1f",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 0.5909853515780825,
+          "input": 0.36492336086031096,
+          "nonCacheInput": 0.0163007251,
+          "cacheRead": 0.1691946132222032,
+          "cacheWrite": 0.17942802253810777,
+          "output": 0.22606199071777155,
+          "reasoning": 0.10135343936248302,
+          "answer": 0.12470855135528855
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.12553933379897753
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.011289027354615129
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.08281767981765116
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.09448787379077449
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0007399969999999999
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.017470072
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.004334013600000001
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.013448107715632839
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 0.24085924650043142
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 472.72151087037355,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.36737297979798,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1468.58,
+          "lower95ci": 1459.2,
+          "upper95ci": 1478.39
+        }
+      },
+      "omniscienceAccuracy": 0.604,
+      "omniscienceHallucinationRate": 0.4898989898989899,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "975aeaef-50bd-4a65-9c73-f1015adcd4d4",
+      "slug": "claude-sonnet-5-5-xhigh",
+      "release": {
+        "slug": "claude-sonnet-5-5",
+        "name": "Claude Sonnet 5.5",
+        "deprecatedTo": null
+      },
+      "name": "Claude Sonnet 5.5 (Xhigh, Default Fallback)",
+      "shortName": "Claude Sonnet 5.5 (xhigh)",
+      "suffix": "Xhigh, Default Fallback",
+      "intelligenceIndex": 49.9240327787242,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 141.80000039516153,
+        "timeToFirstToken": 28.63497389640072,
+        "timeToFirstAnswerToken": 28.63497389640072
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 4.091984916321919,
+          "input": 2.869935927724191,
+          "nonCacheInput": 0.0178402758,
+          "cacheRead": 1.895709552971899,
+          "cacheWrite": 0.9563860989522919,
+          "output": 1.2220489885977281,
+          "reasoning": 0.789989422247036,
+          "answer": 0.432059566350692
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 1.0463691272218
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.021119401057167468
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.6078427561993545
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.4071674316594664
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0013239902
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.023006347
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.024628901600000003
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.04478161035636011
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.9157453510277704
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 861.8116961863043,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.356494696969697,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1739.84,
+          "lower95ci": 1730.18,
+          "upper95ci": 1751.26
+        }
+      },
+      "omniscienceAccuracy": 0.509,
+      "omniscienceHallucinationRate": 0.6171079429735234,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "ea9e0da6-169f-43c6-92f5-730a10d6ff8d",
+      "slug": "claude-opus-5-5-medium",
+      "release": {
+        "slug": "claude-opus-5-5",
+        "name": "Claude Opus 5.5",
+        "deprecatedTo": null
+      },
+      "name": "Claude Opus 5.5 (Medium, Default Fallback)",
+      "shortName": "Claude Opus 5.5 (medium)",
+      "suffix": "Medium, Default Fallback",
+      "intelligenceIndex": 48.2081024960691,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 105.17366546075537,
+        "timeToFirstToken": 17.55936116743734,
+        "timeToFirstAnswerToken": 17.55936116743734
+      },
+      "creator": {
+        "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+        "slug": "anthropic",
+        "name": "Anthropic",
+        "logo": "/img/logos/anthropic.svg",
+        "color": "#cc785c",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 2.4510894376611723,
+          "input": 1.5746690831770878,
+          "nonCacheInput": 0.035686979521622794,
+          "cacheRead": 0.9998771947972656,
+          "cacheWrite": 0.5391049088581995,
+          "output": 0.8764203544840845,
+          "reasoning": 0.41361006155475377,
+          "answer": 0.4628102929293306
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.6597314749506057
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.03192224642455344
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.4042978672513101
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.25640834120925443
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0012363122519514498
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.039765881999999995
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.012990725177920602
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.025115151504402987
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.0196214368911736
+          }
+        ]
+      },
+      "price1mInputTokens": 4,
+      "price1mOutputTokens": 20,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 416.6113854341372,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.330793181818182,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1617.03,
+          "lower95ci": 1609.3,
+          "upper95ci": 1626.22
+        }
+      },
+      "omniscienceAccuracy": 0.639,
+      "omniscienceHallucinationRate": 0.6685133887349953,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "48e6f735-f2bc-418f-b99f-3dc5a0ddda77",
+      "slug": "gemini-4-argon-medium",
+      "release": {
+        "slug": "gemini-4-argon",
+        "name": "Gemini 4 Argon",
+        "deprecatedTo": null
+      },
+      "name": "Gemini 4 Argon (Medium)",
+      "shortName": "Gemini 4 Argon (medium)",
+      "suffix": "Medium",
+      "intelligenceIndex": 47.6040598289046,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 57.85118266808767,
+        "timeToFirstToken": 10.255227508937484,
+        "timeToFirstAnswerToken": 10.255227508937484
+      },
+      "creator": {
+        "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+        "slug": "google",
+        "name": "Google",
+        "logo": "/img/logos/google.svg",
+        "color": "#34A853",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 4.314621569087732,
+          "input": 3.310549234512142,
+          "nonCacheInput": 0.008824197399999999,
+          "cacheRead": 0.8439393397514339,
+          "cacheWrite": 2.4577856973607086,
+          "output": 1.0040723345755898,
+          "reasoning": 0.5506495228174634,
+          "answer": 0.45342281175812615
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.7120819217348444
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.028314525676669172
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.6424922769986513
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 1.15450971963062
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.00016237549999999996
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.009486298
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.0022275494000000002
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.07823748884645014
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.6871094133004967
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 1735.6124598805548,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.250184848484849,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1466.63,
+          "lower95ci": 1456.29,
+          "upper95ci": 1477.98
+        }
+      },
+      "omniscienceAccuracy": 0.48966666666666664,
+      "omniscienceHallucinationRate": 0.1541476159372959,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "665c67ca-09eb-48f0-a7a3-0096e1d5de51",
+      "slug": "kimi-k3-1-pro",
+      "release": {
+        "slug": "kimi-k3-1-pro",
+        "name": "Kimi K3.1 Pro",
+        "deprecatedTo": null
+      },
+      "name": "Kimi K3.1 Pro",
+      "shortName": "Kimi K3.1 Pro",
+      "suffix": null,
+      "intelligenceIndex": 46.4526236744189,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": true,
+      "headline": {
+        "outputSpeed": 30.336882743366214,
+        "timeToFirstToken": 4.320978587263737,
+        "timeToFirstAnswerToken": 185.9507220466522
+      },
+      "creator": {
+        "id": "0a177021-87dd-4250-9a37-f01df196bfe0",
+        "slug": "kimi",
+        "name": "Kimi",
+        "logo": "/img/logos/kimi.jpg",
+        "color": "#047AFE",
+        "country": "cn"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 3.6812002895742055,
+          "input": 2.958810587259056,
+          "nonCacheInput": 0.016748667700000004,
+          "cacheRead": 2.1020636936657997,
+          "cacheWrite": 0.8399982258932563,
+          "output": 0.722389702315149,
+          "reasoning": 0.4422975523008582,
+          "answer": 0.2800921500142909
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 1.0830954549961667
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.04143776763703401
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.5265564268428178
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.35690445271263926
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0064380597
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.026091902
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.036473238
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.07017241618169667
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 1.534030571503851
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.2,
+      "intelligenceIndexTimePerTask": 2381.225877510815,
+      "parameters": 2800,
+      "inferenceParametersActiveBillions": 104,
+      "frontierCode20": 0.254519444444444,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1673.56,
+          "lower95ci": 1663.56,
+          "upper95ci": 1685.46
+        }
+      },
+      "omniscienceAccuracy": 0.48933333333333334,
+      "omniscienceHallucinationRate": 0.3733681462140992,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    },
+    {
+      "id": "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",
+      "slug": "gpt-6-1-sol-medium",
+      "release": {
+        "slug": "gpt-6-1-sol",
+        "name": "GPT-6.1 Sol",
+        "deprecatedTo": null
+      },
+      "name": "GPT-6.1 Sol (Medium)",
+      "shortName": "GPT-6.1 Sol (medium)",
+      "suffix": "Medium",
+      "intelligenceIndex": 46.3468797067114,
+      "contextWindowTokens": 1000000,
+      "isOpenWeights": false,
+      "headline": {
+        "outputSpeed": 49.35100725591335,
+        "timeToFirstToken": 5.190616163388907,
+        "timeToFirstAnswerToken": 5.190616163388907
+      },
+      "creator": {
+        "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+        "slug": "openai",
+        "name": "OpenAI",
+        "logo": "/img/logos/openai.svg",
+        "color": "#1f1f1f",
+        "country": "us"
+      },
+      "intelligenceIndexCostPerTask": {
+        "cost": {
+          "total": 0.3593898648025732,
+          "input": 0.22420650545078347,
+          "nonCacheInput": 0.0163007251,
+          "cacheRead": 0.09670148612754065,
+          "cacheWrite": 0.1112042942232428,
+          "output": 0.13518335935178977,
+          "reasoning": 0.04804587164387744,
+          "answer": 0.08713748770791233
+        },
+        "evaluations": [
+          {
+            "slug": "aa-briefcase",
+            "weightedCostPerTask": 0.06965550981911597
+          },
+          {
+            "slug": "automationbench-aa",
+            "weightedCostPerTask": 0.009815179666235858
+          },
+          {
+            "slug": "terminalbench-4-0",
+            "weightedCostPerTask": 0.06137554705459501
+          },
+          {
+            "slug": "frontiercode-2-0",
+            "weightedCostPerTask": 0.06160126804404088
+          },
+          {
+            "slug": "omniscience",
+            "weightedCostPerTask": 0.0003229445
+          },
+          {
+            "slug": "gdp-pdf",
+            "weightedCostPerTask": 0.016873911999999998
+          },
+          {
+            "slug": "hle-diamond",
+            "weightedCostPerTask": 0.0018542786
+          },
+          {
+            "slug": "critpt-v2-hard",
+            "weightedCostPerTask": 0.0071411286608376295
+          },
+          {
+            "slug": "terminal-bench-science",
+            "weightedCostPerTask": 0.13075009645774785
+          }
+        ]
+      },
+      "price1mInputTokens": 2,
+      "price1mOutputTokens": 10,
+      "cacheHitPrice": 0.1,
+      "intelligenceIndexTimePerTask": 273.9221889652349,
+      "parameters": null,
+      "inferenceParametersActiveBillions": null,
+      "frontierCode20": 0.333875757575758,
+      "briefcaseBreakdown": {
+        "overall": {
+          "elo": 1360.59,
+          "lower95ci": 1352.13,
+          "upper95ci": 1369.76
+        }
+      },
+      "omniscienceAccuracy": 0.596,
+      "omniscienceHallucinationRate": 0.48102310231023104,
+      "inputModalityText": true,
+      "inputModalityImage": true,
+      "inputModalitySpeech": false,
+      "inputModalityVideo": false,
+      "outputModalityText": true
+    }
+  ]
+}

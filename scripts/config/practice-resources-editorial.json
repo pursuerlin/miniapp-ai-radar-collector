@@ -1,0 +1,112 @@
+[
+  {
+    "githubId": 1229774092,
+    "sourceHash": "3174c7ebe5d65dd7beef86fb209c5004844a1f61f6a8a36c8c4fb614e822f3bb",
+    "description": "面向 Claude Code 的漏洞排查与授权安全测试技能集合。"
+  },
+  {
+    "githubId": 1176011916,
+    "sourceHash": "16bea497cd1c27512f1b9d4e0d2fb3eb17c66c9d7e58d7d538219e7bdcc55b2c",
+    "description": "为软件提供命令行入口，方便 AI Agent 调用。"
+  },
+  {
+    "githubId": 1140843380,
+    "sourceHash": "ee626e3e638bfc9b115b0442a83ead012f6badde53d386204b1a4293d461479a",
+    "description": "从社区与网页研究一个主题，并汇总资料。"
+  },
+  {
+    "githubId": 1278676884,
+    "sourceHash": "166390b685511e5741469f9b61101752f8756c764a278ff9485e1220cd0982d1",
+    "description": "评估 Agent 技能与插件，检查质量、重叠和行为影响。"
+  },
+  {
+    "githubId": 1226691771,
+    "sourceHash": "bc6d8a96c921deb03c5d39e01ff44ccd0ebcbed0df216b002775468a1ff1805c",
+    "description": "用于辅助研究论文写作的多 Agent 框架。"
+  },
+  {
+    "githubId": 1135847870,
+    "sourceHash": "5d0d6f9824bcbef0efd50a19c39f2f6996220fcf20459fb011cd13e1b7264f37",
+    "description": "配合 Stitch MCP 服务使用的 Agent Skills 集合。"
+  },
+  {
+    "githubId": 180190854,
+    "sourceHash": "59d657b9c35fd0b4ab04e906139b8351d8c6f1e24dd4cd25f0a7c78dd68154bb",
+    "description": "为开发者和 Agent 提供认证、数据库、存储等后端能力。"
+  },
+  {
+    "githubId": 153097643,
+    "sourceHash": "9617226aa653db4a7f205015ef1416f68edf1cfde1b69840d900b8d66ce7aee4",
+    "description": "用于优化和部署 AI 模型推理的工具包。"
+  },
+  {
+    "githubId": 1073224795,
+    "sourceHash": "92f209e7344165c360d1025c9525accffea5726558abcc94d051ad7e8e55ac49",
+    "description": "围绕软件开发流程组织的 Agent 技能框架。"
+  },
+  {
+    "githubId": 1136590548,
+    "sourceHash": "e4eb8aaa1f3709dfbddd66df722d80fd434b7b9b9867fddd8330683c2965308f",
+    "description": "为编程 Agent 整理技能、记忆与工作流程配置。"
+  },
+  {
+    "githubId": 896335270,
+    "sourceHash": "02bfcb486009cdd2eca4cc6f597572e5ae2d643ec6e8e85471db1cf049453134",
+    "description": "按领域整理可供查找的 MCP 服务集合。"
+  },
+  {
+    "githubId": 1143633223,
+    "sourceHash": "a91cb804076e96e1afab4ea265c5964222cc1064142df14ad6aa125e01688e65",
+    "description": "为编程 Agent 提供现代网页开发实践资料。"
+  },
+  {
+    "githubId": 1123956658,
+    "sourceHash": "86c6f6570c43d9656e9b531fbcd8163572cb9ae86f4a50d24106b8d59ce04742",
+    "description": "协助审阅 Agent 计划、标注反馈与检查代码的工作区。"
+  },
+  {
+    "githubId": 1131202426,
+    "sourceHash": "6b168f4400b9dd194918c91690578f80be16e7a98b6f2ee95f4b8055f679de8d",
+    "description": "可定制、面向 Agent 工作流程的设计系统。"
+  },
+  {
+    "githubId": 1241960226,
+    "sourceHash": "c0beefd0eda93c6f27e5d824f21a542024cc07d035d81646c605d2a1a7d16833",
+    "description": "结合规则流水线与 LLM Agent 的代码审查工具。"
+  },
+  {
+    "githubId": 1079356098,
+    "sourceHash": "7827a95c18cae38d9a6187da3e1f2dd3cc004729866477175d4d453650bd02d7",
+    "description": "面向市场研究、图表与策略分析的 Claude Code 技能集合。"
+  },
+  {
+    "githubId": 1054793726,
+    "sourceHash": "974036aa8626db5ee58ec95051ef5309c0ac2a586bdf5fa4805681a338838eef",
+    "description": "让编程 Agent 通过 MCP 使用 Chrome 开发者工具。"
+  },
+  {
+    "githubId": 1131513930,
+    "sourceHash": "dac6a74e567b7edcc342cd0986e096c46789dbeeec1f7a22267b5205cc59680a",
+    "description": "使用大语言模型汇总多市场行情与新闻，生成分析看板。"
+  },
+  {
+    "githubId": 979392131,
+    "sourceHash": "ed59976bc090a991b2a79521ae4a1a913164f513f2c66391fb25ac2de13df2ab",
+    "description": "用于连接 Agent 与前端应用的交互协议。"
+  },
+  {
+    "githubId": 1132001614,
+    "sourceHash": "08a0dbf0846865d0cb036c770c13a4d82697e4f39a4abf673d1ee2ec308fd566",
+    "description": "供 AI Agent 使用的浏览器自动化命令行工具。"
+  },
+  {
+    "githubId": 1299769220,
+    "sourceHash": "1500121ba7620a690c90fc37fa781acafab71b79d69be22c6d8d9adca7a84a99",
+    "description": "用于查找、验证和修复安全漏洞的 CLI 与 TypeScript SDK。"
+  },
+  {
+    "githubId": 543101941,
+    "sourceHash": "238f3c111a4617fc1f1e7dafee6c61f59f22091312216466a303ae3f8e5ae853",
+    "description": "将文档编辑、计算与协作能力接入产品的办公 SDK。"
+  }
+]

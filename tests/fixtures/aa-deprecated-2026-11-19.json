@@ -1,0 +1,848 @@
+{
+  "pages": {
+    "gpt-6-1-sol": [
+      {
+        "id": "b25ac058-1e33-4c31-bbc9-a20c3ad0717a",
+        "slug": "gpt-6-1-sol",
+        "name": "GPT-6.1 Sol (Max)",
+        "release": {
+          "slug": "gpt-6-1-sol",
+          "name": "GPT-6.1 Sol",
+          "deprecatedTo": "gpt-6-2-sol"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 48.2175269877769,
+          "timeToFirstToken": 143.289201264135,
+          "timeToFirstAnswerToken": 143.289201264135
+        },
+        "intelligenceIndex": 54.6087338138148,
+        "price1mInputTokens": 2,
+        "price1mOutputTokens": 10,
+        "cacheHitPrice": 0.1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 1.2720632679446995,
+            "input": 0.5938263505669177,
+            "nonCacheInput": 0.016300453700000002,
+            "cacheRead": 0.25176175122452343,
+            "cacheWrite": 0.3257641456423942,
+            "output": 0.678236917377782,
+            "reasoning": 0.4921293730141594,
+            "answer": 0.18610754436362267
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 0.3468904165964641
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.014840974258735366
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.18227634618325742
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.16955699611735967
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.002746373499999999
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.020993322
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.010916368200000002
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.023002416704541756
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 0.5008400543843414
+            }
+          ]
+        },
+        "releaseDate": "2026-09-29",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      },
+      {
+        "id": "092a3b0e-c5c8-45dc-bf1b-53673c8ff352",
+        "slug": "gpt-6-1-sol-xhigh",
+        "name": "GPT-6.1 Sol (Xhigh)",
+        "release": {
+          "slug": "gpt-6-1-sol",
+          "name": "GPT-6.1 Sol",
+          "deprecatedTo": "gpt-6-2-sol"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 53.5795655881266,
+          "timeToFirstToken": 59.5162502417737,
+          "timeToFirstAnswerToken": 59.5162502417737
+        },
+        "intelligenceIndex": 52.458219253291,
+        "price1mInputTokens": 2,
+        "price1mOutputTokens": 10,
+        "cacheHitPrice": 0.1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 0.7639949356156494,
+            "input": 0.461583096140911,
+            "nonCacheInput": 0.0163007251,
+            "cacheRead": 0.22654500250139165,
+            "cacheWrite": 0.2187373685395193,
+            "output": 0.3024118394747384,
+            "reasoning": 0.1552665846433734,
+            "answer": 0.14714525483136498
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 0.15578439317634687
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.012527894630593941
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.10259491542428137
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.10542294964469211
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.0013764744999999999
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.018402532
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.0066290526
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.016709518854234835
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 0.3445472047855002
+            }
+          ]
+        },
+        "releaseDate": "2026-09-29",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      },
+      {
+        "id": "3b84fee3-b70a-41bc-819e-5fbdef9a0042",
+        "slug": "gpt-6-1-sol-high",
+        "name": "GPT-6.1 Sol (High)",
+        "release": {
+          "slug": "gpt-6-1-sol",
+          "name": "GPT-6.1 Sol",
+          "deprecatedTo": "gpt-6-2-sol"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 50.5234628068581,
+          "timeToFirstToken": 25.8980684653399,
+          "timeToFirstAnswerToken": 25.8980684653399
+        },
+        "intelligenceIndex": 50.3291231936536,
+        "price1mInputTokens": 2,
+        "price1mOutputTokens": 10,
+        "cacheHitPrice": 0.1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 0.5909853515780825,
+            "input": 0.36492336086031096,
+            "nonCacheInput": 0.0163007251,
+            "cacheRead": 0.1691946132222032,
+            "cacheWrite": 0.17942802253810777,
+            "output": 0.22606199071777155,
+            "reasoning": 0.10135343936248302,
+            "answer": 0.12470855135528855
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 0.12553933379897753
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.011289027354615129
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.08281767981765116
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.09448787379077449
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.0007399969999999999
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.017470072
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.004334013600000001
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.013448107715632839
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 0.24085924650043142
+            }
+          ]
+        },
+        "releaseDate": "2026-09-29",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      },
+      {
+        "id": "a2e51d62-ea4e-4f15-8be0-be9dc1fb489d",
+        "slug": "gpt-6-1-sol-medium",
+        "name": "GPT-6.1 Sol (Medium)",
+        "release": {
+          "slug": "gpt-6-1-sol",
+          "name": "GPT-6.1 Sol",
+          "deprecatedTo": "gpt-6-2-sol"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 52.1467148588893,
+          "timeToFirstToken": 4.76846481295488,
+          "timeToFirstAnswerToken": 4.76846481295488
+        },
+        "intelligenceIndex": 46.3468797067114,
+        "price1mInputTokens": 2,
+        "price1mOutputTokens": 10,
+        "cacheHitPrice": 0.1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 0.3593898648025732,
+            "input": 0.22420650545078347,
+            "nonCacheInput": 0.0163007251,
+            "cacheRead": 0.09670148612754065,
+            "cacheWrite": 0.1112042942232428,
+            "output": 0.13518335935178977,
+            "reasoning": 0.04804587164387744,
+            "answer": 0.08713748770791233
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 0.06965550981911597
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.009815179666235858
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.06137554705459501
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.06160126804404088
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.0003229445
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.016873911999999998
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.0018542786
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.0071411286608376295
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 0.13075009645774785
+            }
+          ]
+        },
+        "releaseDate": "2026-09-29",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      },
+      {
+        "id": "e76e0fe5-93ca-4272-9359-2eb1740467d1",
+        "slug": "gpt-6-1-sol-low",
+        "name": "GPT-6.1 Sol (Low)",
+        "release": {
+          "slug": "gpt-6-1-sol",
+          "name": "GPT-6.1 Sol",
+          "deprecatedTo": "gpt-6-2-sol"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 51.3386386821342,
+          "timeToFirstToken": 2.94630237724232,
+          "timeToFirstAnswerToken": 2.94630237724232
+        },
+        "intelligenceIndex": 34.8029244314559,
+        "price1mInputTokens": 2,
+        "price1mOutputTokens": 10,
+        "cacheHitPrice": 0.1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 0.16147357831822573,
+            "input": 0.10309363155564279,
+            "nonCacheInput": 0.0163007251,
+            "cacheRead": 0.03256735899926756,
+            "cacheWrite": 0.05422554745637523,
+            "output": 0.05837994676258293,
+            "reasoning": 0.015850911146155215,
+            "answer": 0.04252903561642771
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 0.026563642515463656
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.007971955693077893
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.03829418451399688
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.0301605882701895
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.00022405249999999996
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.016707012
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.0008631056000000002
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.00432903830275441
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 0.03635999892274337
+            }
+          ]
+        },
+        "releaseDate": "2026-09-29",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      }
+    ],
+    "gpt-6-astra": [
+      {
+        "id": "2f339a97-9a0d-499a-9cb5-e0db665bfa25",
+        "slug": "gpt-6-astra",
+        "name": "GPT-6 Astra (Max)",
+        "release": {
+          "slug": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "deprecatedTo": "gpt-6-2-astra"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 43.3883377376313,
+          "timeToFirstToken": 187.258088795813,
+          "timeToFirstAnswerToken": 187.258088795813
+        },
+        "intelligenceIndex": 56.8538559596797,
+        "price1mInputTokens": 10,
+        "price1mOutputTokens": 50,
+        "cacheHitPrice": 1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 6.244666943602518,
+            "input": 3.6460069947806435,
+            "nonCacheInput": 0.0815024655,
+            "cacheRead": 2.1747247960716,
+            "cacheWrite": 1.3897797332090436,
+            "output": 2.598659948821875,
+            "reasoning": 1.7879848417442221,
+            "answer": 0.8106751070776523
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 1.4253125872586803
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.07977961555688814
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.8498119471851334
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.9808143266315885
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.014827424999999998
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.10379103499999999
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.055121698000000004
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.11377333332804072
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 2.621434975642187
+            }
+          ]
+        },
+        "releaseDate": "2026-09-03",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      },
+      {
+        "id": "1f541ef3-913f-4eb2-9d07-0e93c7a9a5e3",
+        "slug": "gpt-6-astra-xhigh",
+        "name": "GPT-6 Astra (Xhigh)",
+        "release": {
+          "slug": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "deprecatedTo": "gpt-6-2-astra"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 43.66406415955,
+          "timeToFirstToken": 83.7657093479526,
+          "timeToFirstAnswerToken": 83.7657093479526
+        },
+        "intelligenceIndex": 55.3057468569681,
+        "price1mInputTokens": 10,
+        "price1mOutputTokens": 50,
+        "cacheHitPrice": 1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 3.6589264906126227,
+            "input": 2.3227385608426587,
+            "nonCacheInput": 0.0825188705,
+            "cacheRead": 1.3425376954282364,
+            "cacheWrite": 0.8976819949144229,
+            "output": 1.3361879297699635,
+            "reasoning": 0.7346434320397106,
+            "answer": 0.601544497730253
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 0.9845281987639405
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.07031943574056776
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.5855482520522051
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.6064502289294526
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.007766557499999998
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.09563615499999999
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.037042833
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.08492838930716662
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 1.1867064403192904
+            }
+          ]
+        },
+        "releaseDate": "2026-09-03",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      },
+      {
+        "id": "e05a4828-0536-4876-870d-a235023f992b",
+        "slug": "gpt-6-astra-high",
+        "name": "GPT-6 Astra (High)",
+        "release": {
+          "slug": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "deprecatedTo": "gpt-6-2-astra"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 43.7397020936334,
+          "timeToFirstToken": 40.2083979175584,
+          "timeToFirstAnswerToken": 40.2083979175584
+        },
+        "intelligenceIndex": 54.849838322506,
+        "price1mInputTokens": 10,
+        "price1mOutputTokens": 50,
+        "cacheHitPrice": 1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 3.2385719685518306,
+            "input": 2.0818984867274293,
+            "nonCacheInput": 0.0825188705,
+            "cacheRead": 1.198372711238285,
+            "cacheWrite": 0.8010069049891446,
+            "output": 1.1566734818244009,
+            "reasoning": 0.6045759954179231,
+            "answer": 0.5520974864064778
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 0.7145288690796738
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.06475923848785373
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.40469926217499436
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.5648530377647356
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.0041945125
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.08974120499999999
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.025744073000000003
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.07141818093543038
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 1.2986335896091428
+            }
+          ]
+        },
+        "releaseDate": "2026-09-03",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      },
+      {
+        "id": "e97a4ef5-e817-480e-9595-12f81dc4974f",
+        "slug": "gpt-6-astra-medium",
+        "name": "GPT-6 Astra (Medium)",
+        "release": {
+          "slug": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "deprecatedTo": "gpt-6-2-astra"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 46.1240093150508,
+          "timeToFirstToken": 5.95579083298897,
+          "timeToFirstAnswerToken": 5.95579083298897
+        },
+        "intelligenceIndex": 51.5548393864113,
+        "price1mInputTokens": 10,
+        "price1mOutputTokens": 50,
+        "cacheHitPrice": 1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 2.732438933013427,
+            "input": 1.829857711656857,
+            "nonCacheInput": 0.0825188705,
+            "cacheRead": 1.0772476392711448,
+            "cacheWrite": 0.6700912018857125,
+            "output": 0.9025812213565696,
+            "reasoning": 0.4290352028581502,
+            "answer": 0.4735460184984194
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 0.5909978493212386
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.05885103741150899
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.4430107637760555
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.4193049093540063
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.001641505
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.08599042999999999
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.012000677999999999
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.040670732750786864
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 1.0799710273998309
+            }
+          ]
+        },
+        "releaseDate": "2026-09-03",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      },
+      {
+        "id": "a3f8100d-e38f-408b-b0fa-0085dae18dc1",
+        "slug": "gpt-6-astra-low",
+        "name": "GPT-6 Astra (Low)",
+        "release": {
+          "slug": "gpt-6-astra",
+          "name": "GPT-6 Astra",
+          "deprecatedTo": "gpt-6-2-astra"
+        },
+        "deprecated": true,
+        "creator": {
+          "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+          "slug": "openai",
+          "name": "OpenAI",
+          "logo": "/img/logos/openai.svg",
+          "color": "#1f1f1f",
+          "country": "us"
+        },
+        "headline": {
+          "outputSpeed": 45.5306974849529,
+          "timeToFirstToken": 3.37852279599271,
+          "timeToFirstAnswerToken": 3.37852279599271
+        },
+        "intelligenceIndex": 43.3349823228524,
+        "price1mInputTokens": 10,
+        "price1mOutputTokens": 50,
+        "cacheHitPrice": 1,
+        "intelligenceIndexCostPerTask": {
+          "cost": {
+            "total": 1.4237229635663595,
+            "input": 0.9674325135856097,
+            "nonCacheInput": 0.0825188705,
+            "cacheRead": 0.5122563231674682,
+            "cacheWrite": 0.37265731991814144,
+            "output": 0.45629044998074986,
+            "reasoning": 0.16522187297844848,
+            "answer": 0.2910685770023013
+          },
+          "evaluations": [
+            {
+              "slug": "aa-briefcase",
+              "weightedCostPerTask": 0.21644863739292058
+            },
+            {
+              "slug": "automationbench-aa",
+              "weightedCostPerTask": 0.04995425794534181
+            },
+            {
+              "slug": "terminalbench-4-0",
+              "weightedCostPerTask": 0.22485580260976215
+            },
+            {
+              "slug": "frontiercode-2-0",
+              "weightedCostPerTask": 0.2005876227071538
+            },
+            {
+              "slug": "omniscience",
+              "weightedCostPerTask": 0.0010461224999999998
+            },
+            {
+              "slug": "gdp-pdf",
+              "weightedCostPerTask": 0.08481593
+            },
+            {
+              "slug": "hle-diamond",
+              "weightedCostPerTask": 0.004999888
+            },
+            {
+              "slug": "critpt-v2-hard",
+              "weightedCostPerTask": 0.02367044943812013
+            },
+            {
+              "slug": "terminal-bench-science",
+              "weightedCostPerTask": 0.6173442529730611
+            }
+          ]
+        },
+        "releaseDate": "2026-09-03",
+        "contextWindowTokens": 1000000,
+        "isOpenWeights": false,
+        "inputModalityText": true,
+        "inputModalityImage": true,
+        "outputModalityText": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-19T03:25:14.462Z",
+  "skills": [
+    {
+      "id": "skill:heygen-com-hyperframes-skills-hyperframes",
+      "kind": "skill",
+      "repo": "heygen-com/hyperframes",
+      "path": "skills/hyperframes",
+      "title": "HyperFrames 代码视频",
+      "description": "用 HTML 制作、编辑和渲染视频与动态图形。",
+      "example": "用 HTML 制作一段带字幕和转场的讲解视频。",
+      "category": "视频制作",
+      "name": "hyperframes",
+      "originalDescription": "Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including launch films, explainers, music videos, charts, maps, vertical clips, title cards, captions and overlays. Holds the render contract, the work loop and what each kind of video needs.",
+      "revision": "4abbdc3e0d6d592ae0ea13509bb7979ba1b15157",
+      "license": "作者未单独注明，请查阅技能目录许可",
+      "compatibility": "Agent Skills 格式；各工具兼容性需确认",
+      "requirements": "需要支持技能的 AI 编程工具；具体依赖见原始说明。",
+      "cost": "技能使用条件以目录许可为准；模型、API 或外部服务可能另行收费。",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes/blob/4abbdc3e0d6d592ae0ea13509bb7979ba1b15157/skills/hyperframes/SKILL.md",
+      "repoUrl": "https://github.com/heygen-com/hyperframes",
+      "observedAt": "2026-11-19T03:25:14.462Z",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "sourceUpdatedAt": "2026-11-19T03:20:03Z",
+      "featured": true,
+      "popularity": {
+        "period": "24h",
+        "rank": 8,
+        "installs": 15638,
+        "observedAt": "2026-11-19T02:30:12.715Z"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "github:1061953414",
+      "kind": "github",
+      "githubId": 1061953414,
+      "repo": "anthropics/skills",
+      "title": "skills",
+      "description": "Anthropic 提供的技能示例与文档处理技能。",
+      "originalDescription": "Public repository for Agent Skills",
+      "category": "Agent 技能",
+      "language": "Python",
+      "license": "请查阅仓库许可",
+      "stars": 197263,
+      "forks": 23103,
+      "archived": false,
+      "pushedAt": "2026-11-16T14:22:50Z",
+      "createdAt": "2025-09-22T15:53:31Z",
+      "url": "https://github.com/anthropics/skills",
+      "repoUrl": "https://github.com/anthropics/skills",
+      "readmeUrl": "https://github.com/anthropics/skills#readme",
+      "trending": [
+        {
+          "period": "weekly",
+          "rank": 9,
+          "gain": 4381,
+          "observedAt": "2026-11-19T03:25:14.462Z"
+        }
+      ],
+      "featured": true,
+      "observedAt": "2026-11-19T03:25:14.462Z",
+      "checkedAt": "2026-11-19T03:25:14.462Z"
+    }
+  ],
+  "sources": [
+    {
+      "id": "skill:anthropics/skills/skills/pdf",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/docx",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/pptx",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/xlsx",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/doc-coauthoring",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/internal-comms",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/frontend-design",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/canvas-design",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/algorithmic-art",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/theme-factory",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/webapp-testing",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/mcp-builder",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:anthropics/skills/skills/skill-creator",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:vercel-labs/agent-skills/skills/react-best-practices",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:vercel-labs/agent-skills/skills/web-design-guidelines",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:vercel-labs/agent-skills/skills/composition-patterns",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:vercel-labs/agent-skills/skills/react-native-skills",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:pbakaus/impeccable/.agents/skills/impeccable",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:nextlevelbuilder/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:remotion-dev/skills/skills/remotion-best-practices",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:remotion-dev/skills/skills/remotion-create",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:remotion-dev/skills/skills/remotion-render",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:heygen-com/hyperframes/skills/hyperframes",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:heygen-com/hyperframes/skills/media-use",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:heygen-com/hyperframes/skills/reverse-any-video",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:vercel-labs/agent-browser/skills/agent-browser",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:leonxlnx/taste-skill/skills/taste-skill",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skill:greensock/gsap-skills/skills/gsap-react",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "trending:daily",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "trending:weekly",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:vercel-labs/skills",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:anthropics/skills",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:langgenius/dify",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:n8n-io/n8n",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:comfy-org/comfyui",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:ollama/ollama",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:open-webui/open-webui",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:microsoft/playwright-mcp",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:hkuds/cli-anything",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:mvanhorn/last30days-skill",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:nvidia/skillevaluator",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:google-research/paper-orchestra",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:google-labs-code/stitch-skills",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:appwrite/appwrite",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:openvinotoolkit/openvino",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:obra/superpowers",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:affaan-m/ecc",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:punkpeye/awesome-mcp-servers",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:googlechrome/modern-web-guidance-src",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:backnotprop/plannotator",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:meta/astryx",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:alibaba/open-code-review",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:tradermonty/claude-trading-skills",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:chromedevtools/chrome-devtools-mcp",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:zhulinsen/daily_stock_analysis",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:ag-ui-protocol/ag-ui",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:vercel-labs/agent-browser",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:openai/codex-security",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "repo:dream-num/univer",
+      "status": "ok",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T03:25:14.462Z"
+    },
+    {
+      "id": "skills-trending:24h",
+      "status": "stale",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "observedAt": "2026-11-19T02:30:12.715Z",
+      "code": "UNAVAILABLE",
+      "url": "https://skills.sh/trending"
+    }
+  ],
+  "skillTrends": [
+    {
+      "id": "skill:heygen-com-hyperframes-skills-sh-hyperframes",
+      "kind": "skill",
+      "listingSource": "skills.sh",
+      "repo": "heygen-com/hyperframes",
+      "name": "hyperframes",
+      "title": "代码制作视频",
+      "description": "用 HTML 制作、编辑和渲染视频与动态图形。",
+      "originalDescription": "Read first to make, edit, animate or render any video with HyperFrames (HTML rendered to video), including launch films, explainers, music videos, charts, maps, vertical clips, title cards, captions and overlays. Holds the render contract, the work loop and what each kind of video needs.",
+      "sourceHash": "972bc2ee5871afb321edf541dd4bae80ce82178eca7e7a4d83712bef36e37dff",
+      "category": "视频制作",
+      "url": "https://skills.sh/heygen-com/hyperframes/hyperframes",
+      "repoUrl": "https://github.com/heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes",
+      "compatibility": "Agent Skills 格式；支持范围与依赖以作者说明为准。",
+      "requirements": "需要支持技能的 AI 工具；安装前请阅读作者说明。",
+      "cost": "热度不代表免费；模型 API、外部服务和许可条件请查阅作者说明。",
+      "license": "以作者仓库许可为准",
+      "featured": false,
+      "observedAt": "2026-11-19T02:30:12.715Z",
+      "checkedAt": "2026-11-19T03:25:14.462Z",
+      "trend": {
+        "period": "24h",
+        "rank": 8,
+        "installs": 15638,
+        "observedAt": "2026-11-19T02:30:12.715Z"
+      },
+      "provenance": {
+        "url": "https://skills.sh/heygen-com/hyperframes/hyperframes",
+        "sha256": "6bd62ad6174583b780438cbfba0ed0fab4e39ef66501bdfa3fe7a2f77b4f2c5e"
+      }
+    }
+  ]
+}

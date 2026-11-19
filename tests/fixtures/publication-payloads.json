@@ -1,0 +1,569 @@
+{
+  "manifest.json": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-10-27T16:00:00Z",
+    "datasets": {
+      "catalog": {
+        "label": "模型目录与报价",
+        "collectedAt": "2026-10-27T14:18:05.621Z",
+        "status": "ok",
+        "source": "OpenRouter models API"
+      },
+      "usage": {
+        "label": "Token 用量周榜",
+        "collectedAt": "2026-10-27T14:18:05.621Z",
+        "status": "ok",
+        "source": "OpenRouter rankings"
+      },
+      "intelligence": {
+        "label": "AI 资讯",
+        "collectedAt": "2026-10-27T15:50:54.425Z",
+        "status": "ok",
+        "source": "RSS / 官方更新 / arXiv / HN API"
+      },
+      "evaluation": {
+        "label": "能力评测",
+        "collectedAt": "2026-10-27T12:41:25.435Z",
+        "status": "ok",
+        "source": "Artificial Analysis / LiveBench",
+        "sources": [
+          {
+            "id": "artificial-analysis",
+            "collectedAt": "2026-10-27T12:41:25.435Z",
+            "status": "ok"
+          },
+          {
+            "id": "livebench",
+            "collectedAt": "2026-10-27T12:41:25.710Z",
+            "status": "ok"
+          }
+        ]
+      },
+      "briefings": {
+        "label": "每日与每周简报",
+        "collectedAt": "2026-10-27T15:50:54.425Z",
+        "status": "ok",
+        "source": "本地结构化简报"
+      }
+    },
+    "sourceHealth": {
+      "catalog": {
+        "label": "模型目录与用量",
+        "status": "unknown",
+        "lastSuccessAt": "2026-10-27T14:18:05.621Z",
+        "consecutiveFailures": 0,
+        "nextRetryAt": null
+      },
+      "intelligence": {
+        "label": "AI 资讯",
+        "status": "unknown",
+        "lastSuccessAt": "2026-10-27T15:50:54.425Z",
+        "consecutiveFailures": 0,
+        "nextRetryAt": null
+      },
+      "aa": {
+        "label": "Artificial Analysis",
+        "status": "unknown",
+        "lastSuccessAt": "2026-10-27T12:41:25.435Z",
+        "consecutiveFailures": 0,
+        "nextRetryAt": null
+      },
+      "livebench": {
+        "label": "LiveBench",
+        "status": "unknown",
+        "lastSuccessAt": "2026-10-27T12:41:25.710Z",
+        "consecutiveFailures": 0,
+        "nextRetryAt": null
+      }
+    }
+  },
+  "snapshot.json": {
+    "schemaVersion": 2,
+    "collectedAt": "2026-10-27T14:18:05.621Z",
+    "catalogSource": "https://openrouter.ai/api/v1/models",
+    "usageSource": "https://openrouter.ai/rankings",
+    "usageDefinition": "OpenRouter 公开榜单中的输入 + 输出 Token；按模型版本与免费/标准变体分别统计。仅代表该平台，非全网用量。",
+    "models": [
+      {
+        "id": "openai/gpt-6.1-terra-pro",
+        "slug": "openai/gpt-6.1-terra-pro-20261026",
+        "name": "OpenAI: GPT-6.1 Terra Pro",
+        "provider": "openai",
+        "created": 1793038556,
+        "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+        "context": 1050000,
+        "maxOutput": 128000,
+        "input": 1,
+        "output": 5,
+        "cache": 0.049999999999999996,
+        "modalities": [
+          "file",
+          "image",
+          "text"
+        ],
+        "outputModalities": [
+          "text"
+        ],
+        "parameters": [
+          "include_reasoning",
+          "max_tokens",
+          "reasoning",
+          "reasoning_effort",
+          "response_format",
+          "seed",
+          "structured_outputs",
+          "tool_choice",
+          "tools",
+          "verbosity"
+        ],
+        "source": "https://openrouter.ai/openai/gpt-6.1-terra-pro"
+      }
+    ],
+    "usage": {
+      "week": [
+        {
+          "slug": "deepseek/deepseek-v4.1-flash-20261017",
+          "variant": "standard",
+          "tokens": 35367631288489,
+          "input": 34855358672226,
+          "output": 512272616263,
+          "date": "2026-10-26 00:00:00",
+          "requests": 582405963
+        }
+      ]
+    },
+    "onlineData": {
+      "manifest": {
+        "schemaVersion": 1,
+        "generatedAt": "2026-10-27T16:00:00Z",
+        "datasets": {
+          "catalog": {
+            "label": "模型目录与报价",
+            "collectedAt": "2026-10-27T14:18:05.621Z",
+            "status": "ok",
+            "source": "OpenRouter models API"
+          },
+          "usage": {
+            "label": "Token 用量周榜",
+            "collectedAt": "2026-10-27T14:18:05.621Z",
+            "status": "ok",
+            "source": "OpenRouter rankings"
+          },
+          "intelligence": {
+            "label": "AI 资讯",
+            "collectedAt": "2026-10-27T15:50:54.425Z",
+            "status": "ok",
+            "source": "RSS / 官方更新 / arXiv / HN API"
+          },
+          "evaluation": {
+            "label": "能力评测",
+            "collectedAt": "2026-10-27T12:41:25.435Z",
+            "status": "ok",
+            "source": "Artificial Analysis / LiveBench",
+            "sources": [
+              {
+                "id": "artificial-analysis",
+                "collectedAt": "2026-10-27T12:41:25.435Z",
+                "status": "ok"
+              },
+              {
+                "id": "livebench",
+                "collectedAt": "2026-10-27T12:41:25.710Z",
+                "status": "ok"
+              }
+            ]
+          },
+          "briefings": {
+            "label": "每日与每周简报",
+            "collectedAt": "2026-10-27T15:50:54.425Z",
+            "status": "ok",
+            "source": "本地结构化简报"
+          }
+        },
+        "sourceHealth": {
+          "catalog": {
+            "label": "模型目录与用量",
+            "status": "unknown",
+            "lastSuccessAt": "2026-10-27T14:18:05.621Z",
+            "consecutiveFailures": 0,
+            "nextRetryAt": null
+          },
+          "intelligence": {
+            "label": "AI 资讯",
+            "status": "unknown",
+            "lastSuccessAt": "2026-10-27T15:50:54.425Z",
+            "consecutiveFailures": 0,
+            "nextRetryAt": null
+          },
+          "aa": {
+            "label": "Artificial Analysis",
+            "status": "unknown",
+            "lastSuccessAt": "2026-10-27T12:41:25.435Z",
+            "consecutiveFailures": 0,
+            "nextRetryAt": null
+          },
+          "livebench": {
+            "label": "LiveBench",
+            "status": "unknown",
+            "lastSuccessAt": "2026-10-27T12:41:25.710Z",
+            "consecutiveFailures": 0,
+            "nextRetryAt": null
+          }
+        }
+      },
+      "benchmark": {
+        "schemaVersion": 1,
+        "collectedAt": "2026-10-27T12:41:25.435Z",
+        "source": "https://artificialanalysis.ai/leaderboards/models",
+        "name": "Artificial Analysis Intelligence Index",
+        "indexVersion": "v4.3",
+        "coverage": {
+          "listed": 1,
+          "ranked": 1
+        },
+        "costDefinition": "来源列名：Cost per Task · USD。仅保留官方报告数值，不换算目录价格。",
+        "provenance": {
+          "url": "https://artificialanalysis.ai/leaderboards/models",
+          "sha256": "ae91a6ee0c390b0075e0cedaa6bc31c4ba8cbd8c5d07fb54d2612eac73e9c315",
+          "scoreColumn": "Artificial Analysis Intelligence Index",
+          "costColumn": "Cost per Task USD"
+        },
+        "rows": [
+          {
+            "id": "claude-opus-5-5-max-with-fallback-",
+            "name": "Claude Opus 5.5 (max with fallback)",
+            "provider": "Anthropic",
+            "context": "1M",
+            "score": 58,
+            "provisional": false,
+            "cost": 5.98,
+            "speed": 98,
+            "latency": "741.38",
+            "responseTime": "746.46",
+            "openWeight": false
+          }
+        ]
+      },
+      "evaluations": {
+        "schemaVersion": 2,
+        "collectedAt": "2026-10-27T12:41:25.710Z",
+        "sources": [
+          {
+            "id": "artificial-analysis",
+            "shortLabel": "AA 综合",
+            "status": "integrated",
+            "domain": "综合能力",
+            "source": "https://artificialanalysis.ai/leaderboards/models",
+            "note": "原始 Intelligence Index；保留推理档位和 fallback 配置。"
+          },
+          {
+            "id": "livebench",
+            "shortLabel": "LiveBench 2.0",
+            "status": "integrated",
+            "domain": "七类实际任务",
+            "source": "https://livebench.ai/",
+            "release": "2026-10-25",
+            "collectedAt": "2026-10-27T12:41:25.710Z",
+            "note": "先计算各分类均分，再对分类等权平均；任务费用按官方总费用 / 任务数。"
+          }
+        ],
+        "rows": [
+          {
+            "sourceId": "livebench",
+            "id": "claude-fable-5.1",
+            "name": "Claude Fable 5.1",
+            "provider": "Anthropic",
+            "openWeight": null,
+            "score": 86.11,
+            "cost": 5.91645110403397,
+            "costBasis": "source",
+            "costUnit": "USD / task",
+            "date": "2026-10-25",
+            "configuration": "effort: max",
+            "categories": {
+              "Long Agentic": 77.9,
+              "Reasoning": 91.7,
+              "Coding": 97.7,
+              "Browser": 89.8,
+              "Data Analysis": 80.3,
+              "Research": 82,
+              "Design": 83.4
+            },
+            "source": "https://livebench.ai/",
+            "modelSource": "https://www.anthropic.com/news/claude-fable-5-1"
+          }
+        ],
+        "methodology": [
+          "Each cell is the model's mean task score for the suite, 0–100, from a single run. A task the run could not measure, even after one rerun, scores 0.",
+          "Design: layout and design tasks across presentations, PDFs and documents. Graded on visual and structural checks of the produced file.",
+          "Research: open-ended research briefs producing a written report. Graded against a rubric.",
+          "Browser Use: multi-step tasks in working web applications, completed through a real browser. Scored as the share of tasks passed. A model that cannot accept screenshots cannot do these tasks and scores 0.",
+          "Coding: bug-fix tasks taken from real merged pull requests on a frozen codebase. Deterministic grading; a fix that breaks existing behaviour scores 0.",
+          "Agentic: long-running work — applications extended over several turns of changing requirements, operations on an existing codebase over simulated months or weeks, and extended coding and optimisation tasks. Deterministic grading.",
+          "Data Analysis: short data-analysis questions on small tables — finding runs of consecutive growth, mapping the columns of one table onto another, and converting a table between formats — each with a single correct answer, graded against ground truth. Each question costs far less than an agentic task.",
+          "Reasoning: short logic, spatial and theory-of-mind questions, each with a single correct answer, graded against ground truth. Each question costs far less than an agentic task.",
+          "Models run at their highest supported effort setting. Where a different setting was used, it is shown in the model's expanded row.",
+          "Overall is the mean of the suites a model has a score for. Blank and n/a cells are left out. Every suite counts equally."
+        ],
+        "provenance": {
+          "releaseKey": "20261025",
+          "releaseLabel": "2026-10-25",
+          "assets": [
+            {
+              "url": "https://livebench.ai/data/20261025/table.csv",
+              "sha256": "92aca6ce8a77cad85b27bda3fea5556029770e720c8fe3ec0371c6471355df36"
+            },
+            {
+              "url": "https://livebench.ai/data/20261025/categories.json",
+              "sha256": "b5366a69719445fa91e970de6f248c666115bbc5d8b8d134f33bb5fcc399a7ce"
+            },
+            {
+              "url": "https://livebench.ai/data/20261025/cost.csv",
+              "sha256": "bbfc36eb595d02d3469f81cf3301a0d4fcdeffb7d680c36bb372b0b1bac1118b"
+            },
+            {
+              "url": "https://livebench.ai/data/20261025/notes.json",
+              "sha256": "a6bd6c8fe1ba7ce26dbdb46e20df6e270ce87e5e6677b90ac51fbe809da6fdbc"
+            }
+          ],
+          "applicationScript": "https://livebench.ai/static/js/main.4228bafc.js"
+        },
+        "withdrawn": [
+          {
+            "id": "weighted",
+            "reason": "不同量纲的原始分不能直接相加；版本和测试配置尚未跨源核验。"
+          },
+          {
+            "id": "aider-polyglot",
+            "reason": "历史编程测试不作为当前模型排行，停止展示。"
+          }
+        ]
+      }
+    }
+  },
+  "latest-benchmark.json": {
+    "schemaVersion": 1,
+    "collectedAt": "2026-10-27T12:41:25.435Z",
+    "source": "https://artificialanalysis.ai/leaderboards/models",
+    "name": "Artificial Analysis Intelligence Index",
+    "indexVersion": "v4.3",
+    "coverage": {
+      "listed": 1,
+      "ranked": 1
+    },
+    "costDefinition": "来源列名：Cost per Task · USD。仅保留官方报告数值，不换算目录价格。",
+    "provenance": {
+      "url": "https://artificialanalysis.ai/leaderboards/models",
+      "sha256": "ae91a6ee0c390b0075e0cedaa6bc31c4ba8cbd8c5d07fb54d2612eac73e9c315",
+      "scoreColumn": "Artificial Analysis Intelligence Index",
+      "costColumn": "Cost per Task USD"
+    },
+    "rows": [
+      {
+        "id": "claude-opus-5-5-max-with-fallback-",
+        "name": "Claude Opus 5.5 (max with fallback)",
+        "provider": "Anthropic",
+        "context": "1M",
+        "score": 58,
+        "provisional": false,
+        "cost": 5.98,
+        "speed": 98,
+        "latency": "741.38",
+        "responseTime": "746.46",
+        "openWeight": false
+      }
+    ]
+  },
+  "evaluation-leaderboards.json": {
+    "schemaVersion": 2,
+    "collectedAt": "2026-10-27T12:41:25.710Z",
+    "sources": [
+      {
+        "id": "artificial-analysis",
+        "shortLabel": "AA 综合",
+        "status": "integrated",
+        "domain": "综合能力",
+        "source": "https://artificialanalysis.ai/leaderboards/models",
+        "note": "原始 Intelligence Index；保留推理档位和 fallback 配置。"
+      },
+      {
+        "id": "livebench",
+        "shortLabel": "LiveBench 2.0",
+        "status": "integrated",
+        "domain": "七类实际任务",
+        "source": "https://livebench.ai/",
+        "release": "2026-10-25",
+        "collectedAt": "2026-10-27T12:41:25.710Z",
+        "note": "先计算各分类均分，再对分类等权平均；任务费用按官方总费用 / 任务数。"
+      }
+    ],
+    "rows": [
+      {
+        "sourceId": "livebench",
+        "id": "claude-fable-5.1",
+        "name": "Claude Fable 5.1",
+        "provider": "Anthropic",
+        "openWeight": null,
+        "score": 86.11,
+        "cost": 5.91645110403397,
+        "costBasis": "source",
+        "costUnit": "USD / task",
+        "date": "2026-10-25",
+        "configuration": "effort: max",
+        "categories": {
+          "Long Agentic": 77.9,
+          "Reasoning": 91.7,
+          "Coding": 97.7,
+          "Browser": 89.8,
+          "Data Analysis": 80.3,
+          "Research": 82,
+          "Design": 83.4
+        },
+        "source": "https://livebench.ai/",
+        "modelSource": "https://www.anthropic.com/news/claude-fable-5-1"
+      }
+    ],
+    "methodology": [
+      "Each cell is the model's mean task score for the suite, 0–100, from a single run. A task the run could not measure, even after one rerun, scores 0.",
+      "Design: layout and design tasks across presentations, PDFs and documents. Graded on visual and structural checks of the produced file.",
+      "Research: open-ended research briefs producing a written report. Graded against a rubric.",
+      "Browser Use: multi-step tasks in working web applications, completed through a real browser. Scored as the share of tasks passed. A model that cannot accept screenshots cannot do these tasks and scores 0.",
+      "Coding: bug-fix tasks taken from real merged pull requests on a frozen codebase. Deterministic grading; a fix that breaks existing behaviour scores 0.",
+      "Agentic: long-running work — applications extended over several turns of changing requirements, operations on an existing codebase over simulated months or weeks, and extended coding and optimisation tasks. Deterministic grading.",
+      "Data Analysis: short data-analysis questions on small tables — finding runs of consecutive growth, mapping the columns of one table onto another, and converting a table between formats — each with a single correct answer, graded against ground truth. Each question costs far less than an agentic task.",
+      "Reasoning: short logic, spatial and theory-of-mind questions, each with a single correct answer, graded against ground truth. Each question costs far less than an agentic task.",
+      "Models run at their highest supported effort setting. Where a different setting was used, it is shown in the model's expanded row.",
+      "Overall is the mean of the suites a model has a score for. Blank and n/a cells are left out. Every suite counts equally."
+    ],
+    "provenance": {
+      "releaseKey": "20261025",
+      "releaseLabel": "2026-10-25",
+      "assets": [
+        {
+          "url": "https://livebench.ai/data/20261025/table.csv",
+          "sha256": "92aca6ce8a77cad85b27bda3fea5556029770e720c8fe3ec0371c6471355df36"
+        },
+        {
+          "url": "https://livebench.ai/data/20261025/categories.json",
+          "sha256": "b5366a69719445fa91e970de6f248c666115bbc5d8b8d134f33bb5fcc399a7ce"
+        },
+        {
+          "url": "https://livebench.ai/data/20261025/cost.csv",
+          "sha256": "bbfc36eb595d02d3469f81cf3301a0d4fcdeffb7d680c36bb372b0b1bac1118b"
+        },
+        {
+          "url": "https://livebench.ai/data/20261025/notes.json",
+          "sha256": "a6bd6c8fe1ba7ce26dbdb46e20df6e270ce87e5e6677b90ac51fbe809da6fdbc"
+        }
+      ],
+      "applicationScript": "https://livebench.ai/static/js/main.4228bafc.js"
+    },
+    "withdrawn": [
+      {
+        "id": "weighted",
+        "reason": "不同量纲的原始分不能直接相加；版本和测试配置尚未跨源核验。"
+      },
+      {
+        "id": "aider-polyglot",
+        "reason": "历史编程测试不作为当前模型排行，停止展示。"
+      }
+    ]
+  },
+  "intelligence.json": {
+    "schemaVersion": 1,
+    "rightsVersion": 1,
+    "collectedAt": "2026-10-27T15:50:54.425Z",
+    "sources": [],
+    "articles": []
+  },
+  "briefings.json": {
+    "collectedAt": "2026-10-27T15:50:54.425Z",
+    "daily": [],
+    "weekly": []
+  },
+  "health.json": {
+    "readable": true,
+    "ok": true,
+    "status": "healthy",
+    "generatedAt": "2026-10-27T16:00:00Z",
+    "sourceHealth": {
+      "catalog": {
+        "label": "模型目录与用量",
+        "status": "unknown",
+        "lastSuccessAt": "2026-10-27T14:18:05.621Z",
+        "consecutiveFailures": 0,
+        "nextRetryAt": null
+      },
+      "intelligence": {
+        "label": "AI 资讯",
+        "status": "unknown",
+        "lastSuccessAt": "2026-10-27T15:50:54.425Z",
+        "consecutiveFailures": 0,
+        "nextRetryAt": null
+      },
+      "aa": {
+        "label": "Artificial Analysis",
+        "status": "unknown",
+        "lastSuccessAt": "2026-10-27T12:41:25.435Z",
+        "consecutiveFailures": 0,
+        "nextRetryAt": null
+      },
+      "livebench": {
+        "label": "LiveBench",
+        "status": "unknown",
+        "lastSuccessAt": "2026-10-27T12:41:25.710Z",
+        "consecutiveFailures": 0,
+        "nextRetryAt": null
+      }
+    },
+    "datasets": [
+      {
+        "id": "catalog",
+        "label": "模型目录与报价",
+        "collectedAt": "2026-10-27T14:18:05.621Z",
+        "status": "ok",
+        "source": "OpenRouter models API"
+      },
+      {
+        "id": "usage",
+        "label": "Token 用量周榜",
+        "collectedAt": "2026-10-27T14:18:05.621Z",
+        "status": "ok",
+        "source": "OpenRouter rankings"
+      },
+      {
+        "id": "intelligence",
+        "label": "AI 资讯",
+        "collectedAt": "2026-10-27T15:50:54.425Z",
+        "status": "ok",
+        "source": "RSS / 官方更新 / arXiv / HN API"
+      },
+      {
+        "id": "evaluation",
+        "label": "能力评测",
+        "collectedAt": "2026-10-27T12:41:25.435Z",
+        "status": "ok",
+        "source": "Artificial Analysis / LiveBench",
+        "sources": [
+          {
+            "id": "artificial-analysis",
+            "collectedAt": "2026-10-27T12:41:25.435Z",
+            "status": "ok"
+          },
+          {
+            "id": "livebench",
+            "collectedAt": "2026-10-27T12:41:25.710Z",
+            "status": "ok"
+          }
+        ]
+      },
+      {
+        "id": "briefings",
+        "label": "每日与每周简报",
+        "collectedAt": "2026-10-27T15:50:54.425Z",
+        "status": "ok",
+        "source": "本地结构化简报"
+      }
+    ]
+  }
+}

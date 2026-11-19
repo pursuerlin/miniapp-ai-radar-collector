@@ -1,0 +1,885 @@
+{
+  "skills": [
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/pdf",
+      "title": "PDF 处理",
+      "category": "办公文档",
+      "description": "合并拆分 PDF，提取表格与扫描件文字。",
+      "example": "从一份 PDF 提取表格，并标出需要人工核对的内容。",
+      "introduction": "处理 PDF 的读取、文字与表格提取、合并拆分、旋转和水印，也可创建 PDF、填写表单或对扫描件进行 OCR。适合整理资料与处理文档流程；扫描质量和复杂表格可能影响提取结果，关键内容需要核对。",
+      "detailSourceHash": "d1906e2fc005cb80c70b054ca9a61cbcaa67f14c348463f18c7c3bd41e682d02"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/docx",
+      "title": "Word 文档",
+      "category": "办公文档",
+      "description": "整理 Word 文档，调整格式与内容。",
+      "example": "将项目资料整理为结构清晰的 Word 报告。",
+      "introduction": "创建、读取和编辑 Word 文档，可整理内容、调整标题与目录、处理图片、批注和修订。适合报告、备忘录与文档模板；已有文档可作为输入，输出仍需检查分页与排版。",
+      "detailSourceHash": "622e60ca3c82adf6866787ba2d255299582e9eac6a5dd450062dbf69be6f46b3"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/pptx",
+      "title": "演示文稿",
+      "category": "办公文档",
+      "description": "制作与编辑 PPT，梳理内容与版式。",
+      "example": "把产品介绍整理为一份演示文稿，并检查版式。",
+      "introduction": "制作和修改演示文稿，也可提取已有 PPT 的内容、合并拆分页面、调整模板与备注。适合把材料整理为汇报或产品介绍；需要提供主题、受众、内容与可用素材，完成后检查页面布局。",
+      "detailSourceHash": "0197a5fe5ea196e480d3fc7838335f8527bcf05ac4cb59d5211f88226c99b850"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/xlsx",
+      "title": "电子表格",
+      "category": "办公文档",
+      "description": "整理表格数据，编写与检查公式。",
+      "example": "清洗销售明细，生成带公式的汇总表。",
+      "introduction": "读取、清洗与整理电子表格，编写公式、调整格式并制作图表，也可创建表格或转换常用数据格式。适合处理明细、统计与汇总任务；需要明确字段含义、计算口径和希望得到的结果。",
+      "detailSourceHash": "efd008c86ccd7afe9019af48f04fcd5192414bef7f1f5c44d8454348db04ed2f"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/doc-coauthoring",
+      "title": "文档协作",
+      "category": "写作沟通",
+      "description": "通过协作流程梳理背景、起草和检查文档。",
+      "example": "一起梳理需求，起草项目技术方案。",
+      "introduction": "通过协作流程收集背景、梳理结构、逐步起草并检查文档是否易懂。适合方案、技术说明、提案和决策记录；你可以边补充信息边修改内容，不需要一次写出完整需求。",
+      "detailSourceHash": "1a1433d4314dd9072bb9f2a4cc234148382e6364fef972c9b32c88aed21bea35"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/internal-comms",
+      "title": "内部沟通写作",
+      "category": "写作沟通",
+      "description": "参考常见组织沟通格式，撰写进展与内部材料。",
+      "example": "根据本周进展起草一份团队周报。",
+      "introduction": "根据团队常用格式整理内部沟通材料，包括进展报告、周报、内部公告、FAQ 和项目更新。适合将零散事实转成结构清晰的内容；需要提供真实进展、对象与希望采取的行动。",
+      "detailSourceHash": "3e5a92014a9adb40b967fbc85b8f0d7f52c6799803030e046ef171e804070aa9"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/frontend-design",
+      "title": "前端界面设计",
+      "category": "前端开发",
+      "description": "设计并实现网站页面与前端界面。",
+      "example": "为阅读工具设计一套清晰、易用的网页界面。",
+      "introduction": "为网站和产品界面确定视觉方向，并在实现或改版时梳理字体、布局与组件之间的关系。适合从需求进入前端界面制作，或改善已有页面；需要结合实际内容、品牌约束和目标设备判断。",
+      "detailSourceHash": "f6aca329665c9761de344b5e6dad22a0318b84a356c6f059d641dcb973bb62ec",
+      "aliases": [
+        "Frontend Design"
+      ]
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/canvas-design",
+      "title": "静态视觉设计",
+      "category": "视觉设计",
+      "description": "创作海报等静态视觉作品，输出 PNG 或 PDF。",
+      "example": "为一次读书分享会设计一张海报。",
+      "introduction": "创作海报、静态视觉作品与其他平面设计，输出 PNG 或 PDF。适合活动视觉、艺术作品和静态版式；需要明确主题、用途与画幅，并使用原创或可合法使用的素材。",
+      "detailSourceHash": "e837915070567de724d3068897efa7d522db4f08f9fb6d4f423225979523ca56",
+      "aliases": [
+        "Canvas Design"
+      ]
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/algorithmic-art",
+      "title": "生成艺术",
+      "category": "视觉设计",
+      "description": "使用 p5.js 创作可交互、可调整参数的生成艺术。",
+      "example": "创作一幅可调整粒子数量的生成艺术作品。",
+      "introduction": "使用 p5.js 创作生成艺术，可通过固定随机种子和可调参数探索图形、粒子或流场。适合用代码制作可交互的视觉作品；重点是原创生成规则和参数变化，而非复制既有艺术家的作品。",
+      "detailSourceHash": "b85e0231980497832c9e7350aa3a5ab879e1f4e0ce6479a9cc2bec8ff677774e"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/theme-factory",
+      "title": "作品主题样式",
+      "category": "视觉设计",
+      "description": "为文档、演示或网页作品应用一致的主题样式。",
+      "example": "为现有演示稿应用统一的颜色与字体。",
+      "introduction": "为演示稿、文档、报告或网页作品应用统一主题，协调颜色、字体与整体视觉。可选择预设主题，也可按任务生成新主题；适合已有内容需要统一样式时使用。",
+      "detailSourceHash": "35f48ac45701d5cd5a23014409c5a711ab86dc4509d2b8ea1a30edf2c652185d"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/webapp-testing",
+      "title": "网页功能测试",
+      "category": "测试自动化",
+      "description": "使用 Playwright 与本地网页交互，检查功能和界面。",
+      "example": "检查本地网页的搜索、表单和窄屏布局。",
+      "introduction": "使用 Playwright 与本地网页交互，验证功能、排查界面行为，并查看截图和浏览器日志。适合检查搜索、表单和页面流程；需要本地应用可运行，并明确需要检查的目标。",
+      "detailSourceHash": "05bd234ecb67739592cef6b1f23923e97dc7d527351dc64c0d98bcf2687d99cc"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/mcp-builder",
+      "title": "MCP 服务开发",
+      "category": "测试自动化",
+      "description": "为外部服务设计与构建 MCP 工具接口。",
+      "example": "为现有业务 API 设计一个 MCP 服务。",
+      "introduction": "为外部 API 或服务设计 MCP 工具接口，帮助 AI 通过结构清晰的工具与服务交互。适合开发新的 MCP 服务或整理现有接口；可按任务选择 Python 或 TypeScript 方案，并准备服务的接口资料与权限。",
+      "detailSourceHash": "dd9ba25d52050d05dbb6a41c828679972d696de348b966e2935e718d3d1bae86"
+    },
+    {
+      "repo": "anthropics/skills",
+      "path": "skills/skill-creator",
+      "title": "创建与改进 Skill",
+      "category": "测试自动化",
+      "description": "创建技能、改进已有技能并评估使用效果。",
+      "example": "把重复的报告整理流程做成可复用技能。",
+      "introduction": "创建新的 Skill、修改已有技能，并通过评估检查触发方式与任务效果。适合把重复流程整理成可复用能力；需要给出典型任务、预期结果和可用于验证的案例。",
+      "detailSourceHash": "dc3522ad3e3e46453a411f9d4f55faa15828e312933e722c1be9e8e3a7712cab",
+      "aliases": [
+        "Skill Creator"
+      ]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "path": "skills/react-best-practices",
+      "title": "React 性能实践",
+      "category": "前端开发",
+      "description": "参考 Vercel 整理的 React 与 Next.js 性能优化建议。",
+      "example": "检查 React 页面是否存在不必要的请求与渲染。",
+      "trendName": "vercel-react-best-practices",
+      "introduction": "参考 Vercel 整理的 React 与 Next.js 性能建议，检查组件、数据请求、打包与页面渲染。适合编写、审查或重构前端代码；应结合项目实际瓶颈选择优化项，并验证修改后的行为与性能。",
+      "detailSourceHash": "9e407656c97ec59c97fd74e58adfb629d5929d43cbd1d72c5016025d7cde5606",
+      "aliases": [
+        "React Best Practices"
+      ]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "path": "skills/web-design-guidelines",
+      "title": "网页体验检查",
+      "category": "前端开发",
+      "description": "按网页界面指南检查可访问性与交互细节。",
+      "example": "检查设置页面的键盘操作、表单提示与布局。",
+      "introduction": "按网页界面指南检查 UI 代码，包括可访问性、交互与用户体验细节。适合审查已有网站或组件；需要结合实际页面和代码判断问题，检查结果仍应在目标设备上确认。",
+      "detailSourceHash": "9fa2a4f2fb6b4efbeca52a5fbe5b6d46574516f553522c6c5bde7408ed797fe8",
+      "aliases": [
+        "Web Design Guidelines"
+      ]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "path": "skills/composition-patterns",
+      "title": "React 组件组合",
+      "category": "前端开发",
+      "description": "参考 React 组件组合模式改进组件 API 与复用。",
+      "example": "梳理一个配置复杂的 React 组件，改善组合方式。",
+      "trendName": "vercel-composition-patterns",
+      "introduction": "改进 React 组件的组合方式，处理布尔参数过多、组件复用困难或 API 不够清晰的问题。涉及复合组件、Context 与 render props 等模式；适合重构组件库或复杂业务组件。",
+      "detailSourceHash": "7a7f444cf3b6c4b166d4cc396ed5f8a9c0b957a6f4be2daf11cc800b6bc4fcb5"
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "path": "skills/react-native-skills",
+      "title": "React Native 实践",
+      "category": "前端开发",
+      "description": "参考 React Native 与 Expo 应用开发实践。",
+      "example": "检查移动端长列表与动画的性能问题。",
+      "trendName": "vercel-react-native-skills",
+      "introduction": "参考 React Native 与 Expo 的开发实践，处理组件、长列表、动画与原生模块相关问题。适合移动端功能开发和性能优化；需要结合实际应用、目标平台与运行环境检查效果。",
+      "detailSourceHash": "9264c0fd71aa090a8842f38fa24aa741c1c4765ea0fe80e84e65b04a7f4c57f9"
+    },
+    {
+      "repo": "pbakaus/impeccable",
+      "path": ".agents/skills/impeccable",
+      "title": "Impeccable 界面打磨",
+      "category": "UI 设计",
+      "description": "审查并改进界面层级、排版与交互细节。",
+      "example": "检查这个设置页的层级、排版和窄屏体验。",
+      "introduction": "审查和改进产品界面的层级、布局、排版、颜色、动效与交互文案，也覆盖可访问性、响应式和异常状态。适合网站、App 或组件的设计与打磨；需要结合真实内容、页面与目标设备判断。",
+      "detailSourceHash": "23ce251f1a712a04c627134e9f90cbb5de500abdeaef533e3da012c82d673f24",
+      "aliases": [
+        "Impeccable"
+      ]
+    },
+    {
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "path": ".claude/skills/ui-ux-pro-max",
+      "title": "UI UX Pro Max",
+      "category": "UI 设计",
+      "description": "为产品界面选择风格、配色、字体与组件方案。",
+      "example": "为一个任务管理 App 设计协调的页面与组件样式。",
+      "introduction": "为网页、移动端和桌面界面选择风格、配色、字体与组件方案，并协助实现和检查。作者提供本地可检索的设计与技术资料，适合建立协调的视觉系统；最终选择仍应结合产品任务与内容。",
+      "detailSourceHash": "1448d7f409805bd341e816f4160846708e7d40028c133028ba40357ebeb01ad1",
+      "aliases": [
+        "UI/UX Pro Max"
+      ]
+    },
+    {
+      "repo": "remotion-dev/skills",
+      "path": "skills/remotion-best-practices",
+      "title": "Remotion 代码视频",
+      "category": "视频制作",
+      "description": "用 React 编写视频，按任务查找对应制作技能。",
+      "example": "用 React 制作一段产品功能演示视频。",
+      "introduction": "Remotion 技能的任务入口，按新建视频、场景制作、媒体处理或渲染等需求，引导使用对应制作说明。适合用 React 编写可编辑的视频内容；它负责组织制作流程，不等同于单独的视频生成模型。",
+      "detailSourceHash": "4f1b24826f5eae63b70b44a45f1c03b53de43e7eeb78abe1077ee25b8211f3ed",
+      "aliases": [
+        "Remotion Skills"
+      ]
+    },
+    {
+      "repo": "remotion-dev/skills",
+      "path": "skills/remotion-create",
+      "title": "Remotion 创建视频",
+      "category": "视频制作",
+      "description": "在 Remotion 中创建视频内容与场景。",
+      "example": "把产品介绍整理成可编辑的 Remotion 视频。",
+      "introduction": "在 Remotion 中创建新的可编辑视频，组织视频内容与场景。适合把脚本、产品资料或演示内容转成代码视频；需要准备相应项目环境、画幅与素材，完成后通过预览检查。",
+      "detailSourceHash": "516b5acfd25ec4ea2e7998c1aa80ad67161d9b7f5a82de2f92e26f3855f18384"
+    },
+    {
+      "repo": "remotion-dev/skills",
+      "path": "skills/remotion-render",
+      "title": "Remotion 渲染导出",
+      "category": "视频制作",
+      "description": "将 Remotion 项目渲染为视频或静态画面。",
+      "example": "检查视频项目并导出适合分享的文件。",
+      "introduction": "把 Remotion 项目导出为视频、静态画面或可编辑的时间线文件。适合已有视频项目进入交付环节；需要先确认项目可运行，再按需要选择输出格式和渲染条件。",
+      "detailSourceHash": "2a2851f2f33a82c926e0ca964355a8a20dd970996dc3d55062ab79687f8aedb7"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "path": "skills/hyperframes",
+      "title": "HyperFrames 代码视频",
+      "category": "视频制作",
+      "description": "用 HTML 制作、编辑和渲染视频与动态图形。",
+      "example": "用 HTML 制作一段带字幕和转场的讲解视频。",
+      "introduction": "HyperFrames 的视频制作入口，把 HTML 项目制作成可预览、可编辑和可渲染的视频。覆盖讲解片、产品短片、字幕、图表、标题与动态图形，并按任务衔接制作和检查流程；实际制作需要相应项目环境与素材。",
+      "detailSourceHash": "972bc2ee5871afb321edf541dd4bae80ce82178eca7e7a4d83712bef36e37dff",
+      "aliases": [
+        "HyperFrames"
+      ]
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "path": "skills/media-use",
+      "title": "视频素材与配音",
+      "category": "视频制作",
+      "description": "为 HyperFrames 视频获取或制作图片、音频与配音。",
+      "example": "为视频匹配背景音乐、配音与画面素材。",
+      "introduction": "为 HyperFrames 视频寻找或制作图片、音乐、音效、图标、配音、字幕转录和其他素材，也能调整已有音频的混合与画面观感。适合视频项目需要补齐素材时使用；不同素材的制作方式、费用和许可分别确认。",
+      "detailSourceHash": "52439c915edb47556ce9fd75e6461c1718ce55557a1cd5a50282c66b0d5c8172"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "path": "skills/reverse-any-video",
+      "title": "视频拆解与复刻",
+      "category": "视频制作",
+      "description": "参考原视频，重建可编辑的 HyperFrames 项目。",
+      "example": "分析参考视频的节奏，制作可编辑的新项目。",
+      "introduction": "根据参考视频重建可编辑的 HyperFrames 项目，分析画面、节奏、字幕与运动，并逐步对照参考检查。适合学习和重建视频结构；需要提供可使用的原始视频，重建结果仍需逐项核对。",
+      "detailSourceHash": "3ca0daa3d7432c4f6331eba5a9bb90bc4b7400b498648d9eedac414ca6276b16"
+    },
+    {
+      "repo": "vercel-labs/agent-browser",
+      "path": "skills/agent-browser",
+      "title": "浏览器自动化",
+      "category": "测试自动化",
+      "description": "让 AI 操作网页、填写表单、截图并检查页面。",
+      "example": "检查网页上的搜索、表单与导航是否正常。",
+      "introduction": "让 AI 通过命令行操作浏览器，完成页面导航、表单填写、按钮点击、截图和内容提取。适合网页功能检查、探索测试和重复的浏览器操作；登录、提交表单等动作需要你提供明确目标与权限。",
+      "detailSourceHash": "fc57e3d5c3f1d1bd3414d56077e7e6dc1d316d0c2d634dca53f0d0a02c284608",
+      "aliases": [
+        "Agent Browser"
+      ]
+    },
+    {
+      "repo": "Leonxlnx/taste-skill",
+      "path": "skills/taste-skill",
+      "trendName": "design-taste-frontend",
+      "title": "前端设计品味",
+      "category": "前端开发",
+      "description": "改善前端界面的视觉层级、布局与交互质感。",
+      "example": "改进这个产品页的布局、字体和交互细节。",
+      "introduction": "为网站与落地页梳理文案、版式、图片和界面展示，强调统一的视觉系统与真实浏览器检查。适合新建或打磨公司网站、产品页；需要结合品牌内容、素材权限和目标设备选择表现方式。",
+      "detailSourceHash": "a5dc4ab14f0c60751b5d25a7193773c22d0acbcfee204130e130db81173928bf",
+      "aliases": [
+        "Taste Skill"
+      ]
+    },
+    {
+      "repo": "greensock/gsap-skills",
+      "path": "skills/gsap-react",
+      "title": "React 动效实践",
+      "category": "前端开发",
+      "description": "在 React 项目中使用 GSAP 构建和管理动画。",
+      "example": "为 React 页面的内容切换制作流畅的动画。",
+      "introduction": "在 React 或 Next.js 中使用 GSAP 制作动画，处理 useGSAP、refs、上下文与组件卸载清理。适合交互与页面动效开发；应结合组件生命周期管理动画，并在实际界面验证表现。",
+      "detailSourceHash": "380395d4613f4df6e5ddd19a7cecc21cc6434d2f9a483af31a98bc0c4cacb1a1",
+      "aliases": [
+        "GSAP Skills"
+      ]
+    },
+    {
+      "repo": "Nutlope/hallmark",
+      "path": "skills/hallmark",
+      "title": "Hallmark 网页设计",
+      "category": "UI 设计",
+      "description": "从内容与品牌出发，设计新网站与页面。",
+      "introduction": "为独立产品设计首页，明确内容、视觉方向与组件关系；已有页面的重做应明确提出。",
+      "example": "为一款读书工具设计首页。",
+      "aliases": [
+        "Hallmark"
+      ],
+      "detailSourceHash": "9b24421dd48fc280cd746b999b9eb7db6e713b78d6ecb036469e41b7e066414d"
+    },
+    {
+      "repo": "cth9191/animate",
+      "path": "plugins/animate/skills/animate",
+      "title": "Animate 风格动画",
+      "category": "视频制作",
+      "description": "用 Canvas 代码制作可导出的风格化动画。",
+      "introduction": "围绕故事、视觉与分镜逐步制作短动画，可选剪纸、版画、像素等风格或参考用户素材，使用浏览器和 ffmpeg 渲染 MP4。",
+      "example": "把一个科学概念做成剪纸风动画。",
+      "aliases": [
+        "Animate"
+      ],
+      "detailSourceHash": "821c17ab5b0e807cf4f109813282b0b37fd9a3467b459a45ae929dbcbe41696a",
+      "requirements": "需要 Node 18+、Playwright/Chromium 和 ffmpeg；精确口播对齐另需 Python 与 faster-whisper。"
+    },
+    {
+      "repo": "alchaincyf/huashu-motion",
+      "path": "skills/huashu-motion",
+      "title": "huashu-motion 产品短片",
+      "category": "视频制作",
+      "description": "用可编辑代码制作产品发布片、动画与解说。",
+      "introduction": "先为产品选择动效语言，再制作可编辑的代码视频；可以根据具体画面反馈修改。适合产品宣传与功能讲解，需准备产品资料和可用素材。",
+      "example": "为新发布的效率工具制作一段功能短片。",
+      "aliases": [
+        "huashu-motion"
+      ],
+      "detailSourceHash": "802923dffdd07937cfb577d3a023c93a313164852911f421267adf5bfd59e4ec"
+    },
+    {
+      "repo": "showheyohtaki/motion-prompt",
+      "path": "skills/motion-prompt",
+      "title": "Motion Prompt 动效词典",
+      "category": "视频制作",
+      "description": "浏览动态示例，选择动效并复用代码或提示词。",
+      "introduction": "通过编号示例选择镜头、转场、网页效果或图表表现，再按选择实现到项目或整理成提示词。它是视觉参考与实现辅助，不是视频生成模型。",
+      "example": "挑选适合产品介绍的转场并复用到项目。",
+      "aliases": [
+        "Motion Prompt"
+      ],
+      "detailSourceHash": "31d38f14a63b68240d64b21a59dcee3392d2f4de0753698cb14389aee21a5f55"
+    },
+    {
+      "repo": "patch-gg/pixelfx",
+      "path": "skills/pixelfx",
+      "title": "pixelfx 像素特效",
+      "category": "视觉设计",
+      "description": "制作像素特效、精灵动画与序列图。",
+      "introduction": "利用代码与现成效果制作火焰、魔法、天气和游戏反馈，支持改色、组合与导出精灵图；通过渲染和观察反复调整动画。",
+      "example": "为像素游戏制作冰霜爆发特效。",
+      "aliases": [
+        "pixelfx"
+      ],
+      "detailSourceHash": "90a2dbb7f2afd9ce5cb3b3d8112caa40a05471c8e8d9b8d8fe84bf32a3fda6ef",
+      "requirements": "需要 Node 18+；GIF 与 MP4 预览可选用 ffmpeg。"
+    },
+    {
+      "repo": "benjitaylor/skills",
+      "path": "stageshow",
+      "title": "Stageshow 产品演示",
+      "category": "前端开发",
+      "description": "用 React 与 CSS 制作产品界面插图和鼠标演示。",
+      "introduction": "把产品操作简化成易懂的界面画面，制作浏览器、手机、终端或卡片插图，也可加入鼠标操作动画。适合营销页与功能介绍中的模拟演示。",
+      "example": "为功能介绍制作一段带鼠标操作的界面演示。",
+      "aliases": [
+        "Stageshow"
+      ],
+      "detailSourceHash": "1f9f48fa048ec06c62ab904ae50b44f58621529b5bac05ee987e167e6f8eed8e"
+    },
+    {
+      "repo": "konlu/story-studio",
+      "path": "",
+      "title": "Story Studio 故事工坊",
+      "category": "视频制作",
+      "description": "整理中文人物故事，制作配音、分镜与剪映草稿。",
+      "introduction": "面向历史与真实人物题材，可独立进行写作、豆包配音、分镜配图和剪映草稿制作，也可接续已有项目。不同环节需要对应工具与素材，事实信息需核查。",
+      "example": "将一份历史人物资料整理为故事脚本和分镜。",
+      "aliases": [
+        "Story Studio"
+      ],
+      "detailSourceHash": "9761fdd8e2a829449cb19c768fea2b585a23b77e9c5d6e530114f77f84f20ab0",
+      "trendName": "story-studio"
+    },
+    {
+      "repo": "HeyChengC/vibe-knowledge-film",
+      "path": "",
+      "title": "Vibe Knowledge Film 知识短片",
+      "category": "视频制作",
+      "description": "用代码制作无旁白、字幕驱动的横屏知识短片。",
+      "introduction": "将抽象概念转成直观形象，让画面演示字幕正在讲的内容。按作者方案制作约 2–5 分钟、16:9 的无旁白知识短片，使用 Canvas、Playwright 与 ffmpeg。",
+      "example": "把信息熵做成无旁白的横屏科普短片。",
+      "aliases": [
+        "Vibe Knowledge Film"
+      ],
+      "detailSourceHash": "d3aad5b9f1e90fb2c4da881fc77957ecd9492671d353af3d39253c784460f6bb",
+      "requirements": "需要 Canvas 制作环境、Playwright 和 ffmpeg；仅面向 16:9 横屏无旁白方案。",
+      "trendName": "vibe-knowledge-film"
+    },
+    {
+      "repo": "chunkithwang/design-playful-app-icons",
+      "path": "skills/design-playful-app-icons",
+      "title": "Playful App Icons 趣味图标",
+      "category": "视觉设计",
+      "description": "设计有辨识度的应用图标，检查构图与小尺寸效果。",
+      "introduction": "从紧凑配色、主体比例和吉祥物等方向构思图标，可整理生图提示词、审查已有方案并迭代；交付前检查小尺寸识别与平台要求。",
+      "example": "为习惯打卡 App 构思三个趣味图标方向。",
+      "aliases": [
+        "Playful App Icons"
+      ],
+      "detailSourceHash": "43c672ba84596d6a99b2d7047a9ff3f2d5942fd78aa225322884e0cd16db9548"
+    },
+    {
+      "repo": "kaankiziltug/logo-design-skill",
+      "path": "skills/logo-design",
+      "title": "Logo Design 标志设计",
+      "category": "视觉设计",
+      "description": "从品牌需求出发，设计并检查 SVG 标志。",
+      "introduction": "梳理品牌简报、选择标志类型、探索概念并制作几何 SVG。可检查单色、反白和小尺寸表现，整理交付变体与使用规范；参考案例应避免直接复制。",
+      "example": "为一款阅读产品设计字母组合标志。",
+      "aliases": [
+        "Logo Design"
+      ],
+      "detailSourceHash": "d2da313bcebb1f4e1a45ebff2a83ff02069fd384753eabdd530333600676ea11"
+    },
+    {
+      "repo": "motiondivision/ai-kit",
+      "path": "plugins/motion/skills/motion",
+      "title": "Motion AI Kit 网页动效",
+      "category": "前端开发",
+      "description": "参考 Motion 官方资料制作和检查网页动画。",
+      "introduction": "辅助 Motion 与 CSS 动画实现，搜索文档、生成弹簧曲线并排查动效问题。部分例子源码、性能审计和编辑功能需要 Motion+ 与对应 MCP 服务。",
+      "example": "检查页面切换动画并优化弹簧参数。",
+      "aliases": [
+        "Motion AI Kit"
+      ],
+      "detailSourceHash": "7232032bcfb81e5ec43c93bbfcc57384218ec1309a861323f1fc61f8e12c6777",
+      "requirements": "项目需使用相应前端技术；文档检索等能力需要配置作者提供的 MCP。",
+      "cost": "基础文档服务可免费使用；Motion+ 示例源码、性能审计等功能需要会员。模型调用费用另计。"
+    },
+    {
+      "repo": "YIAN6557/eian-riso-broll",
+      "path": "",
+      "title": "Riso B-Roll 孔版信息动画",
+      "category": "视频制作",
+      "description": "将口播逐字稿转成孔版双色风格的信息动画。",
+      "introduction": "挑出逐字稿中适合视觉表达的数字、流程或对比，先确认静态样帧，再渲染竖屏无音轨 MP4，也可输出透明底 ProRes。它制作信息动画，需要后续与口播合成。",
+      "example": "为一段效率工具口播制作三条信息动画。",
+      "aliases": [
+        "Riso B-Roll"
+      ],
+      "detailSourceHash": "c6f7373293806f699f6b152b5150642c9d9f6241d7c1ccae0541c37d3d60c906",
+      "requirements": "需要 Node 22+、Chrome/Chromium 和 ffmpeg/ffprobe。",
+      "cost": "作者采用个人非商业使用许可；商业使用需事先取得书面授权。",
+      "trendName": "eian-riso-broll"
+    },
+    {
+      "repo": "arvindrk/extract-design-system",
+      "path": "skills/extract-design-system",
+      "title": "Extract Design System 设计提取",
+      "category": "UI 设计",
+      "description": "从公开网站提取设计基础，生成初始样式变量。",
+      "introduction": "分析公开页面的颜色、排版、间距等设计基础，生成项目可用的初始 token 文件。适合研究视觉系统与建立项目起点，仍需检查覆盖范围与实际页面效果。",
+      "example": "分析一个公开网站的字体、颜色与间距规则。",
+      "aliases": [
+        "Extract Design System"
+      ],
+      "detailSourceHash": "03e713e7460ab63d6a16bcc02f00e872cc8b2bb75ae2f6b8563d5432bade7a9a"
+    },
+    {
+      "repo": "jakubkrehel/make-interfaces-feel-better",
+      "path": "skills/make-interfaces-feel-better",
+      "title": "Make Interfaces Feel Better 界面精修",
+      "category": "UI 设计",
+      "description": "检查字体、边框、阴影与微交互，改善界面质感。",
+      "introduction": "从视觉对齐、图标、文字和动效细节审查组件，可进行快速或完整检查。适合已有页面精修，需要结合代码与真实页面判断问题。",
+      "example": "检查设置页的对齐、按钮反馈与弹出动效。",
+      "aliases": [
+        "Make Interfaces Feel Better"
+      ],
+      "detailSourceHash": "fa6570ee718e100e5f058c2c7c65f7e8fac200b184843802bcd70ba0a3301ff8"
+    },
+    {
+      "repo": "jakubkrehel/oklch-skill",
+      "path": "skills/oklch-skill",
+      "title": "OKLCH 网页配色",
+      "category": "UI 设计",
+      "description": "转换网页颜色，生成配色并检查对比度。",
+      "introduction": "围绕 OKLCH 处理色彩转换、色板、色域边界与明暗主题，可结合 Tailwind v4 组织样式。适合建立更容易调整的颜色系统。",
+      "example": "将品牌色扩展为明暗主题并检查文字对比度。",
+      "aliases": [
+        "OKLCH"
+      ],
+      "detailSourceHash": "f304f267fa4ad85adffabeb53ece5e6f3baee0b8eb8f9b1fdfc2b6494ac6db38"
+    },
+    {
+      "repo": "ibelick/ui-skills",
+      "path": "skills/ui-skills-root",
+      "title": "UI Skills 设计工程技能库",
+      "category": "UI 设计",
+      "description": "按任务挑选合适的 UI 技能上下文。",
+      "introduction": "通过 UI Skills CLI 为当前界面工作选取所需资料，减少无关上下文。它是设计工程技能的选择入口，具体任务能力与依赖取决于所选子技能。",
+      "example": "为一个弹窗组件选择需要的设计与交互检查项。",
+      "aliases": [
+        "UI Skills"
+      ],
+      "detailSourceHash": "5d18487557909d712762f080bde28e0c6f808d253ebf14c65ce81610ffcc28f0"
+    },
+    {
+      "repo": "raphaelsalaja/userinterface-wiki",
+      "path": "skills",
+      "title": "User Interface Wiki 界面审查",
+      "category": "UI 设计",
+      "description": "按界面规范检查动效、排版与交互实现。",
+      "introduction": "覆盖动画、CSS、字体、音效与图标等界面主题，审查前端代码并定位到文件和行。适合已有网页体验检查，结果需要在实际页面确认。",
+      "example": "审查弹窗的动效、字体和键盘交互。",
+      "aliases": [
+        "User Interface Wiki"
+      ],
+      "detailSourceHash": "b46d5b44333051b1603ed17b464d7ad58f6b365e2db3fa2248e3801e3bc7cbd3",
+      "trendName": "userinterface-wiki"
+    },
+    {
+      "repo": "uizze/uizze",
+      "path": "skills/image-to-ui",
+      "title": "Image to UI 截图还原",
+      "category": "前端开发",
+      "description": "根据截图实现界面，并渲染对照可见差异。",
+      "introduction": "把截图或设计图作为视觉依据，复现可见内容、层级、比例、字体和素材。完成后对照渲染结果修改；缺失素材或截断区域需要说明，不能承诺自动达到完全一致。",
+      "example": "按提供的手机截图实现页面并逐项对照。",
+      "aliases": [
+        "Image to UI"
+      ],
+      "detailSourceHash": "51acf91c031bb9f242a44ebab165d85127db3be639bbdb1ed26295b324e341da",
+      "cost": "作者标明该 Skill 免费，无需 UIZZE 账号或 MCP；模型与开发工具费用另计。"
+    },
+    {
+      "repo": "emilkowalski/skills",
+      "path": "skills/review-animations",
+      "title": "Review Animations 动效审查",
+      "category": "UI 设计",
+      "description": "检查动画代码的节奏、缓动与交互表现。",
+      "introduction": "依据 Emil Kowalski 的设计工程经验评审已有动效，找出时长、缓动、触发与打断等问题。适合上线前检查，需要结合实际运行效果验证。",
+      "example": "审查侧边栏展开与关闭动画。",
+      "aliases": [
+        "Review Animations"
+      ],
+      "detailSourceHash": "33eba2c2266237b894c1e096dd1e4e01da52012f0ce68a6108d196ca362f2461"
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "path": "skills/slideshow",
+      "title": "Slideshow 交互演示",
+      "category": "办公文档",
+      "description": "用 HyperFrames 制作可现场演示的交互幻灯片。",
+      "introduction": "将内容或已有网页组织成幻灯片，支持逐步揭示、分支热点和带讲稿的演讲者模式，通过 hyperframes present 展示。输出是现场演示网页。",
+      "example": "把产品介绍做成带演讲备注的交互演示。",
+      "aliases": [
+        "Slideshow"
+      ],
+      "detailSourceHash": "4a4a30928c3548ea7ff2df352c2c847e9dc3a95d6a3c77d7ff9c56d266977821"
+    },
+    {
+      "repo": "mattpocock/skills",
+      "path": "skills/productivity/grilling",
+      "title": "Grill Me 需求追问",
+      "category": "写作沟通",
+      "description": "通过连续追问，澄清计划、设计与决策。",
+      "introduction": "帮助发现方案里的假设、遗漏与边界，把模糊想法逐步问清楚。作者的 grill-me 入口当前转向 grilling，因此这里提供实际执行技能的安装方式。",
+      "example": "围绕一个新产品想法追问目标、约束与风险。",
+      "aliases": [
+        "Grill Me"
+      ],
+      "detailSourceHash": "aefd3e0be77f0961bdfa49de8cf3a5bbba7e55bfbf32c5386aa1a39a42352bcf"
+    },
+    {
+      "repo": "emilkowalski/skills",
+      "path": "skills/prototype",
+      "title": "Prototype 多方案原型",
+      "category": "UI 设计",
+      "description": "为同一界面制作多个方向，直接切换对比。",
+      "introduction": "根据描述制作有实质差异的界面原型，通过可视化选择器来回比较，再选定一个方向继续打磨。适合设计探索，需要明确同一屏的任务和内容。",
+      "example": "为阅读器工具栏制作三种可切换的原型。",
+      "aliases": [
+        "Prototype"
+      ],
+      "detailSourceHash": "7a88e89f520ac6f459a82c47ef067fa4b00dc41ae64341eb867f46a0d3fc908f"
+    },
+    {
+      "repo": "DreamOfXM/ui-taste-skill",
+      "path": "",
+      "title": "UI Taste 界面设计",
+      "category": "UI 设计",
+      "description": "梳理页面任务、视觉方向与统一的设计细节。",
+      "introduction": "先确认页面给谁看、需要完成什么判断，再协调间距、字号、文案与视觉方向。支持多方案对照与已有界面精修，实际效果仍需要结合内容和设备检查。",
+      "example": "为一款任务管理 App 打磨首页层级和样式。",
+      "aliases": [
+        "UI Taste"
+      ],
+      "detailSourceHash": "63ccabbd41d7f754835b2ef2211dbc9c3fe42b1f861c75d16a80e6a5e57328aa",
+      "trendName": "ui-taste-skill"
+    },
+    {
+      "repo": "emilkowalski/skills",
+      "path": "skills/apple-design",
+      "title": "Apple Design 交互设计",
+      "category": "UI 设计",
+      "description": "参考 Apple 的设计思路打磨手势、弹簧与界面层次。",
+      "introduction": "将流畅反馈、空间一致性与克制的视觉表达应用到网页界面，检查拖拽、滑动、弹层、惯性、字体和减少动效设置。它是作者的设计实践整理。",
+      "example": "改进手机网页弹层的拖拽、回弹与文字排版。",
+      "aliases": [
+        "Apple Design"
+      ],
+      "detailSourceHash": "07b280d5b529ba5eecec04f84d1cdde07160c028be90b8fc592d8679c50c4d2d"
+    },
+    {
+      "repo": "tt-a1i/archify",
+      "path": "archify",
+      "title": "Archify 架构与流程图",
+      "category": "办公文档",
+      "description": "将系统、流程或说明制作成可探索的独立网页。",
+      "introduction": "根据需求、Mermaid 或仓库证据制作架构、时序、状态和数据关系等图，也可组织为一页说明。支持主题、交互及图像等导出；涉及代码的关系需要以仓库证据核实。",
+      "example": "将项目登录流程整理为可探索的时序图。",
+      "aliases": [
+        "Archify"
+      ],
+      "detailSourceHash": "7d5ad09970f4d08e02573b3a640af2a6e7263f6fd0cacaeaaf68996e398a1570"
+    },
+    {
+      "repo": "vercel-labs/skills",
+      "path": "skills/find-skills",
+      "title": "Find Skills 技能发现",
+      "category": "测试自动化",
+      "description": "按任务寻找可安装的 Agent Skills。",
+      "introduction": "当你描述想完成的事情时，帮助搜索、比较和发现现成技能。安装前仍应核对作者、说明、权限与兼容环境。",
+      "example": "寻找适合检查 React 性能的技能。",
+      "aliases": [
+        "Find Skills"
+      ],
+      "detailSourceHash": "ae20b48793b11f5341a82473dbee7a120f4462c501b1b56f3732876809c94ef5"
+    },
+    {
+      "repo": "higgsfield-ai/skills",
+      "path": "higgsfield-generate",
+      "title": "Higgsfield Generate 多媒体生成",
+      "category": "视频制作",
+      "description": "通过 Higgsfield 服务调用图片、视频等生成能力。",
+      "introduction": "为 AI 编程工具接入 Higgsfield 的多媒体生成与工作流。可用模型、功能与额度随平台变化，需先完成账号登录并核对当前服务条件。",
+      "example": "根据产品资料生成一段演示视频素材。",
+      "aliases": [
+        "Higgsfield Generate"
+      ],
+      "detailSourceHash": "754637a11a3c081105fb576776632c05da909953a24847cc15efb197b523fcf9",
+      "requirements": "需要 Higgsfield CLI、平台账号并完成登录；功能可用性取决于账号权限。",
+      "cost": "外部生成服务需要相应额度或套餐，按 Higgsfield 当前收费规则；此处不承诺免费生成。"
+    },
+    {
+      "repo": "shadcn-ui/ui",
+      "path": "skills/shadcn",
+      "title": "shadcn/ui 组件实践",
+      "category": "前端开发",
+      "description": "查找、添加、组合与调试 shadcn/ui 组件。",
+      "introduction": "结合项目上下文、组件文档与示例构建界面，处理样式、组件注册表、预设和设计系统。适合使用 shadcn/ui 的项目，应检查 components.json 与实际依赖。",
+      "example": "为 shadcn/ui 项目添加可访问的筛选表单。",
+      "aliases": [
+        "shadcn/ui Skill"
+      ],
+      "detailSourceHash": "18f33232ed0334f2d2859ce538a8bb59ce3cda18508ccc7abe7daaee9ddc27c5"
+    },
+    {
+      "repo": "sleekdotdesign/agent-skills",
+      "path": "skills/design-mobile-apps",
+      "title": "Sleek 移动应用设计",
+      "category": "UI 设计",
+      "description": "使用 Sleek 设计 App 页面并衔接界面实现。",
+      "introduction": "生成或修改 Sleek 项目中的移动端设计，并按方案实现为 React Native 或 HTML。使用前需要连接平台账号与 API，实际额度以当前套餐为准。",
+      "example": "为旅行记录 App 设计三个主要页面。",
+      "aliases": [
+        "Sleek"
+      ],
+      "detailSourceHash": "52ff95f81add7e36e1ab52ac5b81b8f5570843a9776344fece84a79275347145",
+      "requirements": "需要 Sleek 账号与 SLEEK_API_KEY，按作者提供的设备授权流程连接。",
+      "cost": "免费账号有一次性试用额度；持续使用需要 Pro 或更高套餐，以平台当前价格为准。",
+      "trendName": "sleek-design-mobile-apps"
+    },
+    {
+      "repo": "elayadesign/ai-design-skills",
+      "path": "skills/landing-page-design",
+      "title": "AI Design Skills 落地页设计",
+      "category": "UI 设计",
+      "description": "统一落地页的内容结构、文案与视觉细节。",
+      "introduction": "从目标与受众出发组织页面结构，协调转化文案、排版、间距、配色和组件规则。属于作者技能集合中的 landing-page-design，另有面向 Figma 的独立技能。",
+      "example": "为一个新工具整理落地页结构并实现首屏。",
+      "aliases": [
+        "AI Design Skills"
+      ],
+      "detailSourceHash": "a10de598b4fbbf2fb7c09f059704101937e93f2306eacac9677297e8da2c09a7"
+    },
+    {
+      "repo": "elayadesign/ai-design-skills",
+      "path": "skills/figma-designer",
+      "title": "AI Design Skills Figma 设计",
+      "category": "UI 设计",
+      "description": "在 Figma 中组织变量、样式、自动布局与组件。",
+      "introduction": "通过 Figma MCP 在文件中建立屏幕、组件与设计系统，协调字体、间距和颜色变量。它面向真实 Figma 文件，需要对应工具连接与权限。",
+      "example": "在 Figma 中建立一组表单组件与颜色变量。",
+      "aliases": [
+        "AI Design Skills"
+      ],
+      "detailSourceHash": "9526de44acb1757c4268fe02cd95fba54a334f6d2e12bc02b26b0fd378bab1c0",
+      "requirements": "需要可用的 Figma MCP 连接及目标文件编辑权限。",
+      "cost": "设计工具和 MCP 的使用条件取决于 Figma 当前账号套餐；模型费用另计。"
+    },
+    {
+      "repo": "JimLiu/baoyu-skills",
+      "path": "skills/baoyu-slide-deck",
+      "title": "宝玉幻灯片",
+      "category": "办公文档",
+      "description": "把内容整理成大纲，生成逐页幻灯片图片。",
+      "introduction": "先组织大纲和视觉风格，再生成每页图片。适合分享与内容展示；图片幻灯片与可逐字编辑的原生 PPT 有不同的交付方式，使用时需明确需求。",
+      "example": "把一篇产品分析整理为八页图片演示稿。",
+      "aliases": [
+        "宝玉幻灯片"
+      ],
+      "detailSourceHash": "61e7fdecef075af67e108e001d854dc3f4b993ec6d15f2f0907d3101a7e4a6b4"
+    },
+    {
+      "repo": "JimLiu/baoyu-skills",
+      "path": "skills/baoyu-xhs-images",
+      "title": "宝玉小红书图文",
+      "category": "视觉设计",
+      "description": "将长文拆分为适合社交分享的图文卡片。",
+      "introduction": "分析内容并拆分为连贯的图片系列，选择视觉风格、布局与配色。适合小红书、微信图文等场景，生成后需要检查文字准确性与阅读顺序。",
+      "example": "把一份工具清单拆成六张小红书图文卡。",
+      "aliases": [
+        "宝玉小红书图文"
+      ],
+      "detailSourceHash": "95c8426c8c1ec3dd6e72f8560691b8b83970cd7802d62cc3c40b67514930f742"
+    },
+    {
+      "repo": "JimLiu/baoyu-skills",
+      "path": "skills/baoyu-infographic",
+      "title": "宝玉信息图",
+      "category": "视觉设计",
+      "description": "将概念、对比与知识要点整理成信息图。",
+      "introduction": "分析信息结构，组合适合的布局与视觉风格，生成用于解释概念、关系和总结的图片。复杂数据与图片中文字需要逐项核对。",
+      "example": "将三个技术方案的差异整理成一张信息图。",
+      "aliases": [
+        "宝玉信息图"
+      ],
+      "detailSourceHash": "6bd5becbb690c185fbc78351665b71b19b3c634d86c00a4c88afc447e5eb9eee"
+    },
+    {
+      "repo": "obra/superpowers",
+      "path": "skills/brainstorming",
+      "title": "Brainstorming 方案梳理",
+      "category": "写作沟通",
+      "description": "通过讨论澄清目标，把想法整理为设计方案。",
+      "introduction": "在实现前梳理背景、约束与备选方向，通过交流逐步明确设计和验收方式。适合功能构思与方案规划，需要提供实际需求和决策依据。",
+      "example": "讨论一个阅读打卡功能的目标与实现边界。",
+      "aliases": [
+        "Brainstorming"
+      ],
+      "detailSourceHash": "031ec08d5214fa0a56c6a59140016cd20a0d79f8cafa8e732650c9225ab998d8"
+    },
+    {
+      "repo": "coreyhaines31/marketingskills",
+      "path": "skills/copywriting",
+      "title": "Copywriting 页面文案",
+      "category": "写作沟通",
+      "description": "撰写产品页卖点、标题与行动提示。",
+      "introduction": "根据受众、产品事实和输入材料组织首页、定价页或功能页文案，也可改善具体句子。对产品效果与比较性表述需要有可支持的依据。",
+      "example": "根据产品真实能力重写首页标题与功能介绍。",
+      "aliases": [
+        "Copywriting"
+      ],
+      "detailSourceHash": "b770242f987f539fab8bdec1ad0665bcc3f3527693bb9e0613058269e6e5742e"
+    },
+    {
+      "repo": "obsidianmd/obsidian-skills",
+      "path": "plugins/obsidian/skills/obsidian-markdown",
+      "title": "Obsidian Markdown 笔记整理",
+      "category": "办公文档",
+      "description": "编写 Obsidian 笔记、双向链接与属性。",
+      "introduction": "创建和编辑 Obsidian 风格 Markdown，处理 wikilinks、嵌入、callouts、属性与标签。适合知识库整理，需要保留已有笔记结构和引用关系。",
+      "example": "把几篇零散笔记整理成有双向链接的主题索引。",
+      "aliases": [
+        "Obsidian Markdown"
+      ],
+      "detailSourceHash": "a20ba3403fe5d0b89705c77d7702fbe743ef42bf6131c7c7fc415da36b95dcf3"
+    },
+    {
+      "repo": "emilkowalski/skills",
+      "path": "skills/emil-design-eng",
+      "title": "Emil Design Engineering 界面工程",
+      "category": "UI 设计",
+      "description": "打磨组件反馈、弹层、提示与动画细节。",
+      "introduction": "参考 Emil Kowalski 的设计工程实践，检查按钮状态、浮层起点、提示时机、过渡和拖拽细节。适合已有组件的交互精修；更具体的任务可用同作者专门技能。",
+      "example": "检查一个操作菜单的出现位置与交互反馈。",
+      "aliases": [
+        "Emil Design Engineering"
+      ],
+      "detailSourceHash": "6ed18ebecc501bb8fd346b433e69f22a9a889cbf0868d9e94c89badc7b9d1de1"
+    }
+  ],
+  "projects": [
+    {
+      "repo": "vercel-labs/skills",
+      "description": "发现和安装 Agent Skills 的命令行工具。",
+      "category": "开发工具"
+    },
+    {
+      "repo": "anthropics/skills",
+      "description": "Anthropic 提供的技能示例与文档处理技能。",
+      "category": "Agent 技能"
+    },
+    {
+      "repo": "langgenius/dify",
+      "description": "构建 AI 应用、知识库与工作流的平台。",
+      "category": "应用平台"
+    },
+    {
+      "repo": "n8n-io/n8n",
+      "description": "连接应用与 AI 服务的工作流自动化平台。",
+      "category": "工作流"
+    },
+    {
+      "repo": "Comfy-Org/ComfyUI",
+      "description": "通过节点工作流运行图像等生成模型。",
+      "category": "创作工具"
+    },
+    {
+      "repo": "ollama/ollama",
+      "description": "在本地运行与管理大语言模型的工具。",
+      "category": "本地模型"
+    },
+    {
+      "repo": "open-webui/open-webui",
+      "description": "可连接多种模型服务的自托管 AI 界面。",
+      "category": "应用平台"
+    },
+    {
+      "repo": "microsoft/playwright-mcp",
+      "description": "通过 MCP 使用 Playwright 操作浏览器。",
+      "category": "开发工具"
+    },
+    {
+      "repo": "Vincentwei1021/mg-styles-15",
+      "description": "MG Styles 15：15 种风格的代码动效案例、源码与提示词参考；当前未提供可安装的 Skill。",
+      "category": "创作工具"
+    }
+  ]
+}

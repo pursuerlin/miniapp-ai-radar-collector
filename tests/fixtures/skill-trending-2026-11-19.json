@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-19T02:30:12.715Z",
+  "skills": [
+    {
+      "id": "skill:anthropics-skills-skills-pdf",
+      "kind": "skill",
+      "repo": "anthropics/skills",
+      "path": "skills/pdf",
+      "title": "PDF 处理",
+      "description": "合并拆分 PDF，提取表格与扫描件文字。",
+      "example": "从一份 PDF 提取表格，并标出需要人工核对的内容。",
+      "category": "办公文档",
+      "name": "pdf",
+      "originalDescription": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+      "revision": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "license": "Complete terms in LICENSE.txt",
+      "compatibility": "作者面向 Claude 提供；其他工具需自行确认",
+      "requirements": "需要支持技能的 AI 编程工具；具体依赖见原始说明。",
+      "cost": "技能使用条件以目录许可为准；模型、API 或外部服务可能另行收费。",
+      "install": "npx skills add anthropics/skills --skill pdf",
+      "url": "https://github.com/anthropics/skills/blob/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/pdf/SKILL.md",
+      "repoUrl": "https://github.com/anthropics/skills",
+      "observedAt": "2026-11-19T00:18:47.881Z",
+      "checkedAt": "2026-11-19T00:18:47.881Z",
+      "sourceUpdatedAt": "2026-11-16T14:22:50Z",
+      "featured": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "github:1134543109",
+      "kind": "github",
+      "githubId": 1134543109,
+      "repo": "vercel-labs/skills",
+      "title": "skills",
+      "description": "发现和安装 Agent Skills 的命令行工具。",
+      "originalDescription": "The open agent skills tool - npx skills",
+      "category": "开发工具",
+      "language": "TypeScript",
+      "license": "MIT",
+      "stars": 39973,
+      "forks": 3525,
+      "archived": false,
+      "pushedAt": "2026-11-17T00:58:04Z",
+      "createdAt": "2026-01-14T21:31:18Z",
+      "url": "https://github.com/vercel-labs/skills",
+      "repoUrl": "https://github.com/vercel-labs/skills",
+      "readmeUrl": "https://github.com/vercel-labs/skills#readme",
+      "trending": [],
+      "featured": true,
+      "observedAt": "2026-11-19T00:18:47.881Z",
+      "checkedAt": "2026-11-19T00:18:47.881Z"
+    }
+  ],
+  "sources": [
+    {
+      "id": "skills-trending:24h",
+      "status": "ok",
+      "checkedAt": "2026-11-19T02:30:12.715Z",
+      "observedAt": "2026-11-19T02:30:12.715Z",
+      "url": "https://skills.sh/trending",
+      "sha256": "cd4ac2e7e787c5adc9e75e3ce874b92c8958bee33fb8a05bd367469f80c4498e",
+      "listed": 30,
+      "details": 2
+    }
+  ],
+  "skillTrends": [
+    {
+      "id": "skill:beltsh-superpowers-skills-sh-ai-video-generation",
+      "kind": "skill",
+      "listingSource": "skills.sh",
+      "repo": "beltsh/superpowers",
+      "name": "ai-video-generation",
+      "title": "AI 视频生成",
+      "description": "通过 inference.sh 调用视频模型，生成或编辑视频。",
+      "originalDescription": "Generate AI videos with Google Veo, Seedance 2.0, HappyHorse, Wan, Grok and 40+ models via inference.sh CLI. Models: Veo 3.1, Veo 3, Seedance 2.0, HappyHorse 1.0, Wan 2.5, Grok Imagine Video, OmniHuman, Fabric, HunyuanVideo. Capabilities: text-to-video, image-to-video, reference-to-video, video editing, lipsync, avatar animation, video upscaling, foley sound. Use for: social media videos, marketing content, explainer videos, product demos, AI avatars. Triggers: video generation, ai video, text to video, image to video, veo, animate image, video from image, ai animation, video generator, generate video, t2v, i2v, ai video maker, create video with ai, runway alternative, pika alternative, sora alternative, kling alternative, seedance, happyhorse",
+      "sourceHash": "3e726a4df199351c976dc0312207d305e5c08224584b3f393ad217d50019f8e2",
+      "category": "设计开发",
+      "url": "https://skills.sh/beltsh/superpowers/ai-video-generation",
+      "repoUrl": "https://github.com/beltsh/superpowers",
+      "install": "npx skills add beltsh/superpowers --skill ai-video-generation",
+      "compatibility": "Agent Skills 格式；支持范围与依赖以作者说明为准。",
+      "requirements": "需要支持技能的 AI 工具；安装前请阅读作者说明。",
+      "cost": "热度不代表免费；模型 API、外部服务和许可条件请查阅作者说明。",
+      "license": "以作者仓库许可为准",
+      "featured": false,
+      "observedAt": "2026-11-19T02:30:12.715Z",
+      "checkedAt": "2026-11-19T02:30:12.715Z",
+      "trend": {
+        "period": "24h",
+        "rank": 1,
+        "installs": 28854,
+        "observedAt": "2026-11-19T02:30:12.715Z"
+      },
+      "provenance": {
+        "url": "https://skills.sh/beltsh/superpowers/ai-video-generation",
+        "sha256": "f717d8a13c9855f34501a8c55b722e2d27313cfbdfb0c8edb1d437db76bf3495"
+      }
+    },
+    {
+      "id": "skill:beltsh-superpowers-skills-sh-ai-image-generation",
+      "kind": "skill",
+      "listingSource": "skills.sh",
+      "repo": "beltsh/superpowers",
+      "name": "ai-image-generation",
+      "title": "AI 图像生成",
+      "description": "通过 inference.sh 生成、编辑图片与局部重绘。",
+      "originalDescription": "Generate AI images with GPT-Image-2, FLUX, Gemini, Grok, Seedream, Reve and 50+ models via inference.sh CLI. Models: GPT-Image-2, FLUX Dev LoRA, FLUX.2 Klein LoRA, Gemini 3 Pro Image, Grok Imagine, Seedream 4.5, Reve, ImagineArt. Capabilities: text-to-image, image-to-image, inpainting, LoRA, image editing, upscaling, text rendering. Use for: AI art, product mockups, concept art, social media graphics, marketing visuals, illustrations. Triggers: flux, image generation, ai image, text to image, stable diffusion, generate image, ai art, midjourney alternative, dall-e alternative, text2img, t2i, image generator, ai picture, create image with ai, generative ai, ai illustration, grok image, gemini image, gpt image, openai image, chatgpt image",
+      "sourceHash": "8eb21dd8020149a8436eb715c9644b38941ae7c37a75ca1e58bbd327fd8beeb8",
+      "category": "设计开发",
+      "url": "https://skills.sh/beltsh/superpowers/ai-image-generation",
+      "repoUrl": "https://github.com/beltsh/superpowers",
+      "install": "npx skills add beltsh/superpowers --skill ai-image-generation",
+      "compatibility": "Agent Skills 格式；支持范围与依赖以作者说明为准。",
+      "requirements": "需要支持技能的 AI 工具；安装前请阅读作者说明。",
+      "cost": "热度不代表免费；模型 API、外部服务和许可条件请查阅作者说明。",
+      "license": "以作者仓库许可为准",
+      "featured": false,
+      "observedAt": "2026-11-19T02:30:12.715Z",
+      "checkedAt": "2026-11-19T02:30:12.715Z",
+      "trend": {
+        "period": "24h",
+        "rank": 2,
+        "installs": 28847,
+        "observedAt": "2026-11-19T02:30:12.715Z"
+      },
+      "provenance": {
+        "url": "https://skills.sh/beltsh/superpowers/ai-image-generation",
+        "sha256": "3978ec1f04e3f307cbc17d87ca239b7f2e2449cdb8165b060cdda1cbe8cd091b"
+      }
+    }
+  ]
+}

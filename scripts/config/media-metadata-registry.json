@@ -1,0 +1,2484 @@
+{
+  "schemaVersion": 1,
+  "revision": 15,
+  "models": [
+    {
+      "id": "qwen-image",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "a7ce8a95-072f-4ca2-b574-35400c21d005",
+          "name": "Qwen Image",
+          "boards": [
+            "text-to-image"
+          ],
+          "provider": "Alibaba"
+        }
+      ],
+      "sources": [
+        {
+          "source": "huggingface",
+          "id": "Qwen/Qwen-Image",
+          "scope": "model",
+          "revision": "75e0b4be04f60ec59a75f475837eced720f823b6"
+        },
+        {
+          "source": "fal",
+          "id": "fal-ai/qwen-image",
+          "scope": "endpoint",
+          "expectedName": "Qwen Image"
+        }
+      ]
+    },
+    {
+      "id": "qwen-image-edit",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "5d5701fe-a1d0-4eab-96b6-8f55b0610e1c",
+          "name": "Qwen Image Edit",
+          "boards": [
+            "image-editing"
+          ],
+          "provider": "Alibaba"
+        }
+      ],
+      "sources": [
+        {
+          "source": "huggingface",
+          "id": "Qwen/Qwen-Image-Edit",
+          "scope": "model",
+          "revision": "ac7f9318f633fc4b5778c59367c8128225f1e3de"
+        },
+        {
+          "source": "fal",
+          "id": "fal-ai/qwen-image-edit",
+          "scope": "endpoint",
+          "expectedName": "Qwen Image Edit"
+        }
+      ]
+    },
+    {
+      "id": "z-image-turbo",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "d48735c9-9f0f-45b6-ad45-cc03eec252c8",
+          "name": "Z-Image Turbo",
+          "boards": [
+            "text-to-image"
+          ],
+          "provider": "Alibaba"
+        }
+      ],
+      "sources": [
+        {
+          "source": "huggingface",
+          "id": "Tongyi-MAI/Z-Image-Turbo",
+          "scope": "model",
+          "revision": "f332072aa78be7aecdf3ee76d5c247082da564a6"
+        },
+        {
+          "source": "fal",
+          "id": "fal-ai/z-image/turbo",
+          "scope": "endpoint",
+          "expectedName": "Z Image Turbo"
+        }
+      ]
+    },
+    {
+      "id": "flux-dev",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "42f6daca-7146-4620-8977-d190d7fac51a",
+          "name": "FLUX.1 [dev]",
+          "boards": [
+            "text-to-image"
+          ],
+          "provider": "Black Forest Labs"
+        }
+      ],
+      "sources": [
+        {
+          "source": "huggingface",
+          "id": "black-forest-labs/FLUX.1-dev",
+          "scope": "model",
+          "revision": "3de623fc3c33e44ffbe2bad470d0f45bccf2eb21"
+        },
+        {
+          "source": "fal",
+          "id": "fal-ai/flux/dev",
+          "scope": "endpoint",
+          "expectedName": "FLUX.1 [dev]"
+        }
+      ]
+    },
+    {
+      "id": "flux-schnell",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "d77cfc0a-2fa1-4f8e-9f7f-a666b348b1e9",
+          "name": "FLUX.1 [schnell]",
+          "boards": [
+            "text-to-image"
+          ],
+          "provider": "Black Forest Labs"
+        }
+      ],
+      "sources": [
+        {
+          "source": "huggingface",
+          "id": "black-forest-labs/FLUX.1-schnell",
+          "scope": "model",
+          "revision": "741f7c3ce8b383c54771c7003378a50191e9efe9"
+        },
+        {
+          "source": "fal",
+          "id": "fal-ai/flux/schnell",
+          "scope": "endpoint",
+          "expectedName": "FLUX.1 [schnell]"
+        }
+      ]
+    },
+    {
+      "id": "flux-kontext-dev",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "b4a07a40-c0c2-475a-8326-469bdd6dff47",
+          "name": "FLUX.1 Kontext [dev]",
+          "boards": [
+            "image-editing"
+          ],
+          "provider": "Black Forest Labs"
+        }
+      ],
+      "sources": [
+        {
+          "source": "huggingface",
+          "id": "black-forest-labs/FLUX.1-Kontext-dev",
+          "scope": "model",
+          "revision": "24e9dedc4ef646698dc8eb4e18ae2cec3c9fea0d"
+        }
+      ]
+    },
+    {
+      "id": "hunyuan-image-3",
+      "reviewedAt": "2026-11-17T14:20:00.000Z",
+      "targets": [
+        {
+          "id": "1522bb2b-0ec1-4cbe-aa0f-3dd04b784035",
+          "name": "HunyuanImage 3.0",
+          "boards": [
+            "text-to-image"
+          ],
+          "provider": "Tencent"
+        }
+      ],
+      "sources": [
+        {
+          "source": "huggingface",
+          "id": "tencent/HunyuanImage-3.0",
+          "scope": "model",
+          "revision": "36f21fe74b65614451cc50ffd8a35a5f662dac70"
+        }
+      ]
+    },
+    {
+      "id": "kling-3-pro-text",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "d149ad95-b3b2-4d23-8611-07a84c1a0e7f",
+          "name": "Kling 3.0 1080p (Pro)",
+          "provider": "KlingAI",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "fal",
+          "id": "fal-ai/kling-video/v3/pro/text-to-video",
+          "scope": "endpoint",
+          "expectedName": "Kling Video v3 Text to Video [Pro]"
+        }
+      ]
+    },
+    {
+      "id": "kling-3-pro-image",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "d149ad95-b3b2-4d23-8611-07a84c1a0e7f",
+          "name": "Kling 3.0 1080p (Pro)",
+          "provider": "KlingAI",
+          "boards": [
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "fal",
+          "id": "fal-ai/kling-video/v3/pro/image-to-video",
+          "scope": "endpoint",
+          "expectedName": "Kling Video v3 Image to Video [Pro]"
+        }
+      ]
+    },
+    {
+      "id": "seedream-4-5-text-to-image",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "08f19008-675e-4d70-98b2-49ad3178c1f0",
+          "name": "Seedream 4.5",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "fal",
+          "id": "fal-ai/bytedance/seedream/v4.5/text-to-image",
+          "scope": "endpoint",
+          "expectedName": "Bytedance Seedream V4.5 Text To Image"
+        }
+      ]
+    },
+    {
+      "id": "seedream-4-5-image-editing",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "08f19008-675e-4d70-98b2-49ad3178c1f0",
+          "name": "Seedream 4.5",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "fal",
+          "id": "fal-ai/bytedance/seedream/v4.5/edit",
+          "scope": "endpoint",
+          "expectedName": "Bytedance Seedream V4.5 Edit"
+        }
+      ]
+    },
+    {
+      "id": "nano-banana-pro-text-to-image",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "6a5056eb-6854-43c4-bf18-01d185ce9e2f",
+          "name": "Nano Banana Pro (Gemini 3 Pro Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "fal",
+          "id": "fal-ai/nano-banana-pro",
+          "scope": "endpoint",
+          "expectedName": "Nano Banana Pro"
+        }
+      ]
+    },
+    {
+      "id": "nano-banana-pro-image-editing",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "6a5056eb-6854-43c4-bf18-01d185ce9e2f",
+          "name": "Nano Banana Pro (Gemini 3 Pro Image)",
+          "provider": "Google",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "fal",
+          "id": "fal-ai/nano-banana-pro/edit",
+          "scope": "endpoint",
+          "expectedName": "Nano Banana Pro"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-3-image",
+      "reviewedAt": "2026-11-18T04:21:03.998Z",
+      "targets": [
+        {
+          "id": "952cb4e8-6155-45f4-a653-f426669cf80a",
+          "name": "FLUX 3 Image",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-3-image",
+          "scope": "endpoint",
+          "expectedName": "Generate an image with FLUX 3."
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-3-image-klein",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "2fcb2223-b343-48c5-b6ed-31bdc0e0678c",
+          "name": "FLUX 3 Image Klein",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-3-image-klein",
+          "scope": "endpoint",
+          "expectedName": "Generate an image with FLUX 3 Image Klein."
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-2-flex",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "e2201d15-3e29-48c6-89ba-e63ccf3dde15",
+          "name": "FLUX.2 [flex]",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-2-flex",
+          "scope": "endpoint",
+          "expectedName": "Generate or edit an image with FLUX.2 [flex]"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-2-max",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "6a398b55-7f36-4039-bbbf-2045ef8ab525",
+          "name": "FLUX.2 [max]",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-2-max",
+          "scope": "endpoint",
+          "expectedName": "Generate or edit an image with FLUX.2 [max]"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-2-pro",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "18874791-11a3-4cb7-bc0e-6ca10138eec7",
+          "name": "FLUX.2 [pro]",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-2-pro",
+          "scope": "endpoint",
+          "expectedName": "Generate or edit an image with FLUX.2 [pro]"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-2-klein-9b",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "3a03722d-32c0-44f3-adde-188c51b639f1",
+          "name": "FLUX.2 [klein] 9B",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-2-klein-9b",
+          "scope": "endpoint",
+          "expectedName": "Generate or edit an image with FLUX.2 [klein] 9B"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-2-klein-4b",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "6443510e-aedc-423b-9a16-478534b16269",
+          "name": "FLUX.2 [klein] 4B",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-2-klein-4b",
+          "scope": "endpoint",
+          "expectedName": "Generate or edit an image with FLUX.2 [klein] 4B"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-pro-1.1",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "f1182fcf-b690-413a-9a9b-38cec96e9e09",
+          "name": "FLUX1.1 [pro]",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-pro-1.1",
+          "scope": "endpoint",
+          "expectedName": "Generate an image with FLUX1.1 [pro]"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-pro-1.1-ultra",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "aa524f71-2f87-4395-b1c1-83dfa20bd87c",
+          "name": "FLUX1.1 [pro] Ultra",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-pro-1.1-ultra",
+          "scope": "endpoint",
+          "expectedName": "Generate an image with FLUX1.1 [pro] ultra mode"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-kontext-pro",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "3338f278-fb1f-4727-b9af-d51ae3ab7e36",
+          "name": "FLUX.1 Kontext [pro]",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-kontext-pro",
+          "scope": "endpoint",
+          "expectedName": "Edit or create an image with FLUX.1 Kontext [pro]"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-kontext-max",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "b7c09073-9046-4043-884b-ac541fedbbac",
+          "name": "FLUX.1 Kontext [max]",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-kontext-max",
+          "scope": "endpoint",
+          "expectedName": "Edit or create an image with FLUX.1 Kontext [max]"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-3-video-t2v",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "b0e23926-7240-4277-8480-b3f12c12251b",
+          "name": "FLUX 3",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-3-video",
+          "scope": "endpoint",
+          "expectedName": "Generate a video with FLUX 3.",
+          "mode": "t2v"
+        }
+      ]
+    },
+    {
+      "id": "bfl-flux-3-video-i2v",
+      "reviewedAt": "2026-11-18T04:21:04.002Z",
+      "targets": [
+        {
+          "id": "b0e23926-7240-4277-8480-b3f12c12251b",
+          "name": "FLUX 3",
+          "provider": "Black Forest Labs",
+          "boards": [
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl",
+          "id": "flux-3-video",
+          "scope": "endpoint",
+          "expectedName": "Generate a video with FLUX 3.",
+          "mode": "i2v"
+        }
+      ]
+    },
+    {
+      "id": "fal-fal-ai-nano-banana-2",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "3180162e-693d-487d-adbb-721f859f768d",
+          "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "fal",
+          "id": "fal-ai/nano-banana-2",
+          "scope": "endpoint",
+          "expectedName": "Nano Banana 2"
+        }
+      ]
+    },
+    {
+      "id": "fal-fal-ai-nano-banana-2-edit",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "3180162e-693d-487d-adbb-721f859f768d",
+          "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+          "provider": "Google",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "fal",
+          "id": "fal-ai/nano-banana-2/edit",
+          "scope": "endpoint",
+          "expectedName": "Nano Banana 2"
+        }
+      ]
+    },
+    {
+      "id": "fal-fal-ai-bytedance-seedance-v2-text-to-video",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "b8289cfd-3843-4d4c-a3fb-ec5ae5e752e0",
+          "name": "Dreamina Seedance 2.0",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "fal",
+          "id": "fal-ai/bytedance/seedance/v2/text-to-video",
+          "scope": "endpoint",
+          "expectedName": "Bytedance Seedance 2 Text to Video"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2-6-sunburst",
+      "reviewedAt": "2026-11-18T05:51:21.900Z",
+      "targets": [
+        {
+          "id": "a126a6fd-2f15-4da2-8b9a-700b2973a4e3",
+          "name": "GPT Image 2.6 Sunburst (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.6-sunburst",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2-6-flare",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "ac1b5565-d063-480e-a593-ce244705cd43",
+          "name": "GPT Image 2.6 Flare (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.6-flare",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2-5-sunburst",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "98833f93-0f33-4205-b83a-c4d42a25da4f",
+          "name": "GPT Image 2.5 Sunburst (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.5-sunburst",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2-5-flare",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "ac3abe51-14ca-4c04-b215-01a85f3a36ac",
+          "name": "GPT Image 2.5 Flare (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.5-flare",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "9570e1d0-a390-48c1-a270-1317570fe3d5",
+          "name": "GPT Image 2 (high)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-1-5",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "a1ee4d6f-d136-434b-bb1d-066fe5f9bf6f",
+          "name": "GPT Image 1.5 (high)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-1.5",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2-6-sunburst-edit",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "a126a6fd-2f15-4da2-8b9a-700b2973a4e3",
+          "name": "GPT Image 2.6 Sunburst (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.6-sunburst-edit",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2-6-flare-edit",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "ac1b5565-d063-480e-a593-ce244705cd43",
+          "name": "GPT Image 2.6 Flare (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.6-flare-edit",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2-5-sunburst-edit",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "98833f93-0f33-4205-b83a-c4d42a25da4f",
+          "name": "GPT Image 2.5 Sunburst (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.5-sunburst-edit",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2-5-flare-edit",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "ac3abe51-14ca-4c04-b215-01a85f3a36ac",
+          "name": "GPT Image 2.5 Flare (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.5-flare-edit",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-2-edit",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "9570e1d0-a390-48c1-a270-1317570fe3d5",
+          "name": "GPT Image 2 (high)",
+          "provider": "OpenAI",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2-edit",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-openai-gpt-image-1-5-edit",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "a1ee4d6f-d136-434b-bb1d-066fe5f9bf6f",
+          "name": "GPT Image 1.5 (high)",
+          "provider": "OpenAI",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-1.5-edit",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-google-gemini-nano-banana-2-1",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "b6f834da-1ca2-4f4c-a215-158970a058fa",
+          "name": "Nano Banana 2.1",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-nano-banana-2.1",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-google-gemini-3-1-flash-lite-image",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "7f1079f3-b886-4ac1-bd3e-7059da87ff28",
+          "name": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-3.1-flash-lite-image",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-google-gemini-omni-1-2-flash",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "939dcfbc-2322-4224-bfdb-5395c4046b6c",
+          "name": "Gemini Omni Flash 1.2",
+          "provider": "Google",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-omni-1.2-flash",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-xai-grok-imagine-image-2-0",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "748fadd1-ecd9-41d0-9b43-f5fccd4fb843",
+          "name": "Grok Imagine Image 2.0",
+          "provider": "SpaceXAI",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "xai",
+          "id": "grok-imagine-image-2.0",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-xai-grok-imagine-video-1-5",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "e83498b8-ae29-4eb7-a343-2a2a74eb0e53",
+          "name": "Grok Imagine Video 1.5",
+          "provider": "SpaceXAI",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "xai",
+          "id": "grok-imagine-video-1.5",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-volcengine-doubao-seedream-5-5-261028",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "b8852bf6-1e75-4209-ac4d-a135170dc1f3",
+          "name": "Seedream 5.5",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "doubao-seedream-5-5-261028",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-volcengine-seedream-5-0-pro",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "c9e4f0a2-3b7d-4c61-8e29-1f5a6d0b47c3",
+          "name": "Seedream 5.0 Pro",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "seedream-5.0-pro",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-microsoft-mai-image-2-6",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "5d931c2e-797e-406e-8eb9-83ce18b5710c",
+          "name": "MAI-Image-2.6",
+          "provider": "Microsoft AI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "microsoft",
+          "id": "MAI-Image-2.6",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-microsoft-mai-image-2-6-flash",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "daa01918-0450-4825-992a-eade1f981683",
+          "name": "MAI-Image-2.6-Flash",
+          "provider": "Microsoft AI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "microsoft",
+          "id": "MAI-Image-2.6-Flash",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-microsoft-mai-image-2-5",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "3f8a2d6b-9c4e-4f1a-b7d2-8e5a0c3d71f9",
+          "name": "MAI-Image-2.5",
+          "provider": "Microsoft AI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "microsoft",
+          "id": "MAI-Image-2.5",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-microsoft-mai-image-2-5-pro",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "503fdcd1-5895-4145-8484-1ab301320f6d",
+          "name": "MAI-Image-2.5-Pro",
+          "provider": "Microsoft AI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "microsoft",
+          "id": "MAI-Image-2.5-Pro",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-minimax-minimax-h3",
+      "reviewedAt": "2026-11-18T07:51:11.083Z",
+      "targets": [
+        {
+          "id": "da987d84-718f-4ac2-a278-518595967b42",
+          "name": "MiniMax H3 (768p)",
+          "provider": "MiniMax",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "minimax",
+          "id": "MiniMax-H3",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-minimax-minimax-h3-image",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "9b61629e-500e-452f-bfaa-5e3cd11f545d",
+          "name": "H3-Image",
+          "provider": "MiniMax",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "minimax",
+          "id": "MiniMax-H3-Image",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-minimax-minimax-h3-image-highspeed",
+      "reviewedAt": "2026-11-18T05:51:21.905Z",
+      "targets": [
+        {
+          "id": "5c408cba-eb9a-4806-a44c-1d77030e9990",
+          "name": "H3-Image Highspeed",
+          "provider": "MiniMax",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "minimax",
+          "id": "MiniMax-H3-Image-Highspeed",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-google-gemini-3-1-flash-image",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "3180162e-693d-487d-adbb-721f859f768d",
+          "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-3.1-flash-image",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-google-gemini-3-pro-image",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "6a5056eb-6854-43c4-bf18-01d185ce9e2f",
+          "name": "Nano Banana Pro (Gemini 3 Pro Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-3-pro-image",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-google-gemini-2-5-flash-image",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "ead01c00-8518-4f8d-8033-76fcaef910fd",
+          "name": "Nano Banana (Gemini 2.5 Flash Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-2.5-flash-image",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-google-gemini-omni-1-1-flash",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "91ad83d7-be21-4595-952a-2eefee3360e5",
+          "name": "Gemini Omni Flash 1.1",
+          "provider": "Google",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-omni-1.1-flash",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-volcengine-doubao-seedance-2-5-260628",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "57913d03-a959-4752-8027-8991612448ed",
+          "name": "Dreamina Seedance 2.5",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "doubao-seedance-2-5-260628",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-volcengine-doubao-seedance-2-0-260128",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "b8289cfd-3843-4d4c-a3fb-ec5ae5e752e0",
+          "name": "Dreamina Seedance 2.0",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "doubao-seedance-2-0-260128",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-xai-grok-imagine-image-2-0-edit",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "748fadd1-ecd9-41d0-9b43-f5fccd4fb843",
+          "name": "Grok Imagine Image 2.0",
+          "provider": "SpaceXAI",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "xai",
+          "id": "grok-imagine-image-2.0-edit",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-xai-grok-imagine-video-1-5-i2v",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "e83498b8-ae29-4eb7-a343-2a2a74eb0e53",
+          "name": "Grok Imagine Video 1.5",
+          "provider": "SpaceXAI",
+          "boards": [
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "xai",
+          "id": "grok-imagine-video-1.5-i2v",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-xai-grok-imagine-video-1-5-lite",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "c478c4a7-cd9f-41ac-8995-355556eb8707",
+          "name": "Grok Imagine Video 1.5 Lite",
+          "provider": "SpaceXAI",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "xai",
+          "id": "grok-imagine-video-1.5-lite",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-xai-grok-imagine-video-1-5-lite-i2v",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "c478c4a7-cd9f-41ac-8995-355556eb8707",
+          "name": "Grok Imagine Video 1.5 Lite",
+          "provider": "SpaceXAI",
+          "boards": [
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "xai",
+          "id": "grok-imagine-video-1.5-lite-i2v",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-microsoft-MAI-Image-2-5-Flash",
+      "reviewedAt": "2026-11-18T06:46:34.565Z",
+      "targets": [
+        {
+          "id": "e23a6328-1441-4633-b53c-bb2c40c5a647",
+          "name": "MAI-Image-2.5-Flash",
+          "provider": "Microsoft AI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "microsoft",
+          "id": "MAI-Image-2.5-Flash",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gpt-image-2.6-sunburst",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "a126a6fd-2f15-4da2-8b9a-700b2973a4e3",
+          "name": "GPT Image 2.6 Sunburst (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.6-sunburst-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gpt-image-2.6-flare",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "ac1b5565-d063-480e-a593-ce244705cd43",
+          "name": "GPT Image 2.6 Flare (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.6-flare-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gpt-image-2.5-sunburst",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "98833f93-0f33-4205-b83a-c4d42a25da4f",
+          "name": "GPT Image 2.5 Sunburst (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.5-sunburst-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gpt-image-2.5-flare",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "ac3abe51-14ca-4c04-b215-01a85f3a36ac",
+          "name": "GPT Image 2.5 Flare (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.5-flare-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gpt-image-2",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "9570e1d0-a390-48c1-a270-1317570fe3d5",
+          "name": "GPT Image 2 (high)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gpt-image-1.5",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "a1ee4d6f-d136-434b-bb1d-066fe5f9bf6f",
+          "name": "GPT Image 1.5 (high)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-1.5-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gemini-nano-banana-2.1",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "b6f834da-1ca2-4f4c-a215-158970a058fa",
+          "name": "Nano Banana 2.1",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-nano-banana-2.1-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gemini-3.1-flash-image",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "3180162e-693d-487d-adbb-721f859f768d",
+          "name": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-3.1-flash-image-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gemini-3.1-flash-lite-image",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "7f1079f3-b886-4ac1-bd3e-7059da87ff28",
+          "name": "Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-3.1-flash-lite-image-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gemini-3-pro-image",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "6a5056eb-6854-43c4-bf18-01d185ce9e2f",
+          "name": "Nano Banana Pro (Gemini 3 Pro Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-3-pro-image-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gemini-2.5-flash-image",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "ead01c00-8518-4f8d-8033-76fcaef910fd",
+          "name": "Nano Banana (Gemini 2.5 Flash Image)",
+          "provider": "Google",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-2.5-flash-image-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gemini-omni-1.2-flash",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "939dcfbc-2322-4224-bfdb-5395c4046b6c",
+          "name": "Gemini Omni Flash 1.2",
+          "provider": "Google",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-omni-1.2-flash-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-gemini-omni-1.1-flash",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "91ad83d7-be21-4595-952a-2eefee3360e5",
+          "name": "Gemini Omni Flash 1.1",
+          "provider": "Google",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "google",
+          "id": "gemini-omni-1.1-flash-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-grok-imagine-image-2.0",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "748fadd1-ecd9-41d0-9b43-f5fccd4fb843",
+          "name": "Grok Imagine Image 2.0",
+          "provider": "SpaceXAI",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "xai",
+          "id": "grok-imagine-image-2.0-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-grok-imagine-video-1.5",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "e83498b8-ae29-4eb7-a343-2a2a74eb0e53",
+          "name": "Grok Imagine Video 1.5",
+          "provider": "SpaceXAI",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio",
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "xai",
+          "id": "grok-imagine-video-1.5-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-grok-imagine-video-1.5-lite",
+      "reviewedAt": "2026-11-18T07:08:00.632Z",
+      "targets": [
+        {
+          "id": "c478c4a7-cd9f-41ac-8995-355556eb8707",
+          "name": "Grok Imagine Video 1.5 Lite",
+          "provider": "SpaceXAI",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio",
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "xai",
+          "id": "grok-imagine-video-1.5-lite-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-gpt-image-2.6-sunburst-generate",
+      "reviewedAt": "2026-11-18T07:11:33.576Z",
+      "targets": [
+        {
+          "id": "a126a6fd-2f15-4da2-8b9a-700b2973a4e3",
+          "name": "GPT Image 2.6 Sunburst (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.6-sunburst-generate",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-gpt-image-2.6-flare-generate",
+      "reviewedAt": "2026-11-18T07:11:33.577Z",
+      "targets": [
+        {
+          "id": "ac1b5565-d063-480e-a593-ce244705cd43",
+          "name": "GPT Image 2.6 Flare (max)",
+          "provider": "OpenAI",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "openai",
+          "id": "gpt-image-2.6-flare-generate",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-minimax-MiniMax-H3-Max",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "f1da1147-517d-431a-8d98-886d71546d66",
+          "name": "MiniMax H3 Max",
+          "provider": "Fal",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "minimax",
+          "id": "MiniMax-H3-Max",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-bfl-docs-flux-3-max",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "a7f0b4bb-703a-4563-a318-c6644415cae9",
+          "name": "FLUX 3 Max",
+          "provider": "Fal",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl-docs",
+          "id": "flux-3-max",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-alibaba-wan3.0-video",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "ceee978e-c560-4ba9-9405-f7d390a47709",
+          "name": "Wan 3.0",
+          "provider": "Alibaba",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "wan3.0-video",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-alibaba-wan3.0-video-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "ceee978e-c560-4ba9-9405-f7d390a47709",
+          "name": "Wan 3.0",
+          "provider": "Alibaba",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "wan3.0-video-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-alibaba-happyhorse-1.0-t2v",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "a4dc21f8-7a35-497e-90a4-4c9a1593c8ca",
+          "name": "HappyHorse-1.0",
+          "provider": "Alibaba-ATH",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "happyhorse-1.0-t2v",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-alibaba-happyhorse-1.0-t2v-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "a4dc21f8-7a35-497e-90a4-4c9a1593c8ca",
+          "name": "HappyHorse-1.0",
+          "provider": "Alibaba-ATH",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "happyhorse-1.0-t2v-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-alibaba-happyhorse-1.0-i2v-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "a4dc21f8-7a35-497e-90a4-4c9a1593c8ca",
+          "name": "HappyHorse-1.0",
+          "provider": "Alibaba-ATH",
+          "boards": [
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "happyhorse-1.0-i2v-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-alibaba-happyhorse-1.1-t2v",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "e0e60f8f-ad67-4b84-aec9-4da2b9a962d5",
+          "name": "HappyHorse-1.1",
+          "provider": "Alibaba-ATH",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "happyhorse-1.1-t2v",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-alibaba-happyhorse-1.1-t2v-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "e0e60f8f-ad67-4b84-aec9-4da2b9a962d5",
+          "name": "HappyHorse-1.1",
+          "provider": "Alibaba-ATH",
+          "boards": [
+            "text-to-video",
+            "text-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "happyhorse-1.1-t2v-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-alibaba-happyhorse-1.1-i2v",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "e0e60f8f-ad67-4b84-aec9-4da2b9a962d5",
+          "name": "HappyHorse-1.1",
+          "provider": "Alibaba-ATH",
+          "boards": [
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "happyhorse-1.1-i2v",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-alibaba-happyhorse-1.1-i2v-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "e0e60f8f-ad67-4b84-aec9-4da2b9a962d5",
+          "name": "HappyHorse-1.1",
+          "provider": "Alibaba-ATH",
+          "boards": [
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "happyhorse-1.1-i2v-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-alibaba-qwen-image-3.0",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "2253749f-b609-4016-b639-0ce39a42375a",
+          "name": "Qwen-Image-3.0",
+          "provider": "Alibaba",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "qwen-image-3.0",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-alibaba-qwen-image-3.0-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "2253749f-b609-4016-b639-0ce39a42375a",
+          "name": "Qwen-Image-3.0",
+          "provider": "Alibaba",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "qwen-image-3.0-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-alibaba-qwen-image-3.0-pro",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "5538a039-fb86-4cd7-a207-4d692f358032",
+          "name": "Qwen-Image-3.0-Pro",
+          "provider": "Alibaba",
+          "boards": [
+            "text-to-image"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "qwen-image-3.0-pro",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-alibaba-qwen-image-3.0-pro-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "5538a039-fb86-4cd7-a207-4d692f358032",
+          "name": "Qwen-Image-3.0-Pro",
+          "provider": "Alibaba",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "alibaba",
+          "id": "qwen-image-3.0-pro-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-minimax-MiniMax-H3-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "da987d84-718f-4ac2-a278-518595967b42",
+          "name": "MiniMax H3 (768p)",
+          "provider": "MiniMax",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "minimax",
+          "id": "MiniMax-H3-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-minimax-MiniMax-H3-Image-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "9b61629e-500e-452f-bfaa-5e3cd11f545d",
+          "name": "H3-Image",
+          "provider": "MiniMax",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "minimax",
+          "id": "MiniMax-H3-Image-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-minimax-MiniMax-H3-Image-Highspeed-pricing",
+      "reviewedAt": "2026-11-18T07:48:40.487Z",
+      "targets": [
+        {
+          "id": "5c408cba-eb9a-4806-a44c-1d77030e9990",
+          "name": "H3-Image Highspeed",
+          "provider": "MiniMax",
+          "boards": [
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "minimax",
+          "id": "MiniMax-H3-Image-Highspeed-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-minimax-MiniMax-H3-Max-pricing",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "f1da1147-517d-431a-8d98-886d71546d66",
+          "name": "MiniMax H3 Max",
+          "provider": "Fal",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "minimax",
+          "id": "MiniMax-H3-Max-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "official-bfl-docs-flux-3-max-i2v",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "a7f0b4bb-703a-4563-a318-c6644415cae9",
+          "name": "FLUX 3 Max",
+          "provider": "Fal",
+          "boards": [
+            "image-to-video",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bfl-docs",
+          "id": "flux-3-max-i2v",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-volcengine-doubao-seedream-5-5-pricing",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "b8852bf6-1e75-4209-ac4d-a135170dc1f3",
+          "name": "Seedream 5.5",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "doubao-seedream-5-5-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-volcengine-doubao-seedream-5-0-pro-pricing",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "c9e4f0a2-3b7d-4c61-8e29-1f5a6d0b47c3",
+          "name": "Seedream 5.0 Pro",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "doubao-seedream-5-0-pro-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-volcengine-doubao-seedream-5-0-lite-pricing",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "d82c66de-d55a-4b6a-af16-f5bf808431cc",
+          "name": "Seedream 5.0 Lite",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "doubao-seedream-5-0-lite-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-volcengine-doubao-seedream-4-5-pricing",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "08f19008-675e-4d70-98b2-49ad3178c1f0",
+          "name": "Seedream 4.5",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-image",
+            "image-editing"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "doubao-seedream-4-5-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-volcengine-doubao-seedance-2.5-pricing",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "57913d03-a959-4752-8027-8991612448ed",
+          "name": "Dreamina Seedance 2.5",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "doubao-seedance-2.5-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    },
+    {
+      "id": "pricing-volcengine-doubao-seedance-2.0-pricing",
+      "reviewedAt": "2026-11-18T08:15:07.398Z",
+      "targets": [
+        {
+          "id": "b8289cfd-3843-4d4c-a3fb-ec5ae5e752e0",
+          "name": "Dreamina Seedance 2.0",
+          "provider": "ByteDance Seed",
+          "boards": [
+            "text-to-video",
+            "image-to-video",
+            "text-to-video-audio",
+            "image-to-video-audio"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "volcengine",
+          "id": "doubao-seedance-2.0-pricing",
+          "scope": "endpoint"
+        }
+      ]
+    }
+  ]
+}

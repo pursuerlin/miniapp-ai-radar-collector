@@ -1,0 +1,11 @@
+node_modules/
+.env*
+.cache/
+state/
+public/
+src/data/
+src/practice-resources/
+docs/accuracy-audit/raw/
+.*verification.json
+.collection-retry.json
+.ci-*.log
