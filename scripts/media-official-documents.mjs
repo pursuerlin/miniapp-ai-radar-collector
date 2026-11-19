@@ -64,16 +64,29 @@ export function normalizeOfficialDocument(raw,source,id){
   }else if(source==='volcengine'){
    const text=raw.replaceAll('\\-','-'),image=model.includes('seedream')
    const block=section(image?'# 图片生成模型':'# 视频生成模型',image?'# 3D 生成模型':'## 价格示例',text)
-   match(image?/输入图单价（元\/张）/:/在线推理<br><br>元\/M token/,block)
+   const tabularVideo=!image&&block.includes('|模型 |输出视频分辨率 |在线推理单价（元/M token） ||')
+   match(image?/输入图单价（元\/张）/:tabularVideo?/在线推理单价（元\/M token）/:/在线推理<br><br>元\/M token/,block)
    const lines=block.split('\n').filter(l=>l.startsWith('|'+model+' ')||l.startsWith('|'+model+'<'))
-   if(lines.length!==1)fail('METADATA_IDENTITY_INVALID')
-   const line=lines[0],cells=line.split('|').map(v=>v.trim()),money=v=>match(/^\d+(?:\.\d+)?$/,v)[0]
+   if(!tabularVideo&&lines.length!==1)fail('METADATA_IDENTITY_INVALID')
+   const line=lines[0]||'',cells=line.split('|').map(v=>v.trim()),money=v=>match(/^\d+(?:\.\d+)?$/,v)[0]
    put('billingBasis','火山方舟官方目录 · 人民币 · 在线推理',block.slice(0,150))
    if(!image){
-    const parts=[...cells[2].matchAll(/输出视频分辨率为 ([^<]+)<br><br>\s*\* 输入不含视频：(\d+(?:\.\d+)?)<br><br>\s*\* 输入包含视频：(\d+(?:\.\d+)?)/g)]
+    let parts,evidence=line
+    if(tabularVideo){
+     const table=section('**Seedance 2.x**','**Seedance 1.x**',block)
+     match(/\|\|\|输入不含视频 \|输入包含视频 \|/,table)
+     const rows=table.split('\n').filter(l=>l.startsWith('|')).map(l=>({line:l,cells:l.split('|').slice(1,-1).map(v=>v.trim())}))
+     const label='Seedance '+model.replace('doubao-seedance-',''),starts=rows.map((r,i)=>r.cells[0]===label?i:-1).filter(i=>i>=0)
+     if(starts.length!==1)fail('METADATA_IDENTITY_INVALID')
+     const selected=[rows[starts[0]]]
+     for(let i=starts[0]+1;i<rows.length&&!rows[i].cells[0];i++)selected.push(rows[i])
+     if(selected.some(r=>r.cells.length!==4||!r.cells.slice(2).every(v=>/^\d+(?:\.\d+)?$/.test(v))))fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
+     parts=selected.map(r=>[null,r.cells[1].replace('、','，'),r.cells[2],r.cells[3]])
+     evidence=selected.map(r=>r.line).join('\n')
+    }else parts=[...cells[2].matchAll(/输出视频分辨率为 ([^<]+)<br><br>\s*\* 输入不含视频：(\d+(?:\.\d+)?)<br><br>\s*\* 输入包含视频：(\d+(?:\.\d+)?)/g)]
     if(parts.length!==3||parts.map(p=>p[1]).join('|')!=='480p，720p|1080p|4K')fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
-    put('videoOutputPrice',parts.map(m=>`${m[1]}：¥${m[2]} / 百万 token`).join('；'),line)
-    put('inputPrice','含输入视频时的任务费率：'+parts.map(m=>`${m[1]} ¥${m[3]} / 百万 token`).join('；'),line)
+    put('videoOutputPrice',parts.map(m=>`${m[1]}：¥${m[2]} / 百万 token`).join('；'),evidence)
+    put('inputPrice','含输入视频时的任务费率：'+parts.map(m=>`${m[1]} ¥${m[3]} / 百万 token`).join('；'),evidence)
     sourceNote='火山方舟 '+model+' 系列目录价；视频输出栏为输入不含视频时的任务费率，含输入视频时按另一档计费并计入输入时长。不是固定每秒价或单独输入附加费；最低用量、Draft 分步计费另见原文，以 usage 和账单为准。'
    }else{
     if(model==='doubao-seedream-5-5'){

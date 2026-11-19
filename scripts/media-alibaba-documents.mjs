@@ -4,7 +4,9 @@ export function alibabaDocument(raw,id,{put,match,section}){
  if(id.endsWith('-pricing')){
   if(!raw.startsWith('# '+model+'\n'))throw Object.assign(Error('METADATA_IDENTITY_INVALID'),{code:'METADATA_IDENTITY_INVALID'})
   const priceBlock=raw.slice(raw.indexOf('## Pricing')),s=section('<Tab title="China (Beijing)">','</Tab>',priceBlock)
-  match(/Price \(USD\)/,s)
+  match(/(?:Price|Input and output price) \(USD\)/,s)
+  const combinedVideo=model==='wan3.0-video'&&s.includes('Input and output price (USD)')
+  if(combinedVideo)match(/Billable duration = input video duration \+ output video duration\./,priceBlock)
   const rows=[...s.matchAll(/<tr><td><p>([^<]+)<\/p><\/td><td><p>(\d+(?:\.\d+)?)<\/p><\/td><td><p>(Per image|Per second)<\/p><\/td><\/tr>/g)]
   const images=model.startsWith('qwen'),outputs=rows.filter(m=>images?/Image\s*(?:Generation|Output)/i.test(m[1]):/Video\s*Generation/i.test(m[1])),inputs=rows.filter(m=>/Image\s*Input/i.test(m[1]))
   if(outputs.length!==(images?2:model.startsWith('happyhorse-1.0')?2:3)||images&&inputs.length!==2||new Set(outputs.map(m=>m[1])).size!==outputs.length)throw Object.assign(Error('METADATA_DOCUMENT_SCHEMA_CHANGED'),{code:'METADATA_DOCUMENT_SCHEMA_CHANGED'})
@@ -12,6 +14,7 @@ export function alibabaDocument(raw,id,{put,match,section}){
   put('billingBasis','百炼北京地域 · 美元 · 官方原价',s.slice(0,250));put('referencePrice',outputs.map(render).join('；'),outputs.map(m=>m[0]).join(' '))
   if(inputs.length)put('imageInputPrice',inputs.map(render).join('；'),inputs.map(m=>m[0]).join(' '))
   sourceNote='仅适用于阿里云百炼北京地域的所列版本与规格，不含限时优惠；其他地域和渠道价格不同，不能当作 AA 评测费用。'+(images?'图片输入另计，不能把输出单价当作总费用。':'按视频时长计费，其他输入或功能费用以实际账单和原文为准。')
+  if(combinedVideo)sourceNote+='输入视频和输出视频均按输出分辨率对应的每秒价格计费；计费时长为输入与输出视频时长之和。'
  }else if(model.startsWith('qwen-image')){
   match(/qwen-image-3\.0-pro/)
   const sizes=match(/qwen-image-3\.0 series, qwen-image-2\.1 series<\/strong>: ([^\n]+)/)
