@@ -1,4 +1,4 @@
-import {validChanges} from '../src/domain/changes.mjs'
+import {validChanges,buildChanges,catalogFingerprint} from '../src/domain/changes.mjs'
 import {validPracticeResources} from '../src/domain/practice-resources.mjs'
 import {validModelEvidence} from '../src/domain/model-evidence.mjs'
 import {readFile,writeFile} from 'node:fs/promises'
@@ -25,8 +25,9 @@ export function validatePublicPayloads(payloads){
  if([manifest.generatedAt,snapshot.collectedAt,benchmark.collectedAt,evaluation.collectedAt,intelligence.collectedAt].some(t=>Date.parse(t)>Date.now()+300000))throw Error('PUBLIC_FUTURE_TIMESTAMP')
  if(payloads['practice-resources.json']&&!validPracticeResources(payloads['practice-resources.json']))throw Error('PUBLIC_RESOURCES_INVALID')
  if(!isDeepStrictEqual(health.sourceHealth,manifest.sourceHealth))throw Error('PUBLIC_SOURCE_HEALTH_MISMATCH')
- if(payloads['changes.json']&&!validChanges(payloads['changes.json']))throw Error('PUBLIC_CHANGES_INVALID')
- const baseline=payloads['catalog-baseline.json'];if(baseline&&(!Number.isFinite(Date.parse(baseline.collectedAt))||!Array.isArray(baseline.models)))throw Error('PUBLIC_CHANGE_BASELINE_INVALID')
+ if(payloads['changes.json']&&(!validChanges(payloads['changes.json'])||payloads['changes.json'].window.to!==snapshot.collectedAt))throw Error('PUBLIC_CHANGES_INVALID')
+ const baseline=payloads['catalog-baseline.json'];if(baseline&&(!Number.isFinite(Date.parse(baseline.collectedAt))||!Array.isArray(baseline.models)||!baseline.models.length||new Set(baseline.models.map(r=>r?.id)).size!==baseline.models.length||baseline.models.some(r=>!r||['id','name','provider'].some(k=>typeof r[k]!=='string'||!r[k])||['input','output','context'].some(k=>r[k]!==null&&(!Number.isFinite(r[k])||r[k]<0)))))throw Error('PUBLIC_CHANGE_BASELINE_INVALID')
+ if(baseline&&(!payloads['changes.json']||!isDeepStrictEqual(payloads['changes.json'],buildChanges(baseline,catalogFingerprint(snapshot)))))throw Error('PUBLIC_CHANGES_MISMATCH')
  return {ok:true,generatedAt:manifest.generatedAt,sourceStates:Object.fromEntries(Object.entries(manifest.sourceHealth||{}).map(([id,s])=>[id,s.status]))}
 }
 export async function readPublicPayloads(dir){const payloads=Object.fromEntries(await Promise.all(PUBLIC_CORE_FILES.map(async name=>[name,JSON.parse(await readFile(resolve(dir,name),'utf8'))])));if(payloads['manifest.json'].datasets.media)payloads['media-leaderboards.json']=JSON.parse(await readFile(resolve(dir,'media-leaderboards.json'),'utf8'));if(payloads['manifest.json'].datasets.research)payloads['model-evidence.json']=JSON.parse(await readFile(resolve(dir,'model-evidence.json'),'utf8'));for(const name of ['changes.json','catalog-baseline.json']){try{payloads[name]=JSON.parse(await readFile(resolve(dir,name),'utf8'))}catch(e){if(e.code!=='ENOENT')throw e}}try{payloads['practice-resources.json']=JSON.parse(await readFile(resolve(dir,'practice-resources.json'),'utf8'))}catch(e){if(e.code!=='ENOENT')throw e}return payloads}
