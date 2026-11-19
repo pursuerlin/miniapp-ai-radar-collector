@@ -1,0 +1,29 @@
+name: Daily radar digest
+on:
+  schedule:
+    - cron: '10 1 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/checkout@v4
+        with:
+          repository: pursuerlin/miniapp-ai-radar-data
+          ref: master
+          path: state/data-site
+          persist-credentials: false
+      - run: node scripts/bootstrap-public-data.mjs
+      - name: Send the existing daily digest
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: node scripts/send-digest.mjs
