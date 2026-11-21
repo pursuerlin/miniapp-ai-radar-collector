@@ -1,5 +1,5 @@
 import {createHash} from 'node:crypto'
-import {resourceId} from '../src/domain/practice-resources.mjs'
+import {resourceId,validSkillTotalLabel} from '../src/domain/practice-resources.mjs'
 const slug=/^[\w.-]+\/[\w.-]+$/,name=/^[\w.-]+$/
 const digest=text=>createHash('sha256').update(text).digest('hex')
 export function parseSkillTrending(html){
@@ -34,6 +34,12 @@ function validateTrendRows(rows){
   ids.add(id.toLowerCase());return {repo:r.source,name:r.skillId,rank:i+1,installs:r.installs}
  }).filter(r=>slug.test(r.repo))
 }
+// Read the single Skill's visible Installs card, excluding the weekly chart and repo totals.
+function parseTotalInstalls(html){
+ const cards=[...html.matchAll(/<div\b[^>]*>\s*<span>Installs<\/span>\s*<\/div>\s*<div\b[^>]*>\s*([\d.,]+[KMB]?)\s*<\/div>/g)]
+ const label=cards.length===1?cards[0][1]:''
+ return validSkillTotalLabel(label)?label:null
+}
 export function parseSkillTrendDetail(html,{repo,name}){
  const url=`https://skills.sh/${repo}/${name}`
  const applications=[]
@@ -43,7 +49,8 @@ export function parseSkillTrendDetail(html,{repo,name}){
  }
  const d=applications[0]
  if(applications.length!==1||d.name!==name||d.url?.replace('https://www.skills.sh/','https://skills.sh/')!==url||typeof d.description!=='string'||!d.description.trim()||d.description.length>20000||!html.includes(`npx skills add https://github.com/${repo} --skill ${name}`))throw Error('SKILL_DETAIL_IDENTITY_CHANGED')
- return {description:d.description,sourceHash:digest(d.description)}
+ const total=parseTotalInstalls(html)
+ return {description:d.description,sourceHash:digest(d.description),...(total?{totalInstalls:total}:{})}
 }
 export async function collectSkillTrending({load,previous=[],now=new Date().toISOString(),editorial=[],limit=30,trackedSkills=[],detailTtlMs=6*3600000}={}){
  const url='https://skills.sh/trending',apiUrl='https://www.skills.sh/api/skills/trending/0',maxAge=7*86400000,deadline=Date.now()+90000
@@ -63,14 +70,15 @@ export async function collectSkillTrending({load,previous=[],now=new Date().toIS
  const annotationFor=row=>editorial.find(a=>a.repo.toLowerCase()===row.repo.toLowerCase()&&a.name===row.name&&a.sourceHash===row.sourceHash)
  const annotate=row=>{const a=annotationFor(row);return a?{...row,title:a.title,description:a.description,category:a.category,...Object.fromEntries(['introduction','example','requirements','cost'].filter(k=>typeof a[k]==='string').map(k=>[k,a[k]]))}:row}
  await Promise.all(Array.from({length:4},async()=>{while(next<listing.length){const index=next++,entry=listing[index],before=previous.find(r=>r.repo.toLowerCase()===entry.repo.toLowerCase()&&r.name===entry.name)
-  if(before&&fresh(before)&&Date.parse(now)-Date.parse(before.observedAt)<detailTtlMs){
+  if(before?.totalInstalls&&fresh(before)&&Date.parse(now)-Date.parse(before.observedAt)<detailTtlMs){
    reused++;const row=annotate({...before,checkedAt:now,detailCached:true,trend:{period:'24h',rank:entry.rank,installs:entry.installs,observedAt:now}});delete row.detailRetained;staged[index]=row;continue
   }
   try{
    if(Date.now()>deadline)throw Error('SKILL_SOURCE_BUDGET')
    const detailHtml=await load(`https://skills.sh/${entry.repo}/${entry.name}`),detail=parseSkillTrendDetail(detailHtml,entry)
    const annotation=annotationFor({...entry,...detail});verified++
-   staged[index]=annotate({id:resourceId('skill',`${entry.repo}/skills-sh/${entry.name}`),kind:'skill',listingSource:'skills.sh',repo:entry.repo,name:entry.name,title:annotation?.title||entry.name,description:annotation?.description||detail.description,originalDescription:detail.description,sourceHash:detail.sourceHash,category:annotation?.category||'趋势技能',url:`https://skills.sh/${entry.repo}/${entry.name}`,repoUrl:`https://github.com/${entry.repo}`,install:`npx skills add ${entry.repo} --skill ${entry.name}`,compatibility:'Agent Skills 格式；支持范围与依赖以作者说明为准。',requirements:'需要支持技能的 AI 工具；安装前请阅读作者说明。',cost:'热度不代表免费；模型 API、外部服务和许可条件请查阅作者说明。',license:'以作者仓库许可为准',featured:false,observedAt:now,checkedAt:now,trend:{period:'24h',rank:entry.rank,installs:entry.installs,observedAt:now},provenance:{url:`https://skills.sh/${entry.repo}/${entry.name}`,sha256:digest(detailHtml)}})
+   const totalInstalls=detail.totalInstalls?{label:detail.totalInstalls,observedAt:now}:before?.totalInstalls
+   staged[index]=annotate({id:resourceId('skill',`${entry.repo}/skills-sh/${entry.name}`),kind:'skill',listingSource:'skills.sh',repo:entry.repo,name:entry.name,title:annotation?.title||entry.name,description:annotation?.description||detail.description,originalDescription:detail.description,sourceHash:detail.sourceHash,category:annotation?.category||'趋势技能',url:`https://skills.sh/${entry.repo}/${entry.name}`,repoUrl:`https://github.com/${entry.repo}`,install:`npx skills add ${entry.repo} --skill ${entry.name}`,compatibility:'Agent Skills 格式；支持范围与依赖以作者说明为准。',requirements:'需要支持技能的 AI 工具；安装前请阅读作者说明。',cost:'热度不代表免费；模型 API、外部服务和许可条件请查阅作者说明。',license:'以作者仓库许可为准',featured:false,observedAt:now,checkedAt:now,...(totalInstalls?{totalInstalls}:{}),trend:{period:'24h',rank:entry.rank,installs:entry.installs,observedAt:now},provenance:{url:`https://skills.sh/${entry.repo}/${entry.name}`,sha256:digest(detailHtml)}})
   }catch{failures++;if(before&&fresh(before))staged[index]=annotate({...before,checkedAt:now,detailRetained:true,trend:{period:'24h',rank:entry.rank,installs:entry.installs,observedAt:now}})}
  }}))
  const rows=staged.filter(Boolean)

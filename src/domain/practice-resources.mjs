@@ -15,7 +15,23 @@ export function resourceSourceUrl(value){
  const github=githubResourceUrl(value);if(github)return github
  try{const u=new URL(value);return u.protocol==='https:'&&u.hostname==='skills.sh'&&!u.username&&!u.password&&/^\/[\w.-]+\/[\w.-]+\/[\w.-]+$/.test(u.pathname)&&!u.search&&!u.hash?u.href:''}catch{return ''}
 }
-function validSkillTrend(r,checkedAt){return validResourceCopy(r)&&r?.kind==='skill'&&r.listingSource==='skills.sh'&&repo(r.repo)&&typeof r.name==='string'&&/^[\w.-]+$/.test(r.name)&&r.id===resourceId('skill',`${r.repo}/skills-sh/${r.name}`)&&r.url===`https://skills.sh/${r.repo}/${r.name}`&&r.repoUrl===`https://github.com/${r.repo}`&&resourceSourceUrl(r.url)&&r.install===`npx skills add ${r.repo} --skill ${r.name}`&&typeof r.title==='string'&&r.title.length>0&&typeof r.description==='string'&&r.description.length>0&&typeof r.originalDescription==='string'&&r.originalDescription.length>0&&/^[a-f0-9]{64}$/.test(r.sourceHash)&&typeof r.category==='string'&&date(r.observedAt)&&date(r.checkedAt)&&Date.parse(r.observedAt)<=Date.parse(r.checkedAt)&&Date.parse(r.checkedAt)<=Date.parse(checkedAt)&&r.trend?.period==='24h'&&Number.isSafeInteger(r.trend.rank)&&r.trend.rank>0&&Number.isSafeInteger(r.trend.installs)&&r.trend.installs>=0&&date(r.trend.observedAt)&&Date.parse(r.trend.observedAt)<=Date.parse(r.checkedAt)&&r.provenance?.url===r.url&&/^[a-f0-9]{64}$/.test(r.provenance.sha256)}
+export function validSkillTotalLabel(label){
+ return typeof label==='string'&&/^(?:0|[1-9]\d{0,12}|[1-9]\d{0,2}(?:,\d{3}){1,4}|[1-9]\d{0,2}(?:\.\d{1,2})?[KMB])$/.test(label)
+}
+const validSkillTotal=(row,checkedAt)=>row.totalInstalls===undefined||(
+ row.kind==='skill'&&validSkillTotalLabel(row.totalInstalls?.label)&&
+ date(row.totalInstalls.observedAt)&&Date.parse(row.totalInstalls.observedAt)<=Date.parse(checkedAt))
+export function resourceTotalInstalls(row,now=Date.now()){
+ const metric=row?.totalInstalls
+ const age=now-Date.parse(metric?.observedAt)
+ return metric?.label&&age>=-300000&&age<=7*86400000?metric:null
+}
+const newerInstallTotal=(before,next)=>{
+ const a=before?.totalInstalls,b=next.totalInstalls
+ const metric=a&&(!b||Date.parse(a.observedAt)>Date.parse(b.observedAt))?a:b
+ return metric?{totalInstalls:metric}:{}
+}
+function validSkillTrend(r,checkedAt){return validResourceCopy(r)&&r?.kind==='skill'&&validSkillTotal(r,checkedAt)&&r.listingSource==='skills.sh'&&repo(r.repo)&&typeof r.name==='string'&&/^[\w.-]+$/.test(r.name)&&r.id===resourceId('skill',`${r.repo}/skills-sh/${r.name}`)&&r.url===`https://skills.sh/${r.repo}/${r.name}`&&r.repoUrl===`https://github.com/${r.repo}`&&resourceSourceUrl(r.url)&&r.install===`npx skills add ${r.repo} --skill ${r.name}`&&typeof r.title==='string'&&r.title.length>0&&typeof r.description==='string'&&r.description.length>0&&typeof r.originalDescription==='string'&&r.originalDescription.length>0&&/^[a-f0-9]{64}$/.test(r.sourceHash)&&typeof r.category==='string'&&date(r.observedAt)&&date(r.checkedAt)&&Date.parse(r.observedAt)<=Date.parse(r.checkedAt)&&Date.parse(r.checkedAt)<=Date.parse(checkedAt)&&r.trend?.period==='24h'&&Number.isSafeInteger(r.trend.rank)&&r.trend.rank>0&&Number.isSafeInteger(r.trend.installs)&&r.trend.installs>=0&&date(r.trend.observedAt)&&Date.parse(r.trend.observedAt)<=Date.parse(r.checkedAt)&&r.provenance?.url===r.url&&/^[a-f0-9]{64}$/.test(r.provenance.sha256)}
 export function validPracticeResources(data){try{return validate(data)}catch{return false}}
 function validate(data){
  if(data?.schemaVersion!==1||!date(data.checkedAt)||Date.parse(data.checkedAt)>Date.now()+300000||!Array.isArray(data.skills)||!Array.isArray(data.projects)||!Array.isArray(data.sources)||data.skills.length>100||data.projects.length>100)return false
@@ -23,7 +39,7 @@ function validate(data){
  if(data.skillTrends!==undefined&&(!Array.isArray(data.skillTrends)||data.skillTrends.length>60||!data.skillTrends.every(r=>validSkillTrend(r,data.checkedAt))||new Set(data.skillTrends.map(r=>r.id)).size!==data.skillTrends.length||new Set(data.skillTrends.map(r=>r.trend.rank)).size!==data.skillTrends.length))return false
  const rows=[...data.skills,...data.projects],ids=new Set();if(data.skillTrends?.some(t=>rows.some(r=>r.id===t.id)))return false;if(!rows.length||JSON.stringify(data).length>1000000)return false
  return data.sources.every(s=>typeof s.id==='string'&&['ok','stale','error'].includes(s.status)&&date(s.checkedAt)&&(!s.observedAt||date(s.observedAt)&&Date.parse(s.observedAt)<=Date.parse(s.checkedAt))&&Date.parse(s.checkedAt)<=Date.parse(data.checkedAt))&&rows.every(r=>{
-  if(!r||!validResourceCopy(r)||ids.has(r.id)||r.id!==resourceId(r.kind,r.kind==='skill'?`${r.repo}/${r.path}`:String(r.githubId))||!repo(r.repo)||!['skill','github'].includes(r.kind)||typeof r.title!=='string'||!r.title||typeof r.description!=='string'||!date(r.observedAt)||!date(r.checkedAt)||Date.parse(r.observedAt)>Date.parse(r.checkedAt)||Date.parse(r.checkedAt)>Date.parse(data.checkedAt)||!githubResourceUrl(r.url)||r.repoUrl!==`https://github.com/${r.repo}`||!githubResourceUrl(r.repoUrl))return false
+  if(!r||!validResourceCopy(r)||!validSkillTotal(r,data.checkedAt)||ids.has(r.id)||r.id!==resourceId(r.kind,r.kind==='skill'?`${r.repo}/${r.path}`:String(r.githubId))||!repo(r.repo)||!['skill','github'].includes(r.kind)||typeof r.title!=='string'||!r.title||typeof r.description!=='string'||!date(r.observedAt)||!date(r.checkedAt)||Date.parse(r.observedAt)>Date.parse(r.checkedAt)||Date.parse(r.checkedAt)>Date.parse(data.checkedAt)||!githubResourceUrl(r.url)||r.repoUrl!==`https://github.com/${r.repo}`||!githubResourceUrl(r.repoUrl))return false
   ids.add(r.id)
   if(r.popularity&&!(r.kind==='skill'&&r.popularity.period==='24h'&&Number.isSafeInteger(r.popularity.rank)&&r.popularity.rank>0&&Number.isSafeInteger(r.popularity.installs)&&r.popularity.installs>=0&&date(r.popularity.observedAt)&&Date.parse(r.popularity.observedAt)<=Date.parse(data.checkedAt)))return false
   if(r.kind==='skill')return r.url===`https://github.com/${r.repo}/blob/${r.revision}/${skillDocumentPath(r.path)}`&&validSkillPath(r.path)&&/^[a-f0-9]{40}$/.test(r.revision)&&typeof r.name==='string'&&/^[\w.-]+$/.test(r.name)&&typeof r.originalDescription==='string'&&r.originalDescription.length>0&&typeof r.install==='string'&&r.install===`npx skills add ${r.repo} --skill ${r.name}`&&typeof r.license==='string'&&typeof r.example==='string'
@@ -52,12 +68,13 @@ export function mergePracticeResources(previous,next){
   // description must not discard a newer statistic, or revive an absent one.
   const a=resourcePopularity(before,Date.parse(next.checkedAt)),b=resourcePopularity(r,Date.parse(next.checkedAt))
   const metric=listingCurrent?b:!a?b:!b||Date.parse(a.observedAt)>Date.parse(b.observedAt)?a:b
-  const result={...base,checkedAt:r.checkedAt};delete result.popularity;if(metric)result.popularity=metric
+  const result={...base,...newerInstallTotal(before,r),checkedAt:r.checkedAt};delete result.popularity;if(metric)result.popularity=metric
   return result
  })
  const trendRows=next.skillTrends?.map(row=>{
   const before=previous.skillTrends?.find(r=>r.id===row.id)
-  return before&&Date.parse(before.observedAt)>Date.parse(row.observedAt)?{...before,checkedAt:row.checkedAt,trend:row.trend}:row
+  const base=before&&Date.parse(before.observedAt)>Date.parse(row.observedAt)?{...before,checkedAt:row.checkedAt,trend:row.trend}:row
+  return {...base,...newerInstallTotal(before,row)}
  })
  // Older publishers do not know this additive field. Keep recent verified trends
  // without advancing their observation time until the new collector is deployed.

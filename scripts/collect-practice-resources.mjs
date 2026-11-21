@@ -92,6 +92,8 @@ export async function collectPracticeResources({root='.',client=createResourceCl
     const retained=result.rows.find(exact),before=oldSkills.find(r=>r.id===skill.id)
     metric=resourcePopularity(retained||{},Date.parse(now))||resourcePopularity(before||{},Date.parse(now))
    }
+   const total=result.rows.find(exact)?.totalInstalls||oldSkills.find(r=>r.id===skill.id)?.totalInstalls
+   if(total)skill.totalInstalls=total
    if(metric)skill.popularity={period:'24h',rank:metric.rank,installs:metric.installs,observedAt:metric.observedAt};else delete skill.popularity
   }
   skillTrends=skillTrends.map(row=>{const a=skillEditorial.find(a=>a.repo.toLowerCase()===row.repo.toLowerCase()&&a.name===row.name&&a.sourceHash===row.sourceHash);return a?{...row,title:a.title,description:a.description,category:a.category,...Object.fromEntries(['introduction','example','requirements','cost'].filter(k=>typeof a[k]==='string').map(k=>[k,a[k]]))}:row})
