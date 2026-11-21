@@ -11,7 +11,8 @@ Data is published to https://pursuerlin.github.io/miniapp-ai-radar-data/radar/ a
 - GitHub scheduling is best effort. `workflow_dispatch` with `heartbeat=true` can fill a delayed news slot.
 - Tests run on code changes, separately from scheduled collection. Data updates do not build the mini-program.
 - Missing AA credentials stop requested media collection explicitly; they are never treated as a successful update.
-- A source outage can leave a run red after the validated retained snapshot has been published; publication and source health are separate checks.
+- The collector waits up to 17 minutes for GitHub Pages and verifies that all required public files match the validated snapshot. Verification failures still fail the run.
+- Once public files are verified, temporary source degradation in scheduled and heartbeat runs appears as a warning. An affected news feed older than three hours or three consecutive failed attempts for a source fails the run. Manual runs require every selected source to pass. The health feed and diagnostics record source degradation in all cases.
 - The existing daily Feishu digest runs at 01:10 UTC; the public-feed freshness check runs at 01:23 UTC and alerts only when news is more than three hours old.
 - An external Cloudflare heartbeat dispatches this repository every two hours. It skips fresh news unless a different source needs recovery. Authenticated Feishu approval actions remain in the private application repository.
 

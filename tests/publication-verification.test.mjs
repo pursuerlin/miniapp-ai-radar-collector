@@ -47,3 +47,30 @@ test('media is fetched and compared when the manifest includes it; 404 cannot ve
  const changed=await verifyPublishedData({expected:candidate,maxAttempts:1,fetcher:async url=>{if(!url.includes('media-leaderboards'))return fetcher(url);const next=structuredClone(media);next.boards[0].rows[0].elo++;return Response.json(next)}})
  assert.equal(changed.ok,false);assert.equal(changed.errorCode,'PUBLIC_CONTENT_PENDING')
 })
+
+test('a twelve-minute Pages queue is tolerated and only the manifest is polled before deployment',async()=>{
+ let clock=0,earlyPayloadReads=0
+ const readyAt=12*60_000
+ const result=await verifyPublishedData({expected,now:()=>clock,wait:async ms=>{clock+=ms},fetcher:async url=>{
+  const name=new URL(url).pathname.split('/').pop()
+  if(clock<readyAt){
+   if(name!=='manifest.json')earlyPayloadReads++
+   return Response.json({...expected[name],generatedAt:'2026-01-01T00:00:00.000Z'})
+  }
+  return Response.json(expected[name])
+ }})
+ assert.equal(result.state,'verified')
+ assert.ok(clock>=readyAt&&clock<readyAt+20_000)
+ assert.equal(earlyPayloadReads,0)
+})
+
+test('a Pages timeout reports the last observed generation and the file awaiting deployment',async()=>{
+ let clock=0
+ const observedGeneratedAt='2026-01-01T00:00:00.000Z'
+ const result=await verifyPublishedData({expected,now:()=>clock,maxDurationMs:12_000,wait:async ms=>{clock+=ms},fetcher:async()=>
+  Response.json({...expected['manifest.json'],generatedAt:observedGeneratedAt})})
+ assert.equal(clock,12_000)
+ assert.equal(result.state,'unverified')
+ assert.equal(result.observedGeneratedAt,observedGeneratedAt)
+ assert.deepEqual(result.pendingFiles,['manifest.json'])
+})

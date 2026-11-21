@@ -5,6 +5,7 @@ import {resolve} from 'node:path'
 import {createHash} from 'node:crypto'
 import {pathToFileURL} from 'node:url'
 import {validModelEvidence,EVIDENCE_CATEGORIES} from '../src/domain/model-evidence.mjs'
+const MAX_EVIDENCE_REQUESTS=110
 const hash=s=>createHash('sha256').update(s).digest('hex')
 const fail=code=>Object.assign(Error(code),{code})
 const clean=s=>s.replace(/<[^>]*>/g,'').replace(/\*\*/g,'').replace(/&amp;/g,'&').trim()
@@ -65,7 +66,7 @@ export function createEvidenceClient({fetcher=curlResponse,wait=ms=>new Promise(
  let next=0,count=0;const cache=new Map()
  return async(path,{revalidate=false}={})=>{
   if(!/^\/leaderboard(?:\.md|\/[a-z0-9-]+\.md|\/rules|\/sources)$/.test(path))throw fail('EVIDENCE_ENDPOINT_INVALID')
-  if(++count>110)throw fail('EVIDENCE_REQUEST_BUDGET')
+  if(++count>MAX_EVIDENCE_REQUESTS)throw fail('EVIDENCE_REQUEST_BUDGET')
   const delay=Math.max(0,next-Date.now());await wait(delay);next=Date.now()+interval
   const url='https://aihot.news'+path,old=cache.get(url);let response
   try{response=await fetcher(url,{headers:{Accept:'text/markdown, text/html;q=0.8','User-Agent':'Mojing-AI-Radar/0.5 (+https://github.com/pursuerlin/miniapp-ai-radar)',...(revalidate?{'Cache-Control':'no-cache'}:{}),...(revalidate&&old?.etag?{'If-None-Match':old.etag}:{})},redirect:'error',signal:AbortSignal.timeout(15000)})}catch{throw fail('EVIDENCE_REQUEST_FAILED')}
@@ -82,25 +83,46 @@ export async function collectModelEvidence({previous,get=createEvidenceClient(),
  if(!rules.includes('各项成绩折算')||!rules.includes('领域加权'))throw fail('EVIDENCE_METHOD_UNVERIFIED')
  if(previous&&validModelEvidence(previous)&&Date.parse(index.sourceUpdatedAt)<Math.max(...previous.models.map(r=>Date.parse(r.sourceUpdatedAt))))throw fail('EVIDENCE_SOURCE_TIME_REGRESSED')
  if(previous&&validModelEvidence(previous)&&index.models.length<previous.models.length*.7)throw fail('EVIDENCE_COVERAGE_COLLAPSED')
- const models=[],errors=[];let stop=false,retryAfterAt=null,detailRechecks=0
- for(const row of index.models){
-  const prior=previous?.models?.find(r=>r.id===row.id&&r.name===row.name&&r.provider===row.provider)
-  try{
-   if(prior?.sourceUpdatedAt===row.sourceUpdatedAt&&prior.detailStatus==='ok'&&prior.categoryRanks&&Date.parse(started)-Date.parse(prior.observedAt)<6*3600000){models.push({...prior,...row});continue}
-   if(stop)throw fail('EVIDENCE_SOURCE_THROTTLED')
-   const path='/leaderboard/'+row.id+'.md'
-   let detail,facts
-   try{detail=await get(path);facts=parseEvidenceDetail(detail,row)}catch(error){
-    // Recheck one transient failure or stale CDN representation, without accepting a
-    // mismatched version. Reserve two index reads within the 110-request budget.
-    if(!['EVIDENCE_VERSION_MISMATCH','EVIDENCE_REQUEST_FAILED'].includes(error.code)||detailRechecks>=8)throw error
-    detailRechecks++;detail=await get(path,{revalidate:true});facts=parseEvidenceDetail(detail,row)
-   }
-   models.push({...row,...facts,observedAt:now(),detailStatus:'ok'})
-  }catch(error){const code=/^EVIDENCE_[A-Z0-9_]+$/.test(error.code||'')?error.code:'EVIDENCE_DETAILS_INVALID';errors.push({key:row.id,code});if(error.retryAfterAt)retryAfterAt=error.retryAfterAt;if(/HTTP_429|HTTP_503|ACCESS_CHALLENGE/.test(code))stop=true
-   // A newer index must never stamp an older detail with its version or date.
-   models.push({...row,categories:{},evaluations:[],prices:[],observedAt:started,detailStatus:'missing',...(prior?.sourceUpdatedAt===row.sourceUpdatedAt&&prior.detailStatus==='ok'?{...prior,detailStatus:'stale'}:{})})
+ const models=[],errors=[],pending=[]
+ let stop=false,retryAfterAt=null
+ // Reserve reads for both the initial and final index.
+ let retries=Math.max(0,Math.min(8,MAX_EVIDENCE_REQUESTS-index.models.length-2))
+ function retainFailure(i,row,prior,error){
+  const code=/^EVIDENCE_[A-Z0-9_]+$/.test(error.code||'')?error.code:'EVIDENCE_DETAILS_INVALID'
+  errors.push({key:row.id,code})
+  if(error.retryAfterAt)retryAfterAt=error.retryAfterAt
+  if(/HTTP_429|HTTP_503|ACCESS_CHALLENGE/.test(code))stop=true
+  // Only previously verified details from this exact index version can be retained.
+  models[i]=prior?.detailStatus==='ok'?{...prior,...row,detailStatus:'stale'}:
+   {...row,categories:{},evaluations:[],prices:[],observedAt:started,detailStatus:'missing'}
+ }
+ async function collectDetail(i,row,path,options){
+  const facts=parseEvidenceDetail(await get(path,options),row)
+  models[i]={...row,...facts,observedAt:now(),detailStatus:'ok'}
+ }
+ for(const [i,row] of index.models.entries()){
+  const prior=previous?.models?.find(r=>r.id===row.id&&r.name===row.name&&r.provider===row.provider&&
+   r.sourceUpdatedAt===row.sourceUpdatedAt&&r.score===row.score)
+  if(prior?.detailStatus==='ok'&&prior.categoryRanks&&Date.parse(started)-Date.parse(prior.observedAt)<6*3600000){
+   models[i]={...prior,...row}
+   continue
   }
+  const path='/leaderboard/'+row.id+'.md'
+  try{
+   if(stop)throw fail('EVIDENCE_SOURCE_THROTTLED')
+   await collectDetail(i,row,path)
+  }catch(error){
+   if(retries>0&&['EVIDENCE_VERSION_MISMATCH','EVIDENCE_REQUEST_FAILED'].includes(error.code)){
+    retries--
+    pending.push({i,row,prior,path,error})
+   }else retainFailure(i,row,prior,error)
+  }
+ }
+ // Retry after reading the other models so lagging detail pages have time to catch up.
+ for(const {i,row,prior,path,error} of pending){
+  if(stop){retainFailure(i,row,prior,error);continue}
+  try{await collectDetail(i,row,path,{revalidate:true})}
+  catch(recheckError){retainFailure(i,row,prior,recheckError)}
  }
  // Every detail must match the index generation. An unavailable final check
  // degrades publication; a positively different index invalidates the entire run.

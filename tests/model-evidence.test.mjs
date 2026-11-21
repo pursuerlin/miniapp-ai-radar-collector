@@ -84,11 +84,16 @@ test('an old detail generation is revalidated once; a still-mismatched result st
  for(const recovers of [true,false]){
   const stale=detail.replace('2026-11-17 20:10','2026-11-16 20:10')
   assert.notEqual(stale,detail)
-  let calls=0,revalidated=false
+  let calls=0,revalidated=false,otherDetails=0
   const result=await collectModelEvidence({get:async(path,options={})=>{
    if(path==='/leaderboard.md')return index
-   if(!path.endsWith('/gpt-6-1-sol.md'))throw Object.assign(Error(),{code:'EVIDENCE_DETAILS_INVALID'})
-   calls++;if(options.revalidate){revalidated=true;return recovers?detail:stale}return stale
+   if(!path.endsWith('/gpt-6-1-sol.md')){
+    otherDetails++
+    throw Object.assign(Error(),{code:'EVIDENCE_DETAILS_INVALID'})
+   }
+   calls++
+   if(options.revalidate){revalidated=true;return recovers&&otherDetails>0?detail:stale}
+   return stale
   }})
   const model=result.models.find(r=>r.id===row.id)
   assert.equal(calls,2);assert.equal(revalidated,true)

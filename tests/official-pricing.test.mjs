@@ -24,3 +24,25 @@ test('Seedance pricing table layout preserves exact editions, three tiers and in
  const parse=body=>normalizeOfficialDocument(body,'volcengine','doubao-seedance-2.5-pricing')
  for(const body of [current.replace('|Seedance 2.5 |','|Seedance 2.5 flash |'),current.replace('||4K |31.00 |19.00 |',''),current.replace('|70.00 |42.00 |','|70.00 |unknown |'),current.replaceAll('元/M token','元/秒')])assert.throws(()=>parse(body),/METADATA_/)
 })
+
+test('Qwen Image keeps its own size and count limits across reviewed document wording',async()=>{
+ const previous=await fixture('qwen-api.md')
+ const current=previous.replace('qwen-image-3.0 series, qwen-image-2.1 series</strong>','qwen-image-3.0 series and qwen-image-2.1 series</strong>')
+  .replace('qwen-image-3.0 and qwen-image-2.1 series support 1 to 6 images','qwen-image-3.0 series and qwen-image-2.1 series support 1\\~6 images')
+ for(const id of ['qwen-image-3.0','qwen-image-3.0-pro']){
+  const parse=body=>normalizeOfficialDocument(body,'alibaba',id)
+  assert.deepEqual(parse(current).fields,parse(previous).fields)
+  assert.equal(parse(current).fields.imageCount,'1 – 6')
+  assert.throws(()=>parse(current.replaceAll('qwen-image-3.0','qwen-image-4.0')),/METADATA_/)
+ }
+})
+
+test('Seedream 5.5 accepts the exact official series sections without a dated model ID in the body',async()=>{
+ const document=(await fixture('volc-images.md')).replaceAll('doubao-seedream-5-5-261028','')
+ const parse=body=>normalizeOfficialDocument(body,'volcengine','doubao-seedream-5-5-261028')
+ const {fields,sourceNote}=parse(document)
+ assert.deepEqual(fields.dimensions,['1K','1.5K','2K'])
+ assert.match(fields.referenceImages,/^10 张/)
+ assert.match(sourceNote,/Seedream 5.5 系列/)
+ assert.throws(()=>parse(document.replace('Seedream 5.5（图片生成场景）','Seedream 5.6（图片生成场景）')),/METADATA_/)
+})

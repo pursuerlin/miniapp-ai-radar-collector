@@ -236,7 +236,6 @@ export function normalizeOfficialDocument(raw,source,id){
    }else put('constraints','4K 使用 H.265/HEVC 10bit 编码，部分播放器或浏览器可能无法直接播放。',match(/4K 视频采用 H\.265\/HEVC 编码格式输出，部分播放器或浏览器可能无法直接播放/)[0])
    sourceNote='所列为火山方舟对应系列与日期版本的接口规格；AA 未披露是否采用同一服务端修订，不能将官方可选配置当作榜单评测配置。'
   }else{
-  if(id==='doubao-seedream-5-5-261028')match(/doubao-seedream-5-5-261028/)
   const version=id.includes('5-5')?'5.5':'5.0 pro'
   const title=version==='5.5'?version:'5.0 pro / Seedream 5.0 flash'
   const start=`**Seedream ${title}（图片生成场景）**`,s=section(start,`**Seedream ${title}（图层拆分场景）**`)
@@ -247,6 +246,7 @@ export function normalizeOfficialDocument(raw,source,id){
   const intro=section(`* **Seedream ${version}`,version==='5.5'?'* **Seedream 5.0 pro':'* **Seedream 5.0 lite')
   put('imageCount','生成单图：1 张；图层拆分为独立模式，数量限制见原文。',match(/生成单图[\s\S]*?暂不支持组图生成/,intro)[0])
   sourceNote='生成图片与图层拆分分别限制；不把拆分图层数当作批量生成张数。'
+  if(version==='5.5')sourceNote+='参数来自官方 Seedream 5.5 系列的生成章节，日期版本的独有参数以对应端点说明为准。'
   }
  }else if(source==='microsoft'){
   const line=raw.split('\n').find(line=>line.startsWith('| `'+id+'`**Preview**'))

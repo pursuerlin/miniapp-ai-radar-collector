@@ -5,30 +5,50 @@ import {createHash} from 'node:crypto'
 import {isDeepStrictEqual} from 'node:util'
 import {PUBLIC_CORE_FILES,readPublicPayloads,validatePublicPayloads} from './validate-public-data.mjs'
 
-export async function verifyPublishedData({expected,baseUrl='https://pursuerlin.github.io/miniapp-ai-radar-data/radar/',fetcher=fetch,maxAttempts=36,delayMs=5000,maxDurationMs=180000,wait=ms=>new Promise(r=>setTimeout(r,ms)),now=()=>Date.now()}={}){
+export async function verifyPublishedData({
+ expected, baseUrl='https://pursuerlin.github.io/miniapp-ai-radar-data/radar/',
+ fetcher=fetch, maxAttempts=65, delayMs, maxDurationMs=17*60_000,
+ wait=ms=>new Promise(r=>setTimeout(r,ms)), now=()=>Date.now(),
+}={}){
  validatePublicPayloads(expected)
  const files=[...PUBLIC_CORE_FILES,...['changes.json','catalog-baseline.json'].filter(name=>expected[name]),...(expected['practice-resources.json']?['practice-resources.json']:[]),...(expected['manifest.json'].datasets.media?['media-leaderboards.json']:[]),...(expected['manifest.json'].datasets.research?['model-evidence.json']:[])]
  const endpoint=new URL(baseUrl);if(endpoint.protocol!=='https:'||endpoint.username||endpoint.password)throw Error('PUBLIC_VERIFY_URL_INVALID')
- let lastCode='PUBLIC_VERIFY_PENDING',attempts=0
+ const generatedAt=expected['manifest.json'].generatedAt
  const deadline=now()+maxDurationMs
- for(let attempt=1;attempt<=maxAttempts;attempt++){
-  if(now()>deadline)break
+ let lastCode='PUBLIC_VERIFY_PENDING',attempts=0
+ let observedGeneratedAt=null,pendingFiles=[]
+ for(let attempt=1;attempt<=maxAttempts&&now()<deadline;attempt++){
   attempts=attempt
+  const stamp=now()
+  const load=async name=>{
+   const url=new URL(name,endpoint)
+   url.searchParams.set('verify',String(stamp))
+   const response=await fetcher(url.href,{signal:AbortSignal.timeout(Math.max(1,Math.min(10_000,deadline-now()))),cache:'no-store'})
+   if(!response.ok)throw Error(`PUBLIC_HTTP_${response.status}`)
+   return [name,await response.json()]
+  }
   try{
-   const live=Object.fromEntries(await Promise.all(files.map(async name=>{
-    const url=new URL(name,endpoint);url.searchParams.set('verify',String(now()))
-    const response=await fetcher(url.href,{signal:AbortSignal.timeout(10000),cache:'no-store'})
-    if(!response.ok)throw Error(`PUBLIC_HTTP_${response.status}`)
-    return [name,await response.json()]
-   })))
+   pendingFiles=['manifest.json']
+   const manifest=await load('manifest.json')
+   observedGeneratedAt=Number.isFinite(Date.parse(manifest[1]?.generatedAt))?manifest[1].generatedAt:null
+   if(!isDeepStrictEqual(manifest[1],expected['manifest.json']))throw Error('PUBLIC_CONTENT_PENDING')
+   const results=await Promise.allSettled(files.filter(name=>name!=='manifest.json').map(load))
+   const missing=results.find(result=>result.status==='rejected')
+   if(missing){
+    pendingFiles=files.filter(name=>name!=='manifest.json').filter((_,index)=>results[index].status==='rejected')
+    throw missing.reason
+   }
+   const live=Object.fromEntries([manifest,...results.map(result=>result.value)])
+   pendingFiles=files.filter(name=>!isDeepStrictEqual(live[name],expected[name]))
    validatePublicPayloads(live)
-   if(!files.every(name=>isDeepStrictEqual(live[name],expected[name])))throw Error('PUBLIC_CONTENT_PENDING')
-   return {ok:true,state:'verified',verifiedAt:new Date(now()).toISOString(),generatedAt:live['manifest.json'].generatedAt,attempts:attempt,
+   if(pendingFiles.length)throw Error('PUBLIC_CONTENT_PENDING')
+   return {ok:true,state:'verified',verifiedAt:new Date(now()).toISOString(),generatedAt,attempts,
     files:files.map(name=>({name,url:new URL(name,endpoint).href,sha256:createHash('sha256').update(JSON.stringify(live[name])).digest('hex')}))}
   }catch(error){lastCode=/^PUBLIC_[A-Z0-9_]+$/.test(error.message)?error.message:'PUBLIC_REQUEST_FAILED'}
-  if(attempt<maxAttempts)await wait(delayMs)
+  const remaining=deadline-now()
+  if(attempt<maxAttempts&&remaining>0)await wait(Math.min(remaining,delayMs??(attempt<=6?5000:20000)))
  }
- return {ok:false,state:'unverified',checkedAt:new Date(now()).toISOString(),generatedAt:expected['manifest.json'].generatedAt,attempts,errorCode:lastCode}
+ return {ok:false,state:'unverified',checkedAt:new Date(now()).toISOString(),generatedAt,attempts,errorCode:lastCode,observedGeneratedAt,pendingFiles}
 }
 if(import.meta.url===pathToFileURL(process.argv[1]||'').href){
  const expected=await readPublicPayloads(resolve('public/radar'))

@@ -79,8 +79,10 @@ jobs:
       - name: Verify deployed public contents
         if: steps.collect.outputs.publish == 'true'
         run: node scripts/verify-published-data.mjs
-      - name: Require healthy selected sources
+      - name: Report selected source health
         if: steps.collect.outputs.publish == 'true'
+        env:
+          AUTOMATIC_COLLECTION: ${{ github.event_name == 'schedule' || inputs.heartbeat }}
         run: node scripts/check-collection-health.mjs
       - name: Save bounded validation diagnostics
         if: always()

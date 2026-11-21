@@ -17,11 +17,11 @@ export function alibabaDocument(raw,id,{put,match,section}){
   if(combinedVideo)sourceNote+='输入视频和输出视频均按输出分辨率对应的每秒价格计费；计费时长为输入与输出视频时长之和。'
  }else if(model.startsWith('qwen-image')){
   match(/qwen-image-3\.0-pro/)
-  const sizes=match(/qwen-image-3\.0 series, qwen-image-2\.1 series<\/strong>: ([^\n]+)/)
+  const sizes=match(/qwen-image-3\.0 series(?:,| and) qwen-image-2\.1 series<\/strong>: ([^\n]+)/)
   // This page describes a pixel-area tier: its table contains non-square edges >2048.
   match(/512\\\*512 to 2048\\\*2048, aspect ratio 1:8 to 8:1/,sizes[0])
   put('dimensions','512×512 – 2048×2048 像素档位；非方形尺寸见原文',sizes[0]);put('aspectRatio','1:8 – 8:1',sizes[0])
-  const n=match(/qwen-image-3\.0 and qwen-image-2\.1 series support (\d+) to (\d+) images/)
+  const n=match(/qwen-image-3\.0(?: series)? and qwen-image-2\.1 series support (\d+)(?: to |\\?~)(\d+) images/)
   put('imageCount',`${n[1]} – ${n[2]}`,n[0]);sourceNote='仅为文生图接口选项；尺寸不是单边上限，原文比例表含非方形组合。不套用到图片编辑模式，也不把 Wan 的 4K/12 张选项套给 Qwen。'
  }else if(model==='wan3.0-video'){
   match(/"model": "wan3\.0-video"/)
