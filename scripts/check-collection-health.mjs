@@ -5,6 +5,13 @@ import {SOURCE_LABELS} from './collection-state.mjs'
 const REPEATED_FAILURES = 3
 const MAX_NEWS_AGE_MS = 3 * 3600000
 
+export function isPublicSnapshotHealthy({datasets, sourceHealth, intelligence}) {
+ return datasets.every(dataset => dataset.status === 'ok' && dataset.freshness === 'fresh') &&
+  !intelligence?.partial &&
+  !Object.values(sourceHealth || {}).some(source =>
+   source.status === 'stale' || source.quality?.regressed || source.quality?.partial)
+}
+
 export function failedCollectedSources(health) {
  return Object.entries(health?.collection?.tasks || {}).filter(([id, task]) => {
   if (task.status === 'skipped') return false

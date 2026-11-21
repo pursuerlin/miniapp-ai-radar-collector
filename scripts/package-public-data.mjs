@@ -1,3 +1,4 @@
+import {isPublicSnapshotHealthy} from './check-collection-health.mjs'
 import {validModelEvidence} from '../src/domain/model-evidence.mjs'
 import {mkdir,readFile,writeFile,readdir} from 'node:fs/promises'
 import {validRadarFile} from '../src/domain/radar-cache.mjs'
@@ -33,10 +34,11 @@ await writeFile('public/radar/attribution.json',JSON.stringify({schemaVersion:1,
   provider:intelligence.aihot?{name:'AIHOT',url:'https://aihot.news',permissionId:'aihot-mojing-written-2026-11-04',scope:'本产品展示、商业使用与公开JSON分发；不授予第三方原文权利'}:null,
   sources:intelligence.sources.map(s=>({id:s.id,name:s.name,url:s.url,rights:s.rights})),
   articles:intelligence.articles.filter(a=>a.contentMode==='licensed-summary').map(a=>({url:a.url,title:a.title,rights:a.rights}))})+'\n')
-const health=datasetSummary(manifest)
-const healthy=health.every(d=>d.status==='ok'&&d.freshness==='fresh')&&!Object.values(manifest.sourceHealth||{}).some(s=>s.quality?.regressed)
-await writeFile('public/radar/health.json',JSON.stringify({ok:healthy,readable:true,status:healthy?'healthy':'degraded',generatedAt:manifest.generatedAt,collection:manifest.collection,sourceHealth:manifest.sourceHealth,datasets:health,intelligence:{collectedAt:intelligence.collectedAt,
+const datasets=datasetSummary(manifest)
+const newsHealth={collectedAt:intelligence.collectedAt,
   connected:intelligence.sources.filter(s=>s.status==='ok').length,total:intelligence.sources.length,
   partial:!!intelligence.aihot?.partial||intelligence.sources.some(s=>s.status!=='ok'),articles:intelligence.articles.length,
-  sources:intelligence.sources.map(({id,name,status,count,checkedAt,lastSuccessAt,latestPublishedAt,freshness,errorCode,lastError,attempts})=>({id,name,status,count,checkedAt,lastSuccessAt,latestPublishedAt,freshness,errorCode,lastError,attempts}))}})+'\n')
+  sources:intelligence.sources.map(({id,name,status,count,checkedAt,lastSuccessAt,latestPublishedAt,freshness,errorCode,lastError,attempts})=>({id,name,status,count,checkedAt,lastSuccessAt,latestPublishedAt,freshness,errorCode,lastError,attempts}))}
+const healthy=isPublicSnapshotHealthy({datasets,sourceHealth:manifest.sourceHealth,intelligence:newsHealth})
+await writeFile('public/radar/health.json',JSON.stringify({ok:healthy,readable:true,status:healthy?'healthy':'degraded',generatedAt:manifest.generatedAt,collection:manifest.collection,sourceHealth:manifest.sourceHealth,datasets,intelligence:newsHealth})+'\n')
 console.log(`已校验并打包公开数据与逐条归属信息到 public/radar/`)

@@ -6,7 +6,7 @@ import {resolve} from 'node:path'
 import {parse} from 'yaml'
 import {bootstrapPublicData} from '../scripts/bootstrap-public-data.mjs'
 import {hasMatchingAaArchive} from '../scripts/aa-source-proof.mjs'
-import {collectionHealthReport} from '../scripts/check-collection-health.mjs'
+import {collectionHealthReport,isPublicSnapshotHealthy} from '../scripts/check-collection-health.mjs'
 const expected=JSON.parse(await readFile('tests/fixtures/publication-payloads.json','utf8'))
 test('bootstrap accepts only validated published state and excludes independently managed operations',async()=>{
  const root=await mkdtemp(resolve(tmpdir(),'public-collector-'))
@@ -60,4 +60,15 @@ test('verified automatic runs warn on recoverable source failures and fail on su
  health.collection.tasks.intelligence={status:'stale'}
  health.sourceHealth.intelligence={lastSuccessAt:'2026-11-21T04:59:00Z',consecutiveFailures:1}
  assert.equal(collectionHealthReport(health,{automatic:true,now}).issues.find(issue=>issue.id==='intelligence').blocking,true)
+})
+
+test('the public health summary keeps inherited partial sources visible',()=>{
+ const snapshot={datasets:[{status:'ok',freshness:'fresh'}],sourceHealth:{media:{status:'ok',quality:{partial:true}}},
+  collection:{tasks:{media:{status:'skipped'}}}}
+ assert.equal(isPublicSnapshotHealthy(snapshot),false)
+ assert.equal(collectionHealthReport(snapshot,{automatic:true}).status,'healthy')
+ snapshot.sourceHealth.media.quality.partial=false
+ assert.equal(isPublicSnapshotHealthy(snapshot),true)
+ snapshot.intelligence={partial:true}
+ assert.equal(isPublicSnapshotHealthy(snapshot),false)
 })
