@@ -101,6 +101,17 @@ export async function collectPracticeResources({root='.',client=createResourceCl
  if(!skills.length||!projects.length||!validPracticeResources(data))throw Error('RESOURCE_FEED_INVALID')
  return data
 }
+const PRACTICE_LISTS=['skills-trending:24h','trending:daily','trending:weekly']
+export function practiceResourcesDue(previous,{now=Date.now(),expectedSkills=0}={}){
+ if(!previous?.skills||previous.skills.length<expectedSkills)return true
+ return PRACTICE_LISTS.some(id=>{
+  const source=previous.sources?.find(entry=>entry.id===id)
+  if(!source)return true
+  const last=Date.parse(source.checkedAt)
+  const delay=source.status==='ok'?6*3600000:source.code==='RATE_LIMIT'?2*3600000:3600000
+  return !Number.isFinite(last)||now-last>=delay
+ })
+}
 export async function writePracticeResources(root,data){
  if(!validPracticeResources(data))throw Error('RESOURCE_FEED_INVALID')
  for(const file of ['src/practice-resources/resources.json','public/radar/practice-resources.json']){const path=`${root}/${file}`;await mkdir(path.slice(0,path.lastIndexOf('/')),{recursive:true});await writeFile(path+'.next',JSON.stringify(data)+'\n');await rename(path+'.next',path)}

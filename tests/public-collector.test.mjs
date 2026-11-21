@@ -4,6 +4,7 @@ import {readFile,mkdtemp,mkdir,writeFile,access,rm} from 'node:fs/promises'
 import {tmpdir} from 'node:os'
 import {resolve} from 'node:path'
 import {parse} from 'yaml'
+import {practiceResourcesDue} from '../scripts/collect-practice-resources.mjs'
 import {bootstrapPublicData} from '../scripts/bootstrap-public-data.mjs'
 import {hasMatchingAaArchive} from '../scripts/aa-source-proof.mjs'
 import {collectionHealthReport,isPublicSnapshotHealthy} from '../scripts/check-collection-health.mjs'
@@ -71,4 +72,17 @@ test('the public health summary keeps inherited partial sources visible',()=>{
  assert.equal(isPublicSnapshotHealthy(snapshot),true)
  snapshot.intelligence={partial:true}
  assert.equal(isPublicSnapshotHealthy(snapshot),false)
+})
+
+test('practice delivery tracks listing schedules independently of the envelope timestamp',()=>{
+ const now=Date.parse('2026-11-21T12:00:00Z')
+ const data={checkedAt:new Date(now).toISOString(),skills:[{}],sources:['skills-trending:24h','trending:daily','trending:weekly'].map(id=>({id,status:'ok',checkedAt:new Date(now-3600000).toISOString()}))}
+ assert.equal(practiceResourcesDue(data,{now}),false)
+ data.sources[0].checkedAt=new Date(now-6*3600000).toISOString()
+ assert.equal(practiceResourcesDue(data,{now}),true)
+ data.sources[0].checkedAt=new Date(now-90*60_000).toISOString()
+ data.sources[0].status='stale'
+ assert.equal(practiceResourcesDue(data,{now}),true)
+ data.sources[0].code='RATE_LIMIT'
+ assert.equal(practiceResourcesDue(data,{now}),false)
 })
