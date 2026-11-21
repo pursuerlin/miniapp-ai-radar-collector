@@ -41,16 +41,34 @@ function parseTotalInstalls(html){
  return validSkillTotalLabel(label)?label:null
 }
 export function parseSkillTrendDetail(html,{repo,name}){
- const url=`https://skills.sh/${repo}/${name}`
  const applications=[]
  for(const m of html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)){
   let d;try{d=JSON.parse(m[1])}catch{continue}
   if(d?.['@type']==='SoftwareApplication')applications.push(d)
  }
  const d=applications[0]
- if(applications.length!==1||d.name!==name||d.url?.replace('https://www.skills.sh/','https://skills.sh/')!==url||typeof d.description!=='string'||!d.description.trim()||d.description.length>20000||!html.includes(`npx skills add https://github.com/${repo} --skill ${name}`))throw Error('SKILL_DETAIL_IDENTITY_CHANGED')
+ const source=d?.url?.match(/^https:\/\/(?:www\.)?skills\.sh\/([\w.-]+\/[\w.-]+)\/([\w.-]+)$/)
+ const install=[...html.matchAll(/npx skills add https:\/\/github\.com\/([\w.-]+\/[\w.-]+) --skill ([\w.-]+)/g)]
+ if(applications.length!==1||d.name!==name||source?.[1].toLowerCase()!==repo.toLowerCase()||source[2]!==name||typeof d.description!=='string'||!d.description.trim()||d.description.length>20000||!install.some(match=>match[1].toLowerCase()===repo.toLowerCase()&&match[2]===name))throw Error('SKILL_DETAIL_IDENTITY_CHANGED')
  const total=parseTotalInstalls(html)
  return {description:d.description,sourceHash:digest(d.description),...(total?{totalInstalls:total}:{})}
+}
+export async function collectFeaturedInstallTotals({entries,load,now,deadlineMs=85_000}){
+ const totals=new Map(),ordered=entries.slice(0,100),deadline=Date.now()+deadlineMs
+ let next=0,unlisted=0,failed=0
+ await Promise.all(Array.from({length:6},async()=>{
+  while(next<ordered.length&&Date.now()<deadline){
+   const {id,repo,name}=ordered[next++]
+   if(!slug.test(repo)||!name||!/^[\w.-]+$/.test(name)){unlisted++;continue}
+   try{
+    const html=await load(`https://skills.sh/${repo}/${name}`,{attempts:1,timeout:8000})
+    const {totalInstalls}=parseSkillTrendDetail(html,{repo,name})
+    if(totalInstalls)totals.set(id,{label:totalInstalls,observedAt:now})
+    else unlisted++
+   }catch(error){if(error.message==='SKILL_HTTP_404')unlisted++;else failed++}
+  }
+ }))
+ return {totals,unlisted,failed:failed+entries.length-next}
 }
 export async function collectSkillTrending({load,previous=[],now=new Date().toISOString(),editorial=[],limit=30,trackedSkills=[],detailTtlMs=6*3600000}={}){
  const url='https://skills.sh/trending',apiUrl='https://www.skills.sh/api/skills/trending/0',maxAge=7*86400000,deadline=Date.now()+90000

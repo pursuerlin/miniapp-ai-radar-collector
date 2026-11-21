@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import {readFile} from 'node:fs/promises'
-import {parseSkillTrendDetail,parseSkillTrendingApi,collectSkillTrending} from '../scripts/collect-skill-trending.mjs'
+import {parseSkillTrendDetail,parseSkillTrendingApi,collectSkillTrending,collectFeaturedInstallTotals} from '../scripts/collect-skill-trending.mjs'
 import {validPracticeResources,filterResources} from '../src/domain/practice-resources.mjs'
 import {collectPracticeResources,createResourceClient} from '../scripts/collect-practice-resources.mjs'
 const data=JSON.parse(await readFile('tests/fixtures/skill-curation-2026-11-19.json','utf8')),trend=data.skillTrends[0],now=new Date(Date.parse(data.checkedAt)+60000).toISOString()
@@ -68,4 +68,20 @@ test('Skill totals come from the matching detail card and keep the original prec
  const result=await collectSkillTrending({load:async url=>url.includes('/api/')?api():detail(card),previous:[trend],now})
  assert.equal(result.rows[0].trend.installs,123)
  assert.deepEqual(result.rows[0].totalInstalls,{label:'108.1K',observedAt:now})
+})
+
+test('featured totals look up exact Skill identities independently of the 24h leaderboard',async()=>{
+ const entries=[{id:'first',repo:'Owner/Repo',name:'first'},{id:'other',repo:'owner/repo',name:'other'},{id:'gone',repo:'owner/repo',name:'gone'}]
+ const {totals,unlisted,failed}=await collectFeaturedInstallTotals({entries,now,load:async(url,options)=>{
+  assert.equal(options.attempts,1)
+  if(url.endsWith('/gone'))throw Error('SKILL_HTTP_404')
+  const id=url.split('/').at(-1)
+  const repo=id==='first'?'owner/repo':'different/repo'
+  const json=JSON.stringify({'@type':'SoftwareApplication',url:'https://skills.sh/'+repo+'/'+id,name:id,description:'A verified description'})
+  return '<script type="application/ld+json">'+json+'</script> npx skills add https://github.com/'+repo+' --skill '+id+
+   '<div><span>Installs</span></div><div>108.1K</div>'
+ }})
+ assert.deepEqual([...totals],[['first',{label:'108.1K',observedAt:now}]])
+ assert.equal(unlisted,1)
+ assert.equal(failed,1)
 })

@@ -7,7 +7,7 @@ import {parse as parseYaml} from 'yaml'
 import {validPracticeResources,resourceId,resourcePopularity,validSkillPath,skillDocumentPath} from '../src/domain/practice-resources.mjs'
 import {projectRelease} from './github-project-releases.mjs'
 import {projectGuide} from './github-project-guides.mjs'
-import {collectSkillTrending} from './collect-skill-trending.mjs'
+import {collectFeaturedInstallTotals,collectSkillTrending} from './collect-skill-trending.mjs'
 const exec=promisify(execFile),read=async file=>{try{return JSON.parse(await readFile(file,'utf8'))}catch(e){if(e.code==='ENOENT')return null;throw e}}
 const text=html=>html.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/\s+/g,' ').trim()
 export function parseTrending(html,period,now){
@@ -30,9 +30,9 @@ export function createResourceClient({cli=false,fetcher=fetch,token=process.env.
  return {async api(path){
   if(cli){try{const {stdout}=await exec('gh',['api',path],{maxBuffer:6e6,timeout:25000});return JSON.parse(stdout)}catch(e){const code=String(e.stderr||'').match(/HTTP (\d{3})/)?.[1];throw Error(['403','429'].includes(code)?'GITHUB_RATE_LIMIT':code?`GITHUB_HTTP_${code}`:'GITHUB_UNAVAILABLE')}}
   for(let attempt=0;attempt<3;attempt++){try{const r=await fetcher('https://api.github.com/'+path,{headers:{Accept:'application/vnd.github+json','User-Agent':'Mojing-Practice-Collector',...(token?{Authorization:`Bearer ${token}`}:{})},signal:AbortSignal.timeout(20000)});if(!r.ok){if([403,429].includes(r.status))throw Error('GITHUB_RATE_LIMIT');if(r.status>=500&&attempt<2){await wait(1000*(attempt+1));continue}throw Error('GITHUB_HTTP_'+r.status)}return await r.json()}catch(e){if(attempt===2||/GITHUB_/.test(e.message))throw e;await wait(1000*(attempt+1))}}
- },async trending(period){const r=await fetcher('https://github.com/trending?since='+period,{headers:{'User-Agent':'Mozilla/5.0 Mojing-Practice-Collector'},signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('TRENDING_HTTP_'+r.status);return r.text()},async skillTrending(url){
+ },async trending(period){const r=await fetcher('https://github.com/trending?since='+period,{headers:{'User-Agent':'Mozilla/5.0 Mojing-Practice-Collector'},signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('TRENDING_HTTP_'+r.status);return r.text()},async skillTrending(url,{attempts=2,timeout=20000}={}){
   if(!/^https:\/\/(?:www\.)?skills\.sh\/(?:trending|api\/skills\/trending\/0|[\w.-]+\/[\w.-]+\/[\w.-]+)$/.test(url))throw Error('SKILL_SOURCE_URL_INVALID')
-  for(let attempt=0;attempt<2;attempt++){try{const r=await fetcher(url.replace('https://skills.sh/','https://www.skills.sh/'),{headers:{'User-Agent':'Mozilla/5.0 Mojing-Practice-Collector',Accept:url.includes('/api/')?'application/json':'text/html'},signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('SKILL_HTTP_'+r.status);const body=await r.text();if(body.length>6000000)throw Error('SKILL_BODY_TOO_LARGE');return body}catch(e){if(attempt===1)throw e;await wait(1000*(attempt+1))}}
+  for(let attempt=0;attempt<attempts;attempt++){try{const r=await fetcher(url.replace('https://skills.sh/','https://www.skills.sh/'),{headers:{'User-Agent':'Mozilla/5.0 Mojing-Practice-Collector',Accept:url.includes('/api/')?'application/json':'text/html'},signal:AbortSignal.timeout(timeout)});if(!r.ok)throw Error('SKILL_HTTP_'+r.status);const body=await r.text();if(body.length>6000000)throw Error('SKILL_BODY_TOO_LARGE');return body}catch(e){if(attempt===attempts-1||e.message==='SKILL_HTTP_404')throw e;await wait(1000*(attempt+1))}}
  }}
 }
 export async function collectPracticeResources({root='.',client=createResourceClient(),now=new Date().toISOString(),registry,previous,guides,onlySkills=false}={}){
@@ -62,7 +62,7 @@ export async function collectPracticeResources({root='.',client=createResourceCl
   }catch(e){if(before)skills.push({...before,checkedAt:now});record(key,before?'stale':'error',before?.observedAt,failCode(e))}
  }
  if(onlySkills){
-  for(const skill of skills){const before=oldSkills.find(s=>s.id===skill.id),metric=resourcePopularity(before||{},Date.parse(now));delete skill.popularity;if(metric)skill.popularity={...metric}}
+  for(const skill of skills){const before=oldSkills.find(s=>s.id===skill.id),metric=resourcePopularity(before||{},Date.parse(now));delete skill.popularity;if(metric)skill.popularity={...metric};if(before?.totalInstalls)skill.totalInstalls=before.totalInstalls}
   const data={...previous,schemaVersion:1,checkedAt:now,skills,sources:[...(previous?.sources||[]).filter(s=>!s.id.startsWith('skill:')), ...sources]}
   if(!skills.length||!validPracticeResources(data))throw Error('RESOURCE_FEED_INVALID')
   return data
@@ -82,6 +82,7 @@ export async function collectPracticeResources({root='.',client=createResourceCl
  }
  let skillTrends=previous?.skillTrends||[]
  if(skillTrendingTask){const result=await skillTrendingTask;skillTrends=result.rows;sources.push(result.source)
+  const featuredEntries=[]
   for(const skill of skills){
    const spec=registry.skills.find(s=>s.repo.toLowerCase()===skill.repo.toLowerCase()&&s.path===skill.path),name=spec?.trendName||skill.name
    const exact=r=>r.repo.toLowerCase()===skill.repo.toLowerCase()&&r.name===name
@@ -94,11 +95,31 @@ export async function collectPracticeResources({root='.',client=createResourceCl
    }
    const total=result.rows.find(exact)?.totalInstalls||oldSkills.find(r=>r.id===skill.id)?.totalInstalls
    if(total)skill.totalInstalls=total
+   if(!total||Date.parse(now)-Date.parse(total.observedAt)>=24*3600000)featuredEntries.push({id:skill.id,repo:skill.repo,name})
    if(metric)skill.popularity={period:'24h',rank:metric.rank,installs:metric.installs,observedAt:metric.observedAt};else delete skill.popularity
   }
+  const priorTotalSource=previous?.sources?.find(s=>s.id==='skills-featured:installs')
+  const lastTotalCheck=Date.parse(priorTotalSource?.checkedAt)
+  const interval=priorTotalSource?.status==='stale'?6*3600000:24*3600000
+  if(featuredEntries.length&&(!Number.isFinite(lastTotalCheck)||Date.parse(now)-lastTotalCheck>=interval)){
+   const featured=await collectFeaturedInstallTotals({entries:featuredEntries,load:(url,options)=>client.skillTrending(url,options),now})
+   for(const skill of skills){
+    const total=featured.totals.get(skill.id)
+    if(total)skill.totalInstalls=total
+   }
+   const available=skills.filter(s=>s.totalInstalls&&Date.parse(now)-Date.parse(s.totalInstalls.observedAt)<=7*86400000).length
+   sources.push({id:'skills-featured:installs',status:featured.failed?'stale':'ok',checkedAt:now,
+    ...(featured.totals.size?{observedAt:now}:priorTotalSource?.observedAt?{observedAt:priorTotalSource.observedAt}:{}),
+    available,unlisted:featured.unlisted,failed:featured.failed})
+  }else if(priorTotalSource)sources.push(priorTotalSource)
   skillTrends=skillTrends.map(row=>{const a=skillEditorial.find(a=>a.repo.toLowerCase()===row.repo.toLowerCase()&&a.name===row.name&&a.sourceHash===row.sourceHash);return a?{...row,title:a.title,description:a.description,category:a.category,...Object.fromEntries(['introduction','example','requirements','cost'].filter(k=>typeof a[k]==='string').map(k=>[k,a[k]]))}:row})
  }
- else if(skillTrends.length){const source=previous.sources.find(s=>s.id==='skills-trending:24h');if(source)sources.push({...source,status:'stale',checkedAt:now})}
+ else{
+  const priorFeatured=previous?.sources?.find(s=>s.id==='skills-featured:installs')
+  if(priorFeatured)sources.push(priorFeatured)
+  for(const skill of skills){const total=oldSkills.find(s=>s.id===skill.id)?.totalInstalls;if(total)skill.totalInstalls=total}
+ }
+ if(!skillTrendingTask&&skillTrends.length){const source=previous.sources.find(s=>s.id==='skills-trending:24h');if(source)sources.push({...source,status:'stale',checkedAt:now})}
  const data={schemaVersion:1,checkedAt:now,skills,projects,sources,...(client.skillTrending||skillTrends.length?{skillTrends}:{})}
  if(!skills.length||!projects.length||!validPracticeResources(data))throw Error('RESOURCE_FEED_INVALID')
  return data
