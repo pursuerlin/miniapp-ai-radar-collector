@@ -80,7 +80,10 @@ export function createEvidenceClient({fetcher=curlResponse,wait=ms=>new Promise(
 }
 export async function collectModelEvidence({previous,get=createEvidenceClient(),now=()=>new Date().toISOString()}={}){
  const started=now(),indexText=await get('/leaderboard.md'),index=parseEvidenceIndex(indexText),rules=indexText.split('## 排名')[0],sources='AIHOT 官方 Markdown 方法说明'
- if(!rules.includes('各项成绩折算')||!rules.includes('领域加权'))throw fail('EVIDENCE_METHOD_UNVERIFIED')
+ const originalMethod=rules.includes('各项成绩折算')&&rules.includes('领域加权')
+ const revisedMethod=rules.includes('只用第三方评测机构自己实测的成绩，厂商自报分数不计')&&
+  rules.includes('各领域折算后按权重加总')&&rules.includes('评分不是正确率')
+ if(!originalMethod&&!revisedMethod)throw fail('EVIDENCE_METHOD_UNVERIFIED')
  if(previous&&validModelEvidence(previous)&&Date.parse(index.sourceUpdatedAt)<Math.max(...previous.models.map(r=>Date.parse(r.sourceUpdatedAt))))throw fail('EVIDENCE_SOURCE_TIME_REGRESSED')
  if(previous&&validModelEvidence(previous)&&index.models.length<previous.models.length*.7)throw fail('EVIDENCE_COVERAGE_COLLAPSED')
  const models=[],errors=[],pending=[]

@@ -12,6 +12,14 @@ const data=await collectModelEvidence({get:async path=>path==='/leaderboard.md'?
 test('official Markdown keeps original scores, configurations and conditional prices',()=>{
  assert.equal(parsed.models.length,98);assert.equal(facts.evaluations.length,56);assert.equal(facts.categoryRanks['科研'],5);assert.ok(facts.prices.some(p=>p.includes('272K')));assert.ok(facts.evaluations.some(e=>e.notes.includes('Max 推理')));assert.equal(facts.evaluations.filter(e=>e.evaluator==='Artificial Analysis').length,15);assert.ok(validModelEvidence(data))
 })
+test('the revised official scoring description is accepted; unsupported descriptions still fail',async()=>{
+ const revised=index.replace(/^只用第三方[^\n]+/m,'只用第三方评测机构自己实测的成绩，厂商自报分数不计；各领域折算后按权重加总：编程 38%、科研 19%、专业办公 19%、知识问答 14%、真人盲选 10%。评分不是正确率。')
+ assert.notEqual(revised,index)
+ const read=source=>async path=>path==='/leaderboard.md'?source:get(path)
+ assert.ok(validModelEvidence(await collectModelEvidence({get:read(revised)})))
+ const unverified=revised.replace('各领域折算后按权重加总','各领域成绩直接相加')
+ await assert.rejects(collectModelEvidence({get:read(unverified)}),/EVIDENCE_METHOD_UNVERIFIED/)
+})
 test('reject identity/version mismatch, truncated detail and numeric schema drift',()=>{
  assert.throws(()=>parseEvidenceDetail(detail,{...row,provider:'other'}),/IDENTITY/)
  assert.throws(()=>parseEvidenceDetail(detail,{...row,sourceUpdatedAt:'2026-11-16T12:10:00.000Z'}),/VERSION/)
