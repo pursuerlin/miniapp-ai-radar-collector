@@ -106,13 +106,50 @@ export function normalizeOfficialDocument(raw,source,id){
   }else if(source==='minimax'){
    const prices=raw.replaceAll('\\$','$')
    if(model==='MiniMax-H3-Max'){
-    const block=section('### H3 Series Extended Models','* **MiniMax-H3-Max**',prices)
-    match(/\*\*MiniMax-H3-Max\*\*/,block);match(/Output Video\\\s*per second/,block);match(/Input Video\\\s*per second/,block)
-    const rows=[...block.matchAll(/<td>(768P|480P)<\/td>\s*<td>\$(\d+(?:\.\d+)?)<\/td>\s*<td>\$(\d+(?:\.\d+)?)<\/td>\s*<td>\$(\d+(?:\.\d+)?)<\/td>/g)]
-    if(rows.length!==2||rows.map(m=>m[1]).join('|')!=='768P|480P'||rows[0][4]!==rows[1][4])fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
-    put('videoOutputPrice',rows.map(m=>`${m[1]}：US$${m[2]} / 秒`).join('；'),block);put('inputPrice',rows.map(m=>`${m[1]} 视频：US$${m[3]} / 秒`).join('；'),block)
-    const free=match(/\* \*\*MiniMax-H3-Max\*\*: The first \*\*(\d+) images\*\* per task are free;[^\n]+/,prices)
-    put('imageInputPrice',`每任务前 ${free[1]} 张免费；额外每张 US$${rows[0][4]}`,free[0]+' '+block)
+    const block=match(/^### H3 Series Extended Models\s*\n([\s\S]*?)(?=\n#{1,3} |(?![\s\S]))/m,prices)[1]
+    const table=match(/<table>[\s\S]*?<\/table>/,block)[0]
+    const headers=[...table.matchAll(/<th>([^<]*)<\/th>/g)].map(cell=>clean(cell[1].replaceAll('\\','')))
+    const hasTaskType=headers[2]==='Task Type'
+    const expectedHeaders=['Model','Output Resolution',...(hasTaskType?['Task Type']:[]),'Output Video per second','Input Video per second',hasTaskType?'Input Image per image':'Input Image per image beyond free quota']
+    if(headers.length!==expectedHeaders.length||headers.some((label,index)=>label!==expectedHeaders[index]))fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
+
+    const rows=[...table.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].map(row=>({
+     evidence:row[0],
+     cells:[...row[1].matchAll(/<td(?:\s+rowSpan="(\d+)")?>([^<]*)<\/td>/g)]
+      .map(cell=>({span:cell[1],text:clean(cell[2].replaceAll('\\',''))}))
+    }))
+    const starts=rows.filter(row=>/^\*\*MiniMax-H3-Max\*\*( |$)/.test(row.cells[0]?.text??''))
+    if(starts.length!==1)fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
+    const first=starts[0],second=rows[rows.indexOf(first)+1]
+    if(first.cells[0].span!=='2'||first.cells.length!==headers.length||second?.cells.length!==4)fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
+
+    const [resolution768,...fields768]=first.cells.slice(1).map(cell=>cell.text)
+    const [resolution480,...fields480]=second.cells.map(cell=>cell.text)
+    if(resolution768!=='768P'||resolution480!=='480P')fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
+    if(hasTaskType&&(fields768.shift()!=='All'||fields480.shift()!=='All'))fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
+    const [output768,input768,image768]=fields768
+    const [output480,input480,image480]=fields480
+    const money=value=>match(/^\$(\d+(?:\.\d+)?)$/,value)[1]
+    const rowEvidence=first.evidence+' '+second.evidence
+    let imageRate,freeImages,imageEvidence
+    if(hasTaskType){
+     if(first.cells.at(-1).span!=='2')fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
+     const rate=match(/^\$(\d+(?:\.\d+)?) first (\d+) free$/,image768)
+     imageRate=rate[1]
+     freeImages=rate[2]
+     imageEvidence=rowEvidence
+     match(/\* \*\*Audio input\*\*: Free for all extended models\./,block)
+    }else{
+     imageRate=money(image768)
+     if(money(image480)!==imageRate)fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
+     const footnote=match(/\* \*\*MiniMax-H3-Max\*\*: The first \*\*(\d+) images\*\* per task are free;[^\n]+/,block)
+     match(/Audio input is free\./,footnote[0])
+     freeImages=footnote[1]
+     imageEvidence=footnote[0]+' '+rowEvidence
+    }
+    put('videoOutputPrice',`768P：US$${money(output768)} / 秒；480P：US$${money(output480)} / 秒`,rowEvidence)
+    put('inputPrice',`768P 视频：US$${money(input768)} / 秒；480P 视频：US$${money(input480)} / 秒`,rowEvidence)
+    put('imageInputPrice',`每任务前 ${freeImages} 张免费；额外每张 US$${imageRate}`,imageEvidence)
     sourceNote='MiniMax 官方 H3 Max 标准价，输出和输入分别计费；AA 此模型由 Fal 提供，不能据此认定 Fal 收费相同。音频输入免费，实际费用以对应渠道账单为准。'
    }else if(model==='MiniMax-H3'){
     const s=section('### H3 Series Flagship Models','* **Image input**',prices),block=section('**MiniMax-H3**','**MiniMax-H3-Highspeed**',s)

@@ -46,3 +46,25 @@ test('Seedream 5.5 accepts the exact official series sections without a dated mo
  assert.match(sourceNote,/Seedream 5.5 系列/)
  assert.throws(()=>parse(document.replace('Seedream 5.5（图片生成场景）','Seedream 5.6（图片生成场景）')),/METADATA_/)
 })
+
+test('MiniMax H3 Max supports the current pricing table and keeps the original units',async()=>{
+ const document=await fixture('minimax-pricing-2026-11-24.md')
+ const parse=raw=>normalizeOfficialDocument(raw,'minimax','MiniMax-H3-Max-pricing')
+ const result=parse(document)
+ assert.deepEqual(result.fields,parse(await fixture('minimax-pricing.md')).fields)
+ assert.equal(result.fields.videoOutputPrice,'768P：US$0.08 / 秒；480P：US$0.05 / 秒')
+ assert.equal(result.fields.inputPrice,'768P 视频：US$0.143 / 秒；480P 视频：US$0.0553 / 秒')
+ assert.equal(result.fields.imageInputPrice,'每任务前 2 张免费；额外每张 US$0.074')
+ assert.match(result.sourceNote,/AA 此模型由 Fal 提供/)
+ assert.match(parse(document.replace('first 2 free','first 3 free')).fields.imageInputPrice,/前 3 张免费/)
+ for(const [before,after] of [
+  ['<td>768P</td>','<td>1080P</td>'],
+  ['<th>Task Type</th>','<th>Other</th>'],
+  ['first 2 free','first unknown free'],
+  ['\\$0.074','unknown']
+ ]){
+  const changed=document.replace(before,after)
+  assert.notEqual(changed,document)
+  assert.throws(()=>parse(changed),/METADATA_DOCUMENT_SCHEMA_CHANGED/)
+ }
+})
