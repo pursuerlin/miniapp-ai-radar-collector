@@ -7,7 +7,7 @@ import {PUBLIC_CORE_FILES,readPublicPayloads,validatePublicPayloads} from './val
 
 export async function verifyPublishedData({
  expected, baseUrl='https://pursuerlin.github.io/miniapp-ai-radar-data/radar/',
- fetcher=fetch, maxAttempts=65, delayMs, maxDurationMs=17*60_000,
+ fetcher=fetch, maxAttempts=90, delayMs, maxDurationMs=25*60_000,
  wait=ms=>new Promise(r=>setTimeout(r,ms)), now=()=>Date.now(),
 }={}){
  validatePublicPayloads(expected)
