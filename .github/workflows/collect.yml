@@ -77,8 +77,12 @@ jobs:
             git push origin HEAD:master
           fi
       - name: Verify deployed public contents
-        if: steps.collect.outputs.publish == 'true'
-        run: node scripts/verify-published-data.mjs
+        if: steps.collect.outputs.publish == 'true' || inputs.heartbeat
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export PUBLIC_DATA_SHA=$(git -C state/data-site rev-parse HEAD)
+          node scripts/verify-published-data.mjs
       - name: Report selected source health
         if: steps.collect.outputs.publish == 'true'
         env:

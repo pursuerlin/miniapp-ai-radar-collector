@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import {readFile} from 'node:fs/promises'
 import {readPublicPayloads,validatePublicPayloads} from '../scripts/validate-public-data.mjs'
-import {verifyPublishedData} from '../scripts/verify-published-data.mjs'
+import {failedPagesRun,verifyPublishedData} from '../scripts/verify-published-data.mjs'
 const expected=JSON.parse(await readFile(new URL('./fixtures/publication-payloads.json',import.meta.url),'utf8'))
 test('public verification waits through mixed CDN snapshots and proves actual file contents',async()=>{
  let round=0,waits=0
@@ -73,4 +73,22 @@ test('a Pages timeout reports the last observed generation and the file awaiting
  assert.equal(result.state,'unverified')
  assert.equal(result.observedGeneratedAt,observedGeneratedAt)
  assert.deepEqual(result.pendingFiles,['manifest.json'])
+})
+
+
+test('a terminal Pages run shortens a wait only for the current publication SHA',async()=>{
+ const sha='a'.repeat(40),run={id:761,head_sha:sha,status:'completed',conclusion:'failure'}
+ const check=(run,head=sha)=>failedPagesRun(sha,{token:'',fetcher:async url=>Response.json(
+  url.includes('/runs?')?{workflow_runs:[run]}:{object:{sha:head}})})
+ const runUrl=await check(run)
+ assert.match(runUrl,/actions\/runs\/761$/)
+ assert.equal(await check(run,'b'.repeat(40)),null)
+ assert.equal(await check({...run,status:'in_progress',conclusion:null}),null)
+ assert.equal(await check({...run,head_sha:'b'.repeat(40)}),null)
+ assert.equal(await failedPagesRun(sha,{fetcher:async()=>Response.json({}, {status:503})}),null)
+ const result=await verifyPublishedData({expected,checkPagesFailure:()=>check(run),wait:async()=>assert.fail('terminal failure must stop polling'),
+  fetcher:async()=>Response.json({...expected['manifest.json'],generatedAt:'2026-01-01T00:00:00.000Z'})})
+ assert.equal(result.errorCode,'PUBLIC_PAGES_DEPLOYMENT_FAILED')
+ assert.equal(result.deploymentRun,runUrl)
+ assert.equal(result.attempts,1)
 })
