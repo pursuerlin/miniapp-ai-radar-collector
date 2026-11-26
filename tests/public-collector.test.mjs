@@ -47,7 +47,7 @@ test('public data sync preserves the independently published v6 comparison polic
 test('verified automatic runs warn on recoverable source failures and fail on sustained degradation',()=>{
  const now=Date.parse('2026-11-21T08:00:00Z')
  const health={collection:{tasks:{media:{status:'ok'},research:{status:'stale',errorCode:'EVIDENCE_VERSION_MISMATCH'},catalog:{status:'skipped'}}},
-  sourceHealth:{media:{qualityFailures:2,quality:{partial:true,errorCode:'METADATA_DOCUMENT_SCHEMA_CHANGED'}},
+  sourceHealth:{media:{qualityFailures:2,quality:{partial:true,errorCode:'METADATA_DOCUMENT_SCHEMA_CHANGED',boards:6,staleBoards:0,publicBenchmarkErrors:0}},
    research:{consecutiveFailures:1},catalog:{consecutiveFailures:7}}}
  const warning=collectionHealthReport(health,{automatic:true,now})
  assert.equal(warning.status,'degraded')
@@ -57,7 +57,15 @@ test('verified automatic runs warn on recoverable source failures and fail on su
  assert.equal(collectionHealthReport(health,{now}).status,'failed')
  health.sourceHealth.media.qualityFailures=3
  assert.equal(collectionHealthReport(health,{automatic:true,now}).status,'failed')
+ health.sourceHealth.media.qualityFailures=4
+ assert.equal(collectionHealthReport(health,{automatic:true,now}).status,'degraded')
+ health.sourceHealth.media.quality.staleBoards=1
+ assert.equal(collectionHealthReport(health,{automatic:true,now}).status,'failed')
  health.sourceHealth.media.qualityFailures=0
+ health.sourceHealth.research={consecutiveFailures:4,quality:{records:100,details:98}}
+ assert.equal(collectionHealthReport(health,{automatic:true,now}).issues.find(issue=>issue.id==='research').blocking,false)
+ health.sourceHealth.research.quality.details=89
+ assert.equal(collectionHealthReport(health,{automatic:true,now}).issues.find(issue=>issue.id==='research').blocking,true)
  health.collection.tasks.intelligence={status:'stale'}
  health.sourceHealth.intelligence={lastSuccessAt:'2026-11-21T04:59:00Z',consecutiveFailures:1}
  assert.equal(collectionHealthReport(health,{automatic:true,now}).issues.find(issue=>issue.id==='intelligence').blocking,true)

@@ -18,6 +18,7 @@ test('Seedance pricing table layout preserves exact editions, three tiers and in
  for(const version of ['2.5','2.0']){
   const id='doubao-seedance-'+version+'-pricing',a=normalizeOfficialDocument(old,'volcengine',id),b=normalizeOfficialDocument(current,'volcengine',id)
   assert.deepEqual(b.fields,a.fields)
+  assert.deepEqual(normalizeOfficialDocument(current.replace('**Seedance 1.x**',''), 'volcengine', id).fields,b.fields)
   assert.match(b.fields.videoOutputPrice,/4K：¥/)
   assert.match(b.fields.inputPrice,/含输入视频时/)
  }
@@ -67,4 +68,13 @@ test('MiniMax H3 Max supports the current pricing table and keeps the original u
   assert.notEqual(changed,document)
   assert.throws(()=>parse(changed),/METADATA_DOCUMENT_SCHEMA_CHANGED/)
  }
+})
+
+
+test('Seedream Pro spec still parses when the next section is 4.0 instead of Lite',async()=>{
+ const document=await fixture('volc-images.md')
+ const updated=document.replace('* **Seedream 5.0 lite','* **Seedream 4.0')
+ assert.notEqual(updated,document)
+ const parse=body=>normalizeOfficialDocument(body,'volcengine','seedream-5.0-pro')
+ assert.deepEqual(parse(updated).fields,parse(document).fields)
 })

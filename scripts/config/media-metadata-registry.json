@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 15,
+  "revision": 16,
   "models": [
     {
       "id": "qwen-image",
@@ -2384,50 +2384,6 @@
         {
           "source": "volcengine",
           "id": "doubao-seedream-5-0-pro-pricing",
-          "scope": "endpoint"
-        }
-      ]
-    },
-    {
-      "id": "pricing-volcengine-doubao-seedream-5-0-lite-pricing",
-      "reviewedAt": "2026-11-18T08:15:07.398Z",
-      "targets": [
-        {
-          "id": "d82c66de-d55a-4b6a-af16-f5bf808431cc",
-          "name": "Seedream 5.0 Lite",
-          "provider": "ByteDance Seed",
-          "boards": [
-            "text-to-image",
-            "image-editing"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "volcengine",
-          "id": "doubao-seedream-5-0-lite-pricing",
-          "scope": "endpoint"
-        }
-      ]
-    },
-    {
-      "id": "pricing-volcengine-doubao-seedream-4-5-pricing",
-      "reviewedAt": "2026-11-18T08:15:07.398Z",
-      "targets": [
-        {
-          "id": "08f19008-675e-4d70-98b2-49ad3178c1f0",
-          "name": "Seedream 4.5",
-          "provider": "ByteDance Seed",
-          "boards": [
-            "text-to-image",
-            "image-editing"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "volcengine",
-          "id": "doubao-seedream-4-5-pricing",
           "scope": "endpoint"
         }
       ]

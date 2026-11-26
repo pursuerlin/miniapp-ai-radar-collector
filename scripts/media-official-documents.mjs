@@ -73,7 +73,9 @@ export function normalizeOfficialDocument(raw,source,id){
    if(!image){
     let parts,evidence=line
     if(tabularVideo){
-     const table=section('**Seedance 2.x**','**Seedance 1.x**',block)
+     const start=block.indexOf('**Seedance 2.x**')
+     if(start<0)fail('METADATA_DOCUMENT_SCHEMA_CHANGED')
+     const table=match(/^\*\*Seedance 2\.x\*\*\s*\n((?:\|[^\n]+\n?)+)/,block.slice(start))[1]
      match(/\|\|\|输入不含视频 \|输入包含视频 \|/,table)
      const rows=table.split('\n').filter(l=>l.startsWith('|')).map(l=>({line:l,cells:l.split('|').slice(1,-1).map(v=>v.trim())}))
      const label='Seedance '+model.replace('doubao-seedance-',''),starts=rows.map((r,i)=>r.cells[0]===label?i:-1).filter(i=>i>=0)
@@ -280,7 +282,9 @@ export function normalizeOfficialDocument(raw,source,id){
   const ratio=match(/宽高比取值范围：\[([^\]]+)\]/,s);put('aspectRatio',ratio[1]+'（自定义尺寸）',ratio[0])
   const pixels=match(/总像素取值范围：([^\n]+)/,s);put('constraints',clean(pixels[1]).replaceAll('`','')+'；总像素与宽高比须同时满足。',pixels[0])
   const refs=match(/Seedream 5\.5 \/ 5\.0 pro \/ 5\.0 flash 最多支持传入 (\d+) 张参考图/);put('referenceImages',refs[1]+' 张（图片生成）；图层拆分仅单图',refs[0]);put('imageInput',true,refs[0])
-  const intro=section(`* **Seedream ${version}`,version==='5.5'?'* **Seedream 5.0 pro':'* **Seedream 5.0 lite')
+  const intro=match(version==='5.5'
+   ? /^\* \*\*Seedream 5\.5[^\n]*\n([\s\S]*?)(?=^\* \*\*Seedream )/m
+   : /^\* \*\*Seedream 5\.0 pro[^\n]*\n([\s\S]*?)(?=^\* \*\*Seedream )/m)[1]
   put('imageCount','生成单图：1 张；图层拆分为独立模式，数量限制见原文。',match(/生成单图[\s\S]*?暂不支持组图生成/,intro)[0])
   sourceNote='生成图片与图层拆分分别限制；不把拆分图层数当作批量生成张数。'
   if(version==='5.5')sourceNote+='参数来自官方 Seedream 5.5 系列的生成章节，日期版本的独有参数以对应端点说明为准。'

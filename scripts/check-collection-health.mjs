@@ -27,8 +27,16 @@ export function collectionHealthReport(health, {automatic = false, now = Date.no
   const source = health.sourceHealth?.[id]
   const newsAge = now - Date.parse(source?.lastSuccessAt ?? task.collectedAt)
   const critical = id === 'intelligence' && (!Number.isFinite(newsAge) || newsAge > MAX_NEWS_AGE_MS)
-  const repeated = Math.max(source?.consecutiveFailures || 0, source?.qualityFailures || 0) >= REPEATED_FAILURES
-  const code = task.errorCode || source?.quality?.errorCode || (source?.quality?.regressed ? 'QUALITY_REGRESSION' : 'SOURCE_DEGRADED')
+  const count = Math.max(source?.consecutiveFailures || 0, source?.qualityFailures || 0)
+  const quality = source?.quality
+  const code = task.errorCode || quality?.errorCode || (quality?.regressed ? 'QUALITY_REGRESSION' : 'SOURCE_DEGRADED')
+  // A usable verified snapshot continues to report degradation. Raise one workflow
+  // failure at the escalation threshold for these known partial-source conditions.
+  const limitedDegradation =
+   (id === 'research' && code === 'EVIDENCE_VERSION_MISMATCH' && quality?.records > 0 && quality.details >= .9 * quality.records) ||
+   (id === 'media' && /^METADATA_(DOCUMENT_SCHEMA_CHANGED|IDENTITY_INVALID)$/.test(code) &&
+    task.status === 'ok' && quality?.boards > 0 && quality.staleBoards === 0 && quality.publicBenchmarkErrors === 0)
+  const repeated = limitedDegradation ? count === REPEATED_FAILURES : count >= REPEATED_FAILURES
   return {
    id,
    label: SOURCE_LABELS[id] || id,
